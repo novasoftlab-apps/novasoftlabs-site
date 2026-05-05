@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy – Samsung Remote</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #0a0f1e;
+      --surface: #111827;
+      --surface2: #1a2236;
+      --border: rgba(99,179,255,0.12);
+      --accent: #1a8cff;
+      --accent2: #00d4ff;
+      --text: #e2eaf7;
+      --muted: #7a90b3;
+      --heading: #ffffff;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Animated background grid */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(26,140,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(26,140,255,0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Glow orbs */
+    body::after {
+      content: '';
+      position: fixed;
+      top: -200px;
+      right: -150px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(26,140,255,0.12) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 24px 100px;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      margin-bottom: 64px;
+      animation: fadeUp 0.7s ease both;
+    }
+
+    .app-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      padding: 8px 20px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--accent2);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .app-badge svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      color: var(--heading);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+
+    h1 span {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .meta {
+      font-size: 14px;
+      color: var(--muted);
+      font-weight: 300;
+    }
+
+    .divider {
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      border-radius: 2px;
+      margin: 24px auto 0;
+    }
+
+    /* Intro card */
+    .intro-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 48px;
+      font-size: 15px;
+      color: var(--text);
+      animation: fadeUp 0.7s 0.1s ease both;
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: 40px;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .section:nth-child(3) { animation-delay: 0.15s; }
+    .section:nth-child(4) { animation-delay: 0.2s; }
+    .section:nth-child(5) { animation-delay: 0.25s; }
+    .section:nth-child(6) { animation-delay: 0.3s; }
+    .section:nth-child(7) { animation-delay: 0.35s; }
+    .section:nth-child(8) { animation-delay: 0.4s; }
+    .section:nth-child(9) { animation-delay: 0.45s; }
+    .section:nth-child(10) { animation-delay: 0.5s; }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .section-num {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      border-radius: 8px;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--heading);
+      letter-spacing: -0.01em;
+    }
+
+    .section-body {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 22px 26px;
+    }
+
+    p {
+      color: var(--text);
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 8px 0;
+    }
+
+    ul li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 15px;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      background: var(--accent2);
+      border-radius: 50%;
+    }
+
+    ul li:last-child { margin-bottom: 0; }
+
+    strong {
+      color: var(--heading);
+      font-weight: 500;
+    }
+
+    /* Contact block */
+    .contact-block {
+      background: linear-gradient(135deg, rgba(26,140,255,0.1), rgba(0,212,255,0.05));
+      border: 1px solid rgba(26,140,255,0.25);
+      border-radius: 14px;
+      padding: 28px;
+      text-align: center;
+      margin-top: 48px;
+      animation: fadeUp 0.6s 0.55s ease both;
+    }
+
+    .contact-block h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--heading);
+      margin-bottom: 8px;
+    }
+
+    .contact-block p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    .contact-block a {
+      display: inline-block;
+      color: var(--accent2);
+      font-weight: 500;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(0,212,255,0.3);
+      padding-bottom: 2px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .contact-block a:hover {
+      color: #fff;
+      border-color: #fff;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--muted);
+      animation: fadeUp 0.6s 0.6s ease both;
+    }
+
+    footer strong {
+      color: var(--accent2);
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <header>
+    <div class="app-badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="2" y="7" width="20" height="15" rx="2"/>
+        <path d="M17 2H7L5 7h14L17 2z"/>
+        <circle cx="12" cy="14" r="2"/>
+      </svg>
+      Samsung Remote App
+    </div>
+    <h1>Privacy <span>Policy</span></h1>
+    <p class="meta">Last updated: May 5, 2026</p>
+    <div class="divider"></div>
+  </header>
+
+  <!-- Intro -->
+  <div class="intro-card">
+    This Privacy Policy explains how <strong>Samsung Remote</strong> ("the App", "we", "us", or "our") collects, uses, and protects your information when you use our application available on the Google Play Store. By using the App, you agree to the terms of this policy. Please read it carefully.
+  </div>
+
+  <!-- 1. Information We Collect -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">1</div>
+      <h2>Information We Collect</h2>
+    </div>
+    <div class="section-body">
+      <p>Samsung Remote is designed to control your Samsung TV over your local Wi-Fi network. We collect only the minimum data necessary to provide this functionality:</p>
+      <ul>
+        <li><strong>Network information:</strong> Local IP addresses of devices on your Wi-Fi network to discover and connect to your Samsung TV. This data never leaves your device.</li>
+        <li><strong>Device information:</strong> Basic device identifiers (e.g., Android version, device model) for diagnostic and compatibility purposes.</li>
+        <li><strong>App usage data:</strong> Anonymous, aggregated usage statistics to help us improve the App (e.g., features used, crash reports). No personally identifiable information is included.</li>
+      </ul>
+      <p>We do <strong>not</strong> collect your name, email address, phone number, or any other personal contact information unless you voluntarily provide it (e.g., when contacting support).</p>
+    </div>
+  </div>
+
+  <!-- 2. How We Use Your Information -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">2</div>
+      <h2>How We Use Your Information</h2>
+    </div>
+    <div class="section-body">
+      <p>The information we collect is used solely for the following purposes:</p>
+      <ul>
+        <li>To discover Samsung TVs on your local network and enable remote control functionality.</li>
+        <li>To diagnose technical issues, fix bugs, and improve App performance.</li>
+        <li>To understand how users interact with the App and identify areas for improvement.</li>
+        <li>To respond to your support requests or feedback (if you contact us).</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 3. Permissions -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">3</div>
+      <h2>Permissions Required</h2>
+    </div>
+    <div class="section-body">
+      <p>To function properly, the App may request the following Android permissions:</p>
+      <ul>
+        <li><strong>Local Network / Wi-Fi access:</strong> Required to discover and communicate with Samsung TVs on your home network.</li>
+        <li><strong>Internet access:</strong> Used only for checking app updates or sending anonymous crash reports.</li>
+        <li><strong>Receive boot completed (optional):</strong> To restore connection preferences on device restart, if enabled by the user.</li>
+      </ul>
+      <p>We do not request access to your camera, microphone, contacts, location, or storage unless it is strictly required for a specific feature — in which case we will clearly notify you beforehand.</p>
+    </div>
+  </div>
+
+  <!-- 4. Data Sharing -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">4</div>
+      <h2>Data Sharing & Third Parties</h2>
+    </div>
+    <div class="section-body">
+      <p>We do <strong>not</strong> sell, trade, or rent your personal information to third parties. We may share limited, non-identifiable data with trusted third-party service providers solely to operate and improve the App, such as:</p>
+      <ul>
+        <li><strong>Analytics providers</strong> (e.g., Firebase/Google Analytics) — for anonymous usage statistics.</li>
+        <li><strong>Crash reporting tools</strong> (e.g., Firebase Crashlytics) — to detect and fix errors.</li>
+      </ul>
+      <p>These providers are contractually obligated to handle data securely and only for the purposes we specify. They are not permitted to use your data for their own purposes.</p>
+      <p>We may disclose information if required by law or to protect the rights, safety, or property of our users or the public.</p>
+    </div>
+  </div>
+
+  <!-- 5. Data Storage & Security -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">5</div>
+      <h2>Data Storage & Security</h2>
+    </div>
+    <div class="section-body">
+      <p>Most data used by the App (such as discovered TV IP addresses and your preferences) is stored <strong>locally on your device</strong> and is never transmitted to our servers.</p>
+      <p>Any data that is transmitted (e.g., crash reports) is protected using industry-standard encryption (TLS/HTTPS). We implement reasonable technical and organizational safeguards to protect your information against unauthorized access, loss, or misuse.</p>
+      <p>However, no method of transmission over the internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
+    </div>
+  </div>
+
+  <!-- 6. Children's Privacy -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">6</div>
+      <h2>Children's Privacy</h2>
+    </div>
+    <div class="section-body">
+      <p>Samsung Remote is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately and we will take steps to delete such information.</p>
+    </div>
+  </div>
+
+  <!-- 7. Your Rights -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">7</div>
+      <h2>Your Rights & Choices</h2>
+    </div>
+    <div class="section-body">
+      <p>Depending on your location, you may have the following rights regarding your data:</p>
+      <ul>
+        <li>The right to <strong>access</strong> the personal data we hold about you.</li>
+        <li>The right to <strong>correct</strong> inaccurate or incomplete data.</li>
+        <li>The right to <strong>delete</strong> your data (where applicable).</li>
+        <li>The right to <strong>opt out</strong> of analytics data collection (available in App settings).</li>
+      </ul>
+      <p>To exercise any of these rights, please contact us using the information below. We will respond within a reasonable timeframe.</p>
+    </div>
+  </div>
+
+  <!-- 8. Changes to This Policy -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">8</div>
+      <h2>Changes to This Privacy Policy</h2>
+    </div>
+    <div class="section-body">
+      <p>We may update this Privacy Policy from time to time to reflect changes in the App or legal requirements. When we do, we will revise the "Last updated" date at the top of this page.</p>
+      <p>We encourage you to review this policy periodically. Continued use of the App after any changes constitutes your acceptance of the updated policy.</p>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <div class="contact-block">
+    <h3>Contact Us</h3>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or how we handle your data, feel free to reach out.</p>
+    <a href="mailto:support@novasoftlabs.com">support@novasoftlabs.com</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2026 <strong>Samsung Remote</strong>. All rights reserved.<br/>
+    This app is an independent product and is not affiliated with or endorsed by Samsung Electronics Co., Ltd.
+  </footer>
+
+</div>
+</body>
+</html>
