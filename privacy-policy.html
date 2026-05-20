@@ -3,454 +3,424 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Privacy Policy – Nova Soft Labs</title>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <title>Privacy Policy — Nova Soft Labs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
   <style>
-    :root {
-      --bg: #0a0f1e;
-      --surface: #111827;
-      --surface2: #1a2236;
-      --border: rgba(99,179,255,0.12);
-      --accent: #1a8cff;
-      --accent2: #00d4ff;
-      --text: #e2eaf7;
-      --muted: #7a90b3;
-      --heading: #ffffff;
-    }
-
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0a0f;
+      --surface: #111118;
+      --border: #1e1e2e;
+      --accent: #6c63ff;
+      --accent2: #00e5ff;
+      --text: #e8e8f0;
+      --muted: #7a7a96;
+      --tag-bg: #1a1a28;
+    }
 
     html { scroll-behavior: smooth; }
 
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 16px;
-      line-height: 1.75;
+      font-family: 'Syne', sans-serif;
+      line-height: 1.7;
       min-height: 100vh;
-      overflow-x: hidden;
     }
 
-    /* Animated background grid */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(26,140,255,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(26,140,255,0.04) 1px, transparent 1px);
-      background-size: 48px 48px;
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    /* Glow orbs */
-    body::after {
-      content: '';
-      position: fixed;
-      top: -200px;
-      right: -150px;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(26,140,255,0.12) 0%, transparent 70%);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .container {
-      position: relative;
-      z-index: 1;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 60px 24px 100px;
-    }
-
-    /* Header */
-    header {
-      text-align: center;
-      margin-bottom: 64px;
-      animation: fadeUp 0.7s ease both;
-    }
-
-    .app-badge {
-      display: inline-flex;
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
       align-items: center;
-      gap: 10px;
-      background: var(--surface2);
-      border: 1px solid var(--border);
-      border-radius: 50px;
-      padding: 8px 20px;
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--accent2);
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      margin-bottom: 24px;
+      justify-content: space-between;
+      padding: 1.2rem 5vw;
+      background: rgba(10,10,15,0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
     }
-
-    .app-badge svg {
-      width: 16px;
-      height: 16px;
-    }
-
-    h1 {
-      font-family: 'Syne', sans-serif;
-      font-size: clamp(2rem, 5vw, 3.2rem);
+    .logo {
+      font-size: 1.15rem;
       font-weight: 800;
-      color: var(--heading);
-      line-height: 1.1;
       letter-spacing: -0.02em;
-      margin-bottom: 16px;
+      color: var(--text);
+      text-decoration: none;
     }
-
-    h1 span {
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .meta {
-      font-size: 14px;
+    .logo span { color: var(--accent); }
+    .nav-link {
+      font-size: 0.85rem;
       color: var(--muted);
-      font-weight: 300;
+      text-decoration: none;
+      font-family: 'Space Mono', monospace;
+      transition: color 0.2s;
     }
+    .nav-link:hover { color: var(--accent2); }
 
-    .divider {
-      width: 60px;
-      height: 3px;
-      background: linear-gradient(90deg, var(--accent), var(--accent2));
-      border-radius: 2px;
-      margin: 24px auto 0;
-    }
-
-    /* Intro card */
-    .intro-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--accent);
-      border-radius: 12px;
-      padding: 24px 28px;
-      margin-bottom: 48px;
-      font-size: 15px;
-      color: var(--text);
-      animation: fadeUp 0.7s 0.1s ease both;
-    }
-
-    /* Sections */
-    .section {
-      margin-bottom: 40px;
-      animation: fadeUp 0.6s ease both;
-    }
-
-    .section:nth-child(3) { animation-delay: 0.15s; }
-    .section:nth-child(4) { animation-delay: 0.2s; }
-    .section:nth-child(5) { animation-delay: 0.25s; }
-    .section:nth-child(6) { animation-delay: 0.3s; }
-    .section:nth-child(7) { animation-delay: 0.35s; }
-    .section:nth-child(8) { animation-delay: 0.4s; }
-    .section:nth-child(9) { animation-delay: 0.45s; }
-    .section:nth-child(10) { animation-delay: 0.5s; }
-
-    .section-header {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 16px;
-    }
-
-    .section-num {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 36px;
-      height: 36px;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      border-radius: 8px;
-      font-family: 'Syne', sans-serif;
-      font-weight: 700;
-      font-size: 14px;
-      color: #fff;
-      flex-shrink: 0;
-    }
-
-    h2 {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--heading);
-      letter-spacing: -0.01em;
-    }
-
-    .section-body {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 22px 26px;
-    }
-
-    p {
-      color: var(--text);
-      font-size: 15px;
-      margin-bottom: 12px;
-    }
-
-    p:last-child { margin-bottom: 0; }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 8px 0;
-    }
-
-    ul li {
+    /* HERO STRIP */
+    .hero {
+      padding: 5rem 5vw 3rem;
+      border-bottom: 1px solid var(--border);
       position: relative;
-      padding-left: 20px;
-      font-size: 15px;
-      color: var(--text);
-      margin-bottom: 8px;
+      overflow: hidden;
     }
-
-    ul li::before {
+    .hero::before {
       content: '';
       position: absolute;
-      left: 0;
-      top: 10px;
-      width: 6px;
-      height: 6px;
-      background: var(--accent2);
-      border-radius: 50%;
+      top: -80px; left: -80px;
+      width: 420px; height: 420px;
+      background: radial-gradient(circle, rgba(108,99,255,0.12) 0%, transparent 70%);
+      pointer-events: none;
     }
-
-    ul li:last-child { margin-bottom: 0; }
-
-    strong {
-      color: var(--heading);
-      font-weight: 500;
-    }
-
-    /* Contact block */
-    .contact-block {
-      background: linear-gradient(135deg, rgba(26,140,255,0.1), rgba(0,212,255,0.05));
-      border: 1px solid rgba(26,140,255,0.25);
-      border-radius: 14px;
-      padding: 28px;
-      text-align: center;
-      margin-top: 48px;
-      animation: fadeUp 0.6s 0.55s ease both;
-    }
-
-    .contact-block h3 {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--heading);
-      margin-bottom: 8px;
-    }
-
-    .contact-block p {
-      color: var(--muted);
-      font-size: 14px;
-      margin-bottom: 16px;
-    }
-
-    .contact-block a {
+    .hero-tag {
       display: inline-block;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
       color: var(--accent2);
-      font-weight: 500;
-      text-decoration: none;
-      border-bottom: 1px solid rgba(0,212,255,0.3);
-      padding-bottom: 2px;
-      transition: border-color 0.2s, color 0.2s;
+      background: var(--tag-bg);
+      border: 1px solid rgba(0,229,255,0.2);
+      padding: 0.3rem 0.8rem;
+      border-radius: 2px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 1.4rem;
     }
-
-    .contact-block a:hover {
-      color: #fff;
-      border-color: #fff;
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
     }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      margin-top: 60px;
-      padding-top: 32px;
-      border-top: 1px solid var(--border);
-      font-size: 13px;
+    .hero h1 em {
+      font-style: normal;
+      color: var(--accent);
+    }
+    .hero-meta {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.78rem;
       color: var(--muted);
-      animation: fadeUp 0.6s 0.6s ease both;
+      margin-top: 1.2rem;
     }
 
-    footer strong {
+    /* LAYOUT */
+    .layout {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 0;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 5vw 6rem;
+    }
+
+    /* SIDEBAR TOC */
+    .toc {
+      padding: 3rem 2rem 3rem 0;
+      position: sticky;
+      top: 70px;
+      align-self: start;
+      height: fit-content;
+      border-right: 1px solid var(--border);
+    }
+    .toc-title {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    .toc a {
+      display: block;
+      font-size: 0.82rem;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 0.38rem 0;
+      border-left: 2px solid transparent;
+      padding-left: 0.8rem;
+      transition: all 0.2s;
+    }
+    .toc a:hover {
+      color: var(--text);
+      border-left-color: var(--accent);
+    }
+
+    /* CONTENT */
+    .content {
+      padding: 3rem 0 3rem 3rem;
+    }
+    .section {
+      margin-bottom: 3.5rem;
+      padding-bottom: 3.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .section:last-child {
+      border-bottom: none;
+    }
+    .section-num {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+    }
+    .section h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+    .section p {
+      color: #b8b8d0;
+      font-size: 0.95rem;
+      margin-bottom: 0.9rem;
+    }
+    .section ul {
+      list-style: none;
+      margin: 0.6rem 0 0.9rem 0;
+    }
+    .section ul li {
+      color: #b8b8d0;
+      font-size: 0.95rem;
+      padding: 0.3rem 0 0.3rem 1.4rem;
+      position: relative;
+    }
+    .section ul li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.8rem;
+    }
+    .highlight-box {
+      background: var(--tag-bg);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      padding: 1rem 1.2rem;
+      border-radius: 4px;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+      color: #c0c0dc;
+    }
+    .contact-block {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--tag-bg);
+      border: 1px solid rgba(108,99,255,0.3);
+      padding: 0.7rem 1.2rem;
+      border-radius: 4px;
+      margin-top: 0.5rem;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.82rem;
       color: var(--accent2);
+      text-decoration: none;
     }
+    .contact-block:hover { border-color: var(--accent2); }
 
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 5vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    footer p {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+    footer a {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 1.2rem;
+      transition: color 0.2s;
+    }
+    footer a:hover { color: var(--accent2); }
+
+    @media (max-width: 700px) {
+      .layout { grid-template-columns: 1fr; }
+      .toc { display: none; }
+      .content { padding: 2rem 0; }
     }
   </style>
 </head>
 <body>
-<div class="container">
 
-  <!-- Header -->
-  <header>
-    <div class="app-badge">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <rect x="2" y="7" width="20" height="15" rx="2"/>
-        <path d="M17 2H7L5 7h14L17 2z"/>
-        <circle cx="12" cy="14" r="2"/>
-      </svg>
-      Nova Soft Labs
+<nav>
+  <a href="https://novasoftlabs.com" class="logo">Nova<span>Soft</span> Labs</a>
+  <a href="https://novasoftlabs.com" class="nav-link">← Back to Home</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-tag">// Legal</div>
+  <h1>Privacy <em>Policy</em></h1>
+  <p style="color:var(--muted);max-width:560px;font-size:0.95rem;">We believe privacy is a right, not a checkbox. Here's exactly what we collect, why, and how we protect it.</p>
+  <div class="hero-meta">Last updated: May 2025 &nbsp;·&nbsp; Applies to all Nova Soft Labs apps</div>
+</div>
+
+<div class="layout">
+  <aside class="toc">
+    <div class="toc-title">On this page</div>
+    <a href="#overview">Overview</a>
+    <a href="#information">Information We Collect</a>
+    <a href="#usage">How We Use It</a>
+    <a href="#sharing">Sharing & Disclosure</a>
+    <a href="#storage">Data Storage & Security</a>
+    <a href="#retention">Data Retention</a>
+    <a href="#children">Children's Privacy</a>
+    <a href="#rights">Your Rights</a>
+    <a href="#thirdparty">Third-Party Services</a>
+    <a href="#changes">Policy Changes</a>
+    <a href="#contact">Contact Us</a>
+  </aside>
+
+  <main class="content">
+
+    <div class="section" id="overview">
+      <div class="section-num">01 —</div>
+      <h2>Overview</h2>
+      <p>Nova Soft Labs ("we," "our," or "us") operates remote control and device management applications, including Samsung Remote and future apps such as Chromecast Remote and LG Remote. This Privacy Policy explains how we handle information when you use any of our apps.</p>
+      <p>Our apps are designed as remote control utilities. We do not build user profiles, sell your data, or serve you ads. Our goal is simple: connect your phone to your device and get out of the way.</p>
+      <div class="highlight-box">
+        📱 This policy applies universally across all current and future Nova Soft Labs remote control apps available on Google Play and other platforms.
+      </div>
     </div>
-    <h1>Privacy <span>Policy</span></h1>
-    <p class="meta">Last updated: May 5, 2026</p>
-    <div class="divider"></div>
-  </header>
 
-  <!-- Intro -->
-  <div class="intro-card">
-    Welcome to Nova Soft Labs ("we," "our," or "us"). We are committed to protecting your privacy. This Privacy Policy applies to all mobile applications published by Nova Soft Labs on the Google Play Store (collectively referred to as the "Applications").
-
-This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Applications and the choices you have associated with that data.
-
-By downloading and using any of our Applications, you agree to the collection and use of information in accordance with this policy.
-  </div>
-
-  <!-- 1. Information We Collect -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-num">1</div>
-      <h2>Information Collection and Use</h2>
-    </div>
-    <div class="section-body">
-      <p>Our Applications are designed to provide utility, remote control, and entertainment features. Depending on the specific Application you download, we may collect different types of information to provide and improve our services:</p>
+    <div class="section" id="information">
+      <div class="section-num">02 —</div>
+      <h2>Information We Collect</h2>
+      <p>We collect only what is necessary to make the app function. We do <strong>not</strong> require account registration or collect personal identifying information to use our apps.</p>
+      <p><strong>Automatically collected (non-personal):</strong></p>
       <ul>
-        <li><strong>Personal Data:</strong> We do not actively collect personally identifiable information (such as your physical address, phone number, or government ID) unless you intentionally provide it to us when contacting support.</li>
-        <li><strong>Usage Data & Device Information:</strong> We may automatically collect information sent by your mobile device. This may include your device model, Operating System (OS) version, unique device identifiers, Internet Protocol (IP) address, and general usage statistics within the app.</li>
-        <li><strong>Permissions Required by Our Apps:</strong> To function properly, individual Applications may request access to certain device capabilities, such as:
-        <ul>
-                <li><em>Network/Wi-Fi State:</em> To detect local smart devices or smart TVs for connection.</li>
-                <li><em>Infrared (IR) Transmitter:</em> To send control signals from your phone hardware.</li>
-                <li><em>Storage/Media:</em> To store local app configurations or user preferences.</li>
-            </ul>
-            <em>(Note: These permissions are strictly used for functional utility inside your device and are never sent to our servers).</em>
-        </li>
+        <li>Device type, operating system version, and app version (for crash diagnostics)</li>
+        <li>Anonymous usage statistics (e.g. feature usage frequency, session duration)</li>
+        <li>Crash logs and error reports to improve stability</li>
       </ul>
-      <p>We do <strong>not</strong> collect your name, email address, phone number, or any other personal contact information unless you voluntarily provide it (e.g., when contacting support).</p>
+      <p><strong>Network &amp; local device data:</strong></p>
+      <ul>
+        <li>Local network information (IP addresses on your home/local network) used solely to discover and connect to your TV or device — never transmitted to our servers</li>
+        <li>Device names visible on your local network, used only within the app session</li>
+      </ul>
+      <p><strong>We do NOT collect:</strong></p>
+      <ul>
+        <li>Your name, email, phone number, or any account information</li>
+        <li>Location data (GPS or otherwise)</li>
+        <li>Contacts, photos, messages, or any unrelated device content</li>
+        <li>Browsing history or cross-app activity</li>
+        <li>Payment information (purchases are handled entirely by Google Play)</li>
+      </ul>
     </div>
-  </div>
 
-  <!-- 2. How We Use Your Information -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-num">2</div>
-      <h2>Third-Party Services and Analytics</h2>
+    <div class="section" id="usage">
+      <div class="section-num">03 —</div>
+      <h2>How We Use Information</h2>
+      <p>Any data collected is used exclusively for:</p>
+      <ul>
+        <li>Enabling core app functionality (device discovery, remote control operation)</li>
+        <li>Diagnosing crashes and fixing bugs to improve app stability</li>
+        <li>Understanding which features are most useful to improve future versions</li>
+        <li>Complying with legal obligations</li>
+      </ul>
+      <p>We do not use your data for advertising, marketing, or any purpose beyond operating and improving the app.</p>
     </div>
-    <div class="section-body">
-      <p>To keep our applications free or support their infrastructure, we may utilize trusted third-party services inside our Applications. These third parties may collect information used to identify your device in accordance with their own privacy guidelines.</p>
 
-    <p>These third-party providers may include:</p>
-    <ul>
-        <li>Google Play Services (Used to support core Android functions)</li>
-        <li>Google AdMob / Firebase (Used to serve advertisements and analyze non-identifiable app performance analytics)</li>
-    </ul>
-    <p>We recommend reviewing their respective privacy policies on their official websites to understand how they handle user data.</p>
+    <div class="section" id="sharing">
+      <div class="section-num">04 —</div>
+      <h2>Sharing &amp; Disclosure</h2>
+      <p>We do not sell, rent, trade, or share your data with third parties for commercial purposes. Period.</p>
+      <p>We may share limited, anonymized data only in these circumstances:</p>
+      <ul>
+        <li><strong>Service providers:</strong> Trusted tools like Firebase (Google) for crash analytics, used under strict data processing agreements</li>
+        <li><strong>Legal requirements:</strong> If required by law, court order, or to protect the rights and safety of our users or the public</li>
+        <li><strong>Business transfer:</strong> In the unlikely event of a merger or acquisition, user data would be disclosed as part of that transaction with the same privacy commitments</li>
+      </ul>
     </div>
-  </div>
 
-  <!-- 3. Permissions -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-num">3</div>
-      <h2>Data Retention and Security</h2>
+    <div class="section" id="storage">
+      <div class="section-num">05 —</div>
+      <h2>Data Storage &amp; Security</h2>
+      <p>App preferences and settings are stored locally on your device. Any analytics data transmitted to our service providers is encrypted in transit (TLS) and at rest.</p>
+      <p>Local network data (such as your TV's IP address) is stored only on-device and is never uploaded to any server.</p>
+      <div class="highlight-box">
+        🔒 No sensitive personal data is transmitted to or stored on Nova Soft Labs servers.
+      </div>
     </div>
-    <div class="section-body">
-     <p>The security of your data is important to us. We implement standard security protocols to safeguard any automated log information. Because our Applications generally do not require a user account signup or transmit user databases to a central server, your operational data remains local to your device.</p>
-      
-    </div>
-  </div>
 
-  <!-- 4. Data Sharing -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-num">4</div>
-      <h2>Children’s Privacy</h2>
+    <div class="section" id="retention">
+      <div class="section-num">06 —</div>
+      <h2>Data Retention</h2>
+      <p>Crash and analytics data retained by third-party services is typically held for 90 days before automatic deletion. Local app data (settings, paired devices) remains on your device until you uninstall the app or clear its data.</p>
     </div>
-    <div class="section-body">
-      <p>Our Applications are generic tools and utilities not directed at children under the age of 13. We do not knowingly collect personally identifiable information from children under 13. If we discover that a child under 13 has provided us with personal information, we immediately delete this from our records.</p>
-    </div>
-  </div>
 
-  <!-- 5. Data Storage & Security -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-num">5</div>
-      <h2>Changes to This Privacy Policy</h2>
+    <div class="section" id="children">
+      <div class="section-num">07 —</div>
+      <h2>Children's Privacy</h2>
+      <p>Our apps are general-purpose remote control utilities suitable for all ages. We do not knowingly collect any personal information from children under 13 (or the applicable age in your region). Since we collect no personal identifying information from any user, our apps are safe for family use.</p>
+      <p>If you believe your child has somehow submitted personal information through our app, please contact us immediately at <a href="mailto:support@novasoftlabs.com" style="color:var(--accent2);">support@novasoftlabs.com</a> and we will address it promptly.</p>
     </div>
-    <div class="section-body">
-     <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date at the top of this document. You are advised to review this Privacy Policy periodically for any changes.</p>
-    </div>
-  </div>
 
-  <!-- 6. Children's Privacy -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-num">6</div>
+    <div class="section" id="rights">
+      <div class="section-num">08 —</div>
+      <h2>Your Rights</h2>
+      <p>Because we collect no personal identifying information, most data rights requests are satisfied by design. However, you always have the right to:</p>
+      <ul>
+        <li>Uninstall the app to remove all locally stored data from your device</li>
+        <li>Contact us to request deletion of any analytics data associated with your app instance</li>
+        <li>Opt out of analytics by adjusting permissions in your device settings</li>
+        <li>Request information about what data, if any, we hold related to you</li>
+      </ul>
+      <p>Users in the EU/EEA, UK, California (CCPA), and other jurisdictions with data protection laws may have additional rights. We honor all applicable requests.</p>
+    </div>
+
+    <div class="section" id="thirdparty">
+      <div class="section-num">09 —</div>
+      <h2>Third-Party Services</h2>
+      <p>Our apps may use the following third-party services, each governed by their own privacy policies:</p>
+      <ul>
+        <li><strong>Google Play Services</strong> — App distribution and in-app purchases</li>
+        <li><strong>Firebase Crashlytics</strong> — Crash reporting and diagnostics</li>
+        <li><strong>Google Analytics for Firebase</strong> — Anonymous usage analytics</li>
+      </ul>
+      <p>We encourage you to review Google's Privacy Policy for details on how these services handle data: <a href="https://policies.google.com/privacy" target="_blank" style="color:var(--accent2);">policies.google.com/privacy</a></p>
+    </div>
+
+    <div class="section" id="changes">
+      <div class="section-num">10 —</div>
+      <h2>Policy Changes</h2>
+      <p>We may update this policy as we launch new apps or features. When we do, we'll update the "Last updated" date at the top of this page. For significant changes, we'll notify users via an in-app notice.</p>
+      <p>Continued use of our apps after changes constitutes acceptance of the updated policy.</p>
+    </div>
+
+    <div class="section" id="contact">
+      <div class="section-num">11 —</div>
       <h2>Contact Us</h2>
+      <p>Have a question, concern, or request about your privacy? We're here.</p>
+      <a href="mailto:support@novasoftlabs.com" class="contact-block">✉ support@novasoftlabs.com</a>
+      <p style="margin-top:1rem;">We aim to respond to all inquiries within 48 hours.</p>
     </div>
-    <div class="section-body">
-      <ul>
-        <li><strong>Email:</strong> support@novasoftlabs.com</li>
-        <li><strong>Company Name:</strong> Nova Soft Labs</li>
-    </ul>
-    </div>
+
+  </main>
+</div>
+
+<footer>
+  <p>© 2025 Nova Soft Labs. All rights reserved.</p>
+  <div>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms-of-use.html">Terms of Use</a>
+    <a href="https://novasoftlabs.com">Home</a>
   </div>
-
-  <!-- 7. Your Rights -->
-  <!-- <div class="section">
-    <div class="section-header">
-      <div class="section-num">7</div>
-      <h2>Your Rights & Choices</h2>
-    </div>
-    <div class="section-body">
-      <p>Depending on your location, you may have the following rights regarding your data:</p>
-      <ul>
-        <li>The right to <strong>access</strong> the personal data we hold about you.</li>
-        <li>The right to <strong>correct</strong> inaccurate or incomplete data.</li>
-        <li>The right to <strong>delete</strong> your data (where applicable).</li>
-        <li>The right to <strong>opt out</strong> of analytics data collection (available in App settings).</li>
-      </ul>
-      <p>To exercise any of these rights, please contact us using the information below. We will respond within a reasonable timeframe.</p>
-    </div>
-  </div> -->
-
-  <!-- 8. Changes to This Policy -->
-  <!-- <div class="section">
-    <div class="section-header">
-      <div class="section-num">8</div>
-      <h2>Changes to This Privacy Policy</h2>
-    </div>
-    <div class="section-body">
-      <p>We may update this Privacy Policy from time to time to reflect changes in the App or legal requirements. When we do, we will revise the "Last updated" date at the top of this page.</p>
-      <p>We encourage you to review this policy periodically. Continued use of the App after any changes constitutes your acceptance of the updated policy.</p>
-    </div>
-  </div> -->
-
-  <!-- Contact -->
-  <!-- <div class="contact-block">
-    <h3>Contact Us</h3>
-    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or how we handle your data, feel free to reach out.</p>
-    <a href="mailto:support@novasoftlabs.com">support@novasoftlabs.com</a>
-  </div> -->
-
-  <!-- Footer -->
-  <footer>
-    &copy; 2026 <strong>Nova Soft Labs</strong>. All rights reserved.<br/>
-    Our applications are independent utility products and are not affiliated with, sponsored by, or endorsed by any third-party device manufacturers or electronics brands.
 </footer>
 
-</div>
 </body>
 </html>
