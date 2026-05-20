@@ -3,468 +3,413 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Terms of Use – Samsung Remote</title>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <title>Terms of Use — Nova Soft Labs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
   <style>
-    :root {
-      --bg: #0a0f1e;
-      --surface: #111827;
-      --surface2: #1a2236;
-      --border: rgba(99,179,255,0.12);
-      --accent: #1a8cff;
-      --accent2: #00d4ff;
-      --text: #e2eaf7;
-      --muted: #7a90b3;
-      --heading: #ffffff;
-    }
-
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0a0f;
+      --surface: #111118;
+      --border: #1e1e2e;
+      --accent: #6c63ff;
+      --accent2: #00e5ff;
+      --text: #e8e8f0;
+      --muted: #7a7a96;
+      --tag-bg: #1a1a28;
+    }
 
     html { scroll-behavior: smooth; }
 
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 16px;
-      line-height: 1.75;
+      font-family: 'Syne', sans-serif;
+      line-height: 1.7;
       min-height: 100vh;
-      overflow-x: hidden;
     }
 
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(26,140,255,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(26,140,255,0.04) 1px, transparent 1px);
-      background-size: 48px 48px;
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    body::after {
-      content: '';
-      position: fixed;
-      top: -200px;
-      right: -150px;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(26,140,255,0.12) 0%, transparent 70%);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .container {
-      position: relative;
-      z-index: 1;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 60px 24px 100px;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 64px;
-      animation: fadeUp 0.7s ease both;
-    }
-
-    .app-badge {
-      display: inline-flex;
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
       align-items: center;
-      gap: 10px;
-      background: var(--surface2);
-      border: 1px solid var(--border);
-      border-radius: 50px;
-      padding: 8px 20px;
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--accent2);
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      margin-bottom: 24px;
+      justify-content: space-between;
+      padding: 1.2rem 5vw;
+      background: rgba(10,10,15,0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
     }
-
-    .app-badge svg { width: 16px; height: 16px; }
-
-    h1 {
-      font-family: 'Syne', sans-serif;
-      font-size: clamp(2rem, 5vw, 3.2rem);
+    .logo {
+      font-size: 1.15rem;
       font-weight: 800;
-      color: var(--heading);
-      line-height: 1.1;
       letter-spacing: -0.02em;
-      margin-bottom: 16px;
-    }
-
-    h1 span {
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .meta { font-size: 14px; color: var(--muted); font-weight: 300; }
-
-    .divider {
-      width: 60px;
-      height: 3px;
-      background: linear-gradient(90deg, var(--accent), var(--accent2));
-      border-radius: 2px;
-      margin: 24px auto 0;
-    }
-
-    .intro-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--accent);
-      border-radius: 12px;
-      padding: 24px 28px;
-      margin-bottom: 48px;
-      font-size: 15px;
       color: var(--text);
-      animation: fadeUp 0.7s 0.1s ease both;
+      text-decoration: none;
     }
-
-    .section {
-      margin-bottom: 40px;
-      animation: fadeUp 0.6s ease both;
+    .logo span { color: var(--accent); }
+    .nav-link {
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-decoration: none;
+      font-family: 'Space Mono', monospace;
+      transition: color 0.2s;
     }
+    .nav-link:hover { color: var(--accent2); }
 
-    .section:nth-child(3)  { animation-delay: 0.10s; }
-    .section:nth-child(4)  { animation-delay: 0.15s; }
-    .section:nth-child(5)  { animation-delay: 0.20s; }
-    .section:nth-child(6)  { animation-delay: 0.25s; }
-    .section:nth-child(7)  { animation-delay: 0.30s; }
-    .section:nth-child(8)  { animation-delay: 0.35s; }
-    .section:nth-child(9)  { animation-delay: 0.40s; }
-    .section:nth-child(10) { animation-delay: 0.45s; }
-    .section:nth-child(11) { animation-delay: 0.50s; }
-    .section:nth-child(12) { animation-delay: 0.55s; }
-
-    .section-header {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 16px;
-    }
-
-    .section-num {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 36px;
-      height: 36px;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      border-radius: 8px;
-      font-family: 'Syne', sans-serif;
-      font-weight: 700;
-      font-size: 14px;
-      color: #fff;
-      flex-shrink: 0;
-    }
-
-    h2 {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--heading);
-      letter-spacing: -0.01em;
-    }
-
-    .section-body {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 22px 26px;
-    }
-
-    p {
-      color: var(--text);
-      font-size: 15px;
-      margin-bottom: 12px;
-    }
-
-    p:last-child { margin-bottom: 0; }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 8px 0;
-    }
-
-    ul li {
+    .hero {
+      padding: 5rem 5vw 3rem;
+      border-bottom: 1px solid var(--border);
       position: relative;
-      padding-left: 20px;
-      font-size: 15px;
-      color: var(--text);
-      margin-bottom: 8px;
+      overflow: hidden;
     }
-
-    ul li::before {
+    .hero::before {
       content: '';
       position: absolute;
-      left: 0;
-      top: 10px;
-      width: 6px;
-      height: 6px;
-      background: var(--accent2);
-      border-radius: 50%;
+      top: -80px; right: -80px;
+      width: 420px; height: 420px;
+      background: radial-gradient(circle, rgba(0,229,255,0.08) 0%, transparent 70%);
+      pointer-events: none;
     }
-
-    ul li:last-child { margin-bottom: 0; }
-
-    strong { color: var(--heading); font-weight: 500; }
-
-    .contact-block {
-      background: linear-gradient(135deg, rgba(26,140,255,0.1), rgba(0,212,255,0.05));
-      border: 1px solid rgba(26,140,255,0.25);
-      border-radius: 14px;
-      padding: 28px;
-      text-align: center;
-      margin-top: 48px;
-      animation: fadeUp 0.6s 0.6s ease both;
-    }
-
-    .contact-block h3 {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--heading);
-      margin-bottom: 8px;
-    }
-
-    .contact-block p {
-      color: var(--muted);
-      font-size: 14px;
-      margin-bottom: 16px;
-    }
-
-    .contact-block a {
+    .hero-tag {
       display: inline-block;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
       color: var(--accent2);
-      font-weight: 500;
-      text-decoration: none;
-      border-bottom: 1px solid rgba(0,212,255,0.3);
-      padding-bottom: 2px;
-      transition: border-color 0.2s, color 0.2s;
+      background: var(--tag-bg);
+      border: 1px solid rgba(0,229,255,0.2);
+      padding: 0.3rem 0.8rem;
+      border-radius: 2px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 1.4rem;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--accent2);
+    }
+    .hero-meta {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 1.2rem;
     }
 
-    .contact-block a:hover { color: #fff; border-color: #fff; }
+    .layout {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 0;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 5vw 6rem;
+    }
+
+    .toc {
+      padding: 3rem 2rem 3rem 0;
+      position: sticky;
+      top: 70px;
+      align-self: start;
+      height: fit-content;
+      border-right: 1px solid var(--border);
+    }
+    .toc-title {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    .toc a {
+      display: block;
+      font-size: 0.82rem;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 0.38rem 0;
+      border-left: 2px solid transparent;
+      padding-left: 0.8rem;
+      transition: all 0.2s;
+    }
+    .toc a:hover {
+      color: var(--text);
+      border-left-color: var(--accent2);
+    }
+
+    .content {
+      padding: 3rem 0 3rem 3rem;
+    }
+    .section {
+      margin-bottom: 3.5rem;
+      padding-bottom: 3.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .section:last-child { border-bottom: none; }
+    .section-num {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--accent2);
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+    }
+    .section h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+    .section p {
+      color: #b8b8d0;
+      font-size: 0.95rem;
+      margin-bottom: 0.9rem;
+    }
+    .section ul {
+      list-style: none;
+      margin: 0.6rem 0 0.9rem 0;
+    }
+    .section ul li {
+      color: #b8b8d0;
+      font-size: 0.95rem;
+      padding: 0.3rem 0 0.3rem 1.4rem;
+      position: relative;
+    }
+    .section ul li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent2);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.8rem;
+    }
+    .highlight-box {
+      background: var(--tag-bg);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent2);
+      padding: 1rem 1.2rem;
+      border-radius: 4px;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+      color: #c0c0dc;
+    }
+    .contact-block {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--tag-bg);
+      border: 1px solid rgba(0,229,255,0.3);
+      padding: 0.7rem 1.2rem;
+      border-radius: 4px;
+      margin-top: 0.5rem;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.82rem;
+      color: var(--accent2);
+      text-decoration: none;
+    }
+    .contact-block:hover { border-color: var(--accent); }
 
     footer {
-      text-align: center;
-      margin-top: 60px;
-      padding-top: 32px;
       border-top: 1px solid var(--border);
-      font-size: 13px;
-      color: var(--muted);
-      animation: fadeUp 0.6s 0.65s ease both;
+      padding: 2rem 5vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
     }
+    footer p {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+    footer a {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 1.2rem;
+      transition: color 0.2s;
+    }
+    footer a:hover { color: var(--accent2); }
 
-    footer strong { color: var(--accent2); }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
+    @media (max-width: 700px) {
+      .layout { grid-template-columns: 1fr; }
+      .toc { display: none; }
+      .content { padding: 2rem 0; }
     }
   </style>
 </head>
 <body>
-<div class="container">
 
-  <!-- Header -->
-  <header>
-    <div class="app-badge">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <rect x="2" y="7" width="20" height="15" rx="2"/>
-        <path d="M17 2H7L5 7h14L17 2z"/>
-        <circle cx="12" cy="14" r="2"/>
-      </svg>
-      Samsung Remote App
-    </div>
-    <h1>Terms <span>of Use</span></h1>
-    <p class="meta">Last updated: May 5, 2026</p>
-    <div class="divider"></div>
-  </header>
+<nav>
+  <a href="https://novasoftlabs.com" class="logo">Nova<span>Soft</span> Labs</a>
+  <a href="https://novasoftlabs.com" class="nav-link">← Back to Home</a>
+</nav>
 
-  <!-- Intro -->
-  <div class="intro-card">
-    Please read these Terms of Use ("Terms") carefully before using the <strong>Samsung Remote</strong> app ("the App") developed by <strong>NovaSoft Labs</strong>. By downloading, installing, or using the App, you agree to be bound by these Terms. If you do not agree, please do not use the App.
-  </div>
-
-  <!-- 1. Acceptance of Terms -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-num">1</div>
-      <h2>Acceptance of Terms</h2>
-    </div>
-    <div class="section-body">
-      <p>By accessing or using Samsung Remote, you confirm that you are at least <strong>13 years of age</strong>, have read and understood these Terms, and agree to be legally bound by them. If you are using the App on behalf of an organization, you represent that you have the authority to bind that organization to these Terms.</p>
-      <p>NovaSoft Labs reserves the right to update or modify these Terms at any time. Continued use of the App after changes are posted constitutes your acceptance of the revised Terms.</p>
-    </div>
-  </div>
-
-  <!-- 2. Description of the App -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-num">2</div>
-      <h2>Description of the App</h2>
-    </div>
-    <div class="section-body">
-      <p>Samsung Remote is a third-party remote control application that allows users to control compatible Samsung Smart TVs over a local Wi-Fi network. The App provides features such as:</p>
-      <ul>
-        <li>Remote control of Samsung Smart TVs (power, volume, channels, navigation)</li>
-        <li>Auto-discovery of Samsung TVs on the local network</li>
-        <li>Customizable remote layouts and shortcuts</li>
-      </ul>
-      <p><strong>Important:</strong> Samsung Remote is an independent application and is <strong>not affiliated with, endorsed by, or officially connected to Samsung Electronics Co., Ltd.</strong> in any way. "Samsung" is a registered trademark of Samsung Electronics Co., Ltd.</p>
-    </div>
-  </div>
-
-  <!-- 3. License -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-num">3</div>
-      <h2>License to Use</h2>
-    </div>
-    <div class="section-body">
-      <p>NovaSoft Labs grants you a limited, non-exclusive, non-transferable, revocable license to download and use the App on your personal Android device solely for your personal, non-commercial purposes, subject to these Terms.</p>
-      <p>You may <strong>not</strong>:</p>
-      <ul>
-        <li>Copy, modify, or create derivative works of the App</li>
-        <li>Reverse engineer, decompile, or disassemble the App</li>
-        <li>Sell, sublicense, rent, or transfer the App to any third party</li>
-        <li>Remove or alter any proprietary notices or labels on the App</li>
-        <li>Use the App for any illegal or unauthorized purpose</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- 4. User Responsibilities -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-num">4</div>
-      <h2>User Responsibilities</h2>
-    </div>
-    <div class="section-body">
-      <p>You are responsible for your use of the App and any consequences thereof. You agree to:</p>
-      <ul>
-        <li>Use the App only on devices and networks you own or have permission to use.</li>
-        <li>Ensure your device meets the minimum requirements for the App to function properly.</li>
-        <li>Keep your device and network secure to prevent unauthorized access via the App.</li>
-        <li>Not use the App to interfere with, disrupt, or gain unauthorized access to any TV, device, or network you do not own.</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- 5. Intellectual Property -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-num">5</div>
-      <h2>Intellectual Property</h2>
-    </div>
-    <div class="section-body">
-      <p>All content, design, code, graphics, logos, and other materials within the App are the intellectual property of <strong>NovaSoft Labs</strong> and are protected by applicable copyright, trademark, and other intellectual property laws.</p>
-      <p>You may not reproduce, distribute, or use any part of the App's content without prior written permission from NovaSoft Labs, except as expressly permitted by these Terms.</p>
-    </div>
-  </div>
-
-  <!-- 6. Disclaimers -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-num">6</div>
-      <h2>Disclaimers</h2>
-    </div>
-    <div class="section-body">
-      <p>The App is provided on an <strong>"as is" and "as available"</strong> basis without warranties of any kind, either express or implied. NovaSoft Labs does not warrant that:</p>
-      <ul>
-        <li>The App will be error-free, uninterrupted, or secure at all times.</li>
-        <li>The App will be compatible with all Samsung TV models or firmware versions.</li>
-        <li>Any defects or errors in the App will be corrected.</li>
-      </ul>
-      <p>Compatibility depends on your TV model, firmware version, and network setup. We make no guarantee of uninterrupted connectivity.</p>
-    </div>
-  </div>
-
-  <!-- 7. Limitation of Liability -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-num">7</div>
-      <h2>Limitation of Liability</h2>
-    </div>
-    <div class="section-body">
-      <p>To the fullest extent permitted by law, NovaSoft Labs shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of — or inability to use — the App, including but not limited to:</p>
-      <ul>
-        <li>Loss of data or device malfunction</li>
-        <li>Unauthorized access to your TV or network</li>
-        <li>Any damage caused by reliance on the App's functionality</li>
-      </ul>
-      <p>Our total liability to you for any claim arising from these Terms or your use of the App shall not exceed the amount you paid (if any) to download or use the App.</p>
-    </div>
-  </div>
-
-  <!-- 8. Third-Party Services -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-num">8</div>
-      <h2>Third-Party Services</h2>
-    </div>
-    <div class="section-body">
-      <p>The App may integrate with or rely on third-party services (such as Google Play Services or analytics providers). Your use of those services is governed by their own terms and privacy policies. NovaSoft Labs is not responsible for the practices of any third-party service providers.</p>
-    </div>
-  </div>
-
-  <!-- 9. Termination -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-num">9</div>
-      <h2>Termination</h2>
-    </div>
-    <div class="section-body">
-      <p>NovaSoft Labs reserves the right to suspend or terminate your access to the App at any time, with or without notice, for conduct that violates these Terms or is otherwise harmful to other users, NovaSoft Labs, or third parties.</p>
-      <p>You may stop using the App at any time by uninstalling it from your device. Upon termination, all licenses granted to you under these Terms will immediately cease.</p>
-    </div>
-  </div>
-
-  <!-- 10. Governing Law -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-num">10</div>
-      <h2>Governing Law</h2>
-    </div>
-    <div class="section-body">
-      <p>These Terms shall be governed by and construed in accordance with the laws of the jurisdiction in which NovaSoft Labs operates, without regard to its conflict of law provisions.</p>
-      <p>Any disputes arising out of or related to these Terms or the App shall first be attempted to be resolved through good-faith negotiation. If unresolved, disputes shall be submitted to the competent courts of the applicable jurisdiction.</p>
-    </div>
-  </div>
-
-  <!-- 11. Changes to Terms -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-num">11</div>
-      <h2>Changes to These Terms</h2>
-    </div>
-    <div class="section-body">
-      <p>We may revise these Terms of Use at any time by updating this page. The "Last updated" date at the top will reflect when changes were made. We encourage you to review these Terms periodically.</p>
-      <p>Your continued use of the App following the posting of revised Terms means you accept and agree to the changes.</p>
-    </div>
-  </div>
-
-  <!-- Contact -->
-  <div class="contact-block">
-    <h3>Questions or Concerns?</h3>
-    <p>If you have any questions about these Terms of Use, please contact our support team.</p>
-    <a href="mailto:support@novasoftlabs.com">support@novasoftlabs.com</a>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-    &copy; 2026 <strong>NovaSoft Labs</strong>. All rights reserved.<br/>
-    Samsung Remote is an independent app and is not affiliated with or endorsed by Samsung Electronics Co., Ltd.
-  </footer>
-
+<div class="hero">
+  <div class="hero-tag">// Legal</div>
+  <h1>Terms of <em>Use</em></h1>
+  <p style="color:var(--muted);max-width:560px;font-size:0.95rem;">By using any Nova Soft Labs app, you agree to these terms. We've written them to be clear and fair — please read them.</p>
+  <div class="hero-meta">Last updated: May 2025 &nbsp;·&nbsp; Applies to all Nova Soft Labs apps</div>
 </div>
+
+<div class="layout">
+  <aside class="toc">
+    <div class="toc-title">On this page</div>
+    <a href="#acceptance">Acceptance of Terms</a>
+    <a href="#description">App Description</a>
+    <a href="#license">License to Use</a>
+    <a href="#conduct">Acceptable Use</a>
+    <a href="#purchases">In-App Purchases</a>
+    <a href="#ip">Intellectual Property</a>
+    <a href="#disclaimer">Disclaimer</a>
+    <a href="#liability">Limitation of Liability</a>
+    <a href="#thirdparty">Third-Party Services</a>
+    <a href="#termination">Termination</a>
+    <a href="#changes">Changes to Terms</a>
+    <a href="#governing">Governing Law</a>
+    <a href="#contact">Contact Us</a>
+  </aside>
+
+  <main class="content">
+
+    <div class="section" id="acceptance">
+      <div class="section-num">01 —</div>
+      <h2>Acceptance of Terms</h2>
+      <p>By downloading, installing, or using any application developed by Nova Soft Labs ("we," "our," or "us"), you agree to be bound by these Terms of Use. If you do not agree to these terms, please do not use our apps.</p>
+      <p>These terms apply to all Nova Soft Labs applications including, but not limited to, Samsung Remote, Chromecast Remote, LG Remote, and any future apps we publish.</p>
+    </div>
+
+    <div class="section" id="description">
+      <div class="section-num">02 —</div>
+      <h2>App Description</h2>
+      <p>Nova Soft Labs develops remote control applications that allow users to control compatible smart TVs, streaming devices, and home entertainment systems from their mobile device over a local Wi-Fi network.</p>
+      <p>Our apps are utility tools. They require a compatible device and a local network connection to function. We do not guarantee compatibility with all device models or firmware versions.</p>
+    </div>
+
+    <div class="section" id="license">
+      <div class="section-num">03 —</div>
+      <h2>License to Use</h2>
+      <p>We grant you a limited, non-exclusive, non-transferable, revocable license to use our apps for personal, non-commercial purposes on devices you own or control, subject to these Terms.</p>
+      <p>This license does not allow you to:</p>
+      <ul>
+        <li>Copy, modify, or create derivative works of our apps</li>
+        <li>Reverse-engineer, decompile, or disassemble the app</li>
+        <li>Sell, rent, lease, or sublicense the app to others</li>
+        <li>Remove or alter any copyright, trademark, or proprietary notices</li>
+        <li>Use the app for any commercial purpose without our written consent</li>
+      </ul>
+    </div>
+
+    <div class="section" id="conduct">
+      <div class="section-num">04 —</div>
+      <h2>Acceptable Use</h2>
+      <p>You agree to use our apps only for lawful purposes and in accordance with these Terms. You must not use our apps to:</p>
+      <ul>
+        <li>Control or access any device without the owner's permission</li>
+        <li>Interfere with or disrupt any network, server, or device</li>
+        <li>Attempt to gain unauthorized access to any system or network</li>
+        <li>Use the app in any way that violates applicable local, national, or international law</li>
+      </ul>
+      <div class="highlight-box">
+        ⚠️ Our apps are designed for use with devices you own or have permission to control. Unauthorized use of remote control functionality against devices you do not own is strictly prohibited.
+      </div>
+    </div>
+
+    <div class="section" id="purchases">
+      <div class="section-num">05 —</div>
+      <h2>In-App Purchases</h2>
+      <p>Some features may be available as in-app purchases or subscriptions processed through Google Play. All purchases are subject to Google Play's terms and policies.</p>
+      <ul>
+        <li>Prices are displayed in your local currency as set by Google Play</li>
+        <li>Subscriptions automatically renew unless cancelled at least 24 hours before the renewal date</li>
+        <li>Refunds are handled in accordance with Google Play's refund policy</li>
+        <li>We do not collect or store your payment information — all transactions are managed by Google</li>
+      </ul>
+      <p>To cancel a subscription or request a refund, visit your Google Play subscription settings or contact us at <a href="mailto:support@novasoftlabs.com" style="color:var(--accent2);">support@novasoftlabs.com</a>.</p>
+    </div>
+
+    <div class="section" id="ip">
+      <div class="section-num">06 —</div>
+      <h2>Intellectual Property</h2>
+      <p>All content, features, and functionality in our apps — including but not limited to code, graphics, logos, icons, and interface design — are owned by Nova Soft Labs and protected by applicable intellectual property laws.</p>
+      <p>Third-party trademarks (such as Samsung®, Chromecast®, LG®) referenced in our apps are the property of their respective owners. Nova Soft Labs is not affiliated with, endorsed by, or officially connected to any of these companies.</p>
+    </div>
+
+    <div class="section" id="disclaimer">
+      <div class="section-num">07 —</div>
+      <h2>Disclaimer of Warranties</h2>
+      <p>Our apps are provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind, either express or implied, including but not limited to:</p>
+      <ul>
+        <li>Merchantability or fitness for a particular purpose</li>
+        <li>Uninterrupted, error-free, or secure operation</li>
+        <li>Compatibility with any specific device, TV, or firmware version</li>
+        <li>Accuracy or completeness of any content or features</li>
+      </ul>
+      <p>We reserve the right to modify, suspend, or discontinue any feature at any time without notice.</p>
+    </div>
+
+    <div class="section" id="liability">
+      <div class="section-num">08 —</div>
+      <h2>Limitation of Liability</h2>
+      <p>To the fullest extent permitted by applicable law, Nova Soft Labs shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of, or inability to use, our apps.</p>
+      <p>In no event shall our total liability to you for all claims exceed the amount you paid us in the twelve months prior to the event giving rise to the claim (or $5 USD if you have not made any purchases).</p>
+    </div>
+
+    <div class="section" id="thirdparty">
+      <div class="section-num">09 —</div>
+      <h2>Third-Party Services</h2>
+      <p>Our apps may use or integrate with third-party services such as Google Play, Firebase, and device manufacturer APIs. These services are governed by their own terms and privacy policies. We are not responsible for the practices of any third-party services.</p>
+      <p>Links or references to third-party services do not constitute an endorsement by Nova Soft Labs.</p>
+    </div>
+
+    <div class="section" id="termination">
+      <div class="section-num">10 —</div>
+      <h2>Termination</h2>
+      <p>We may terminate or suspend your access to our apps immediately, without prior notice, if you breach these Terms or engage in conduct that we determine is harmful to other users, us, or third parties.</p>
+      <p>Upon termination, your license to use the app is revoked. Provisions of these Terms that by their nature should survive termination shall continue in effect.</p>
+    </div>
+
+    <div class="section" id="changes">
+      <div class="section-num">11 —</div>
+      <h2>Changes to Terms</h2>
+      <p>We reserve the right to update these Terms at any time. When we do, we will update the "Last updated" date at the top of this page. For material changes, we may also notify users via an in-app notice.</p>
+      <p>Your continued use of our apps after any changes constitutes your acceptance of the revised Terms.</p>
+    </div>
+
+    <div class="section" id="governing">
+      <div class="section-num">12 —</div>
+      <h2>Governing Law</h2>
+      <p>These Terms shall be governed by and construed in accordance with applicable law. Any disputes arising from these Terms or your use of our apps shall be resolved through good-faith negotiation, and if necessary, through binding arbitration or courts of competent jurisdiction.</p>
+    </div>
+
+    <div class="section" id="contact">
+      <div class="section-num">13 —</div>
+      <h2>Contact Us</h2>
+      <p>If you have any questions about these Terms or need support with any of our apps, reach out to us:</p>
+      <a href="mailto:support@novasoftlabs.com" class="contact-block">✉ support@novasoftlabs.com</a>
+      <p style="margin-top:1rem;">We aim to respond to all inquiries within 48 hours.</p>
+    </div>
+
+  </main>
+</div>
+
+<footer>
+  <p>© 2025 Nova Soft Labs. All rights reserved.</p>
+  <div>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms-of-use.html">Terms of Use</a>
+    <a href="https://novasoftlabs.com">Home</a>
+  </div>
+</footer>
+
 </body>
 </html>
