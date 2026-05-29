@@ -9,7 +9,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
       --bg: #0a0a0f;
       --surface: #111118;
@@ -20,9 +19,7 @@
       --muted: #7a7a96;
       --tag-bg: #1a1a28;
     }
-
     html { scroll-behavior: smooth; }
-
     body {
       background: var(--bg);
       color: var(--text);
@@ -30,7 +27,6 @@
       line-height: 1.7;
       min-height: 100vh;
     }
-
     /* NAV */
     nav {
       position: sticky;
@@ -60,7 +56,6 @@
       transition: color 0.2s;
     }
     .nav-link:hover { color: var(--accent2); }
-
     /* HERO STRIP */
     .hero {
       padding: 5rem 5vw 3rem;
@@ -106,7 +101,6 @@
       color: var(--muted);
       margin-top: 1.2rem;
     }
-
     /* LAYOUT */
     .layout {
       display: grid;
@@ -116,7 +110,6 @@
       margin: 0 auto;
       padding: 0 5vw 6rem;
     }
-
     /* SIDEBAR TOC */
     .toc {
       padding: 3rem 2rem 3rem 0;
@@ -148,7 +141,6 @@
       color: var(--text);
       border-left-color: var(--accent);
     }
-
     /* CONTENT */
     .content {
       padding: 3rem 0 3rem 3rem;
@@ -222,7 +214,6 @@
       text-decoration: none;
     }
     .contact-block:hover { border-color: var(--accent2); }
-
     /* FOOTER */
     footer {
       border-top: 1px solid var(--border);
@@ -247,7 +238,6 @@
       transition: color 0.2s;
     }
     footer a:hover { color: var(--accent2); }
-
     @media (max-width: 700px) {
       .layout { grid-template-columns: 1fr; }
       .toc { display: none; }
@@ -256,27 +246,26 @@
   </style>
 </head>
 <body>
-
 <nav>
   <a href="https://novasoftlabs.com" class="logo">Nova<span>Soft</span> Labs</a>
   <a href="https://novasoftlabs.com" class="nav-link">← Back to Home</a>
 </nav>
-
 <div class="hero">
   <div class="hero-tag">// Legal</div>
   <h1>Privacy <em>Policy</em></h1>
   <p style="color:var(--muted);max-width:560px;font-size:0.95rem;">We believe privacy is a right, not a checkbox. Here's exactly what we collect, why, and how we protect it.</p>
   <div class="hero-meta">Last updated: May 2026 &nbsp;·&nbsp; Applies to all Nova Soft Labs apps</div>
 </div>
-
 <div class="layout">
   <aside class="toc">
     <div class="toc-title">On this page</div>
     <a href="#overview">Overview</a>
     <a href="#information">Information We Collect</a>
     <a href="#usage">How We Use It</a>
-    <a href="#sharing">Sharing & Disclosure</a>
-    <a href="#storage">Data Storage & Security</a>
+    <a href="#advertising">Advertising (AdMob)</a>
+    <a href="#purchases">In-App Purchases</a>
+    <a href="#sharing">Sharing &amp; Disclosure</a>
+    <a href="#storage">Data Storage &amp; Security</a>
     <a href="#retention">Data Retention</a>
     <a href="#children">Children's Privacy</a>
     <a href="#rights">Your Rights</a>
@@ -284,14 +273,13 @@
     <a href="#changes">Policy Changes</a>
     <a href="#contact">Contact Us</a>
   </aside>
-
   <main class="content">
 
     <div class="section" id="overview">
       <div class="section-num">01 —</div>
       <h2>Overview</h2>
-      <p>Nova Soft Labs ("we," "our," or "us") operates remote control and device management applications, including Samsung Remote and future apps such as Chromecast Remote and LG Remote. This Privacy Policy explains how we handle information when you use any of our apps.</p>
-      <p>Our apps are designed as remote control utilities. We do not build user profiles, sell your data, or serve you ads. Our goal is simple: connect your phone to your device and get out of the way.</p>
+      <p>Nova Soft Labs ("we," "our," or "us") operates remote control and device management applications, including Samsung Remote, Chromecast Remote, LG Remote, and any future apps we publish. This Privacy Policy explains how we handle information when you use any of our apps.</p>
+      <p>Our apps are designed as remote control utilities. We are committed to being transparent about how data is collected and used — including by third-party services such as advertising and analytics providers integrated into our apps.</p>
       <div class="highlight-box">
         📱 This policy applies universally across all current and future Nova Soft Labs remote control apps available on Google Play and other platforms.
       </div>
@@ -312,12 +300,19 @@
         <li>Local network information (IP addresses on your home/local network) used solely to discover and connect to your TV or device — never transmitted to our servers</li>
         <li>Device names visible on your local network, used only within the app session</li>
       </ul>
+      <p><strong>Collected by third-party SDKs (advertising &amp; analytics):</strong></p>
+      <ul>
+        <li>Advertising ID (Google Advertising ID / GAID) — collected by Google AdMob for ad serving</li>
+        <li>Device information (model, OS version, screen size) — used by AdMob for ad targeting</li>
+        <li>App interaction data (ad impressions, clicks) — collected by AdMob</li>
+        <li>Approximate location (derived from IP address) — may be used by AdMob for geo-targeted ads</li>
+      </ul>
       <p><strong>We do NOT collect:</strong></p>
       <ul>
         <li>Your name, email, phone number, or any account information</li>
-        <li>Location data (GPS or otherwise)</li>
+        <li>Precise location data (GPS)</li>
         <li>Contacts, photos, messages, or any unrelated device content</li>
-        <li>Browsing history or cross-app activity</li>
+        <li>Browsing history or cross-app activity (beyond what AdMob collects for ad personalization)</li>
         <li>Payment information (purchases are handled entirely by Google Play)</li>
       </ul>
     </div>
@@ -325,22 +320,61 @@
     <div class="section" id="usage">
       <div class="section-num">03 —</div>
       <h2>How We Use Information</h2>
-      <p>Any data collected is used exclusively for:</p>
+      <p>Any data collected by us is used exclusively for:</p>
       <ul>
         <li>Enabling core app functionality (device discovery, remote control operation)</li>
         <li>Diagnosing crashes and fixing bugs to improve app stability</li>
         <li>Understanding which features are most useful to improve future versions</li>
+        <li>Displaying advertisements through Google AdMob to support free app features</li>
         <li>Complying with legal obligations</li>
       </ul>
-      <p>We do not use your data for advertising, marketing, or any purpose beyond operating and improving the app.</p>
+      <p>Data collected by third-party SDKs (such as Google AdMob) is used by those providers in accordance with their own privacy policies, which may include ad personalization and cross-app tracking.</p>
+    </div>
+
+    <div class="section" id="advertising">
+      <div class="section-num">04 —</div>
+      <h2>Advertising (Google AdMob)</h2>
+      <p>Our apps display advertisements provided by <strong>Google AdMob</strong>, a third-party advertising service operated by Google LLC. AdMob helps us keep our apps free by showing relevant ads to users.</p>
+      <p><strong>What AdMob collects:</strong></p>
+      <ul>
+        <li>Google Advertising ID (GAID) — a resettable device identifier used for ad targeting</li>
+        <li>Device information (model, OS version, language, time zone)</li>
+        <li>Ad interaction data (impressions, clicks, and view time)</li>
+        <li>Approximate location based on IP address (for geo-targeted ads)</li>
+        <li>App usage context (to serve relevant ads)</li>
+      </ul>
+      <p><strong>Personalized Ads:</strong> By default, AdMob may serve personalized advertisements based on your interests and past interactions across apps and websites. This is done using the Google Advertising ID on your device.</p>
+      <div class="highlight-box">
+        🔧 <strong>Opt-Out of Personalized Ads:</strong> You can reset or delete your Google Advertising ID at any time by going to <strong>Settings → Google → Ads</strong> on your Android device. Selecting "Delete advertising ID" will prevent all apps on your device from using it for personalized advertising.
+      </div>
+      <p>AdMob's data collection and use is governed by Google's Privacy Policy. We encourage you to review it at <a href="https://policies.google.com/privacy" target="_blank" style="color:var(--accent2);">policies.google.com/privacy</a>.</p>
+      <p>For more information on how Google uses data from apps that use AdMob, visit: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" style="color:var(--accent2);">policies.google.com/technologies/partner-sites</a>.</p>
+    </div>
+
+    <div class="section" id="purchases">
+      <div class="section-num">05 —</div>
+      <h2>In-App Purchases</h2>
+      <p>Some of our apps offer in-app purchases or premium features that can be unlocked through a one-time purchase or subscription. All transactions are processed securely by <strong>Google Play</strong>.</p>
+      <p><strong>What this means for your data:</strong></p>
+      <ul>
+        <li>We do not collect, store, or have access to your payment card details or billing information — this is handled entirely by Google Play</li>
+        <li>Google Play may share a purchase confirmation with us (e.g. whether a purchase was completed) solely to unlock the relevant premium feature in the app</li>
+        <li>Purchase history is managed through your Google Play account</li>
+      </ul>
+      <p><strong>Subscriptions:</strong> If you purchase a subscription, it will automatically renew unless cancelled at least 24 hours before the end of the current billing period. You can manage or cancel subscriptions at any time through your Google Play account settings.</p>
+      <p><strong>Refunds:</strong> Refund requests are handled in accordance with Google Play's refund policy. You may also contact us at <a href="mailto:support@novasoftlabs.com" style="color:var(--accent2);">support@novasoftlabs.com</a> for assistance.</p>
+      <div class="highlight-box">
+        💳 Nova Soft Labs never sees or stores your payment information. All billing is managed securely by Google Play.
+      </div>
     </div>
 
     <div class="section" id="sharing">
-      <div class="section-num">04 —</div>
+      <div class="section-num">06 —</div>
       <h2>Sharing &amp; Disclosure</h2>
-      <p>We do not sell, rent, trade, or share your data with third parties for commercial purposes. Period.</p>
-      <p>We may share limited, anonymized data only in these circumstances:</p>
+      <p>We do not sell, rent, or trade your personal data with third parties for their own commercial purposes.</p>
+      <p>We may share limited data only in these circumstances:</p>
       <ul>
+        <li><strong>Advertising partners:</strong> Google AdMob receives device and usage data as described in the Advertising section above, for the purpose of serving ads in our apps</li>
         <li><strong>Service providers:</strong> Trusted tools like Firebase (Google) for crash analytics, used under strict data processing agreements</li>
         <li><strong>Legal requirements:</strong> If required by law, court order, or to protect the rights and safety of our users or the public</li>
         <li><strong>Business transfer:</strong> In the unlikely event of a merger or acquisition, user data would be disclosed as part of that transaction with the same privacy commitments</li>
@@ -348,47 +382,52 @@
     </div>
 
     <div class="section" id="storage">
-      <div class="section-num">05 —</div>
+      <div class="section-num">07 —</div>
       <h2>Data Storage &amp; Security</h2>
       <p>App preferences and settings are stored locally on your device. Any analytics data transmitted to our service providers is encrypted in transit (TLS) and at rest.</p>
       <p>Local network data (such as your TV's IP address) is stored only on-device and is never uploaded to any server.</p>
       <div class="highlight-box">
-        🔒 No sensitive personal data is transmitted to or stored on Nova Soft Labs servers.
+        🔒 No sensitive personal data is transmitted to or stored on Nova Soft Labs servers. Data collected by third-party services (AdMob, Firebase) is stored on their respective infrastructure under their own security standards.
       </div>
     </div>
 
     <div class="section" id="retention">
-      <div class="section-num">06 —</div>
+      <div class="section-num">08 —</div>
       <h2>Data Retention</h2>
       <p>Crash and analytics data retained by third-party services is typically held for 90 days before automatic deletion. Local app data (settings, paired devices) remains on your device until you uninstall the app or clear its data.</p>
+      <p>Data retained by Google AdMob and Google Play is subject to Google's own data retention policies, which you can review at <a href="https://policies.google.com/privacy" target="_blank" style="color:var(--accent2);">policies.google.com/privacy</a>.</p>
     </div>
 
     <div class="section" id="children">
-      <div class="section-num">07 —</div>
+      <div class="section-num">09 —</div>
       <h2>Children's Privacy</h2>
-      <p>Our apps are general-purpose remote control utilities suitable for all ages. We do not knowingly collect any personal information from children under 13 (or the applicable age in your region). Since we collect no personal identifying information from any user, our apps are safe for family use.</p>
-      <p>If you believe your child has somehow submitted personal information through our app, please contact us immediately at <a href="mailto:support@novasoftlabs.com" style="color:var(--accent2);">support@novasoftlabs.com</a> and we will address it promptly.</p>
+      <p>Our apps are general-purpose remote control utilities intended for users of all ages, but advertising features are not directed at children under 13. We do not knowingly collect personal information from children under 13 (or the applicable age in your region).</p>
+      <p>If you are a parent or guardian and believe your child has been exposed to personalized advertising through our apps, you can opt out using your device's ad settings as described in the Advertising section above.</p>
+      <p>If you believe your child has submitted personal information through our app, please contact us immediately at <a href="mailto:support@novasoftlabs.com" style="color:var(--accent2);">support@novasoftlabs.com</a> and we will address it promptly.</p>
     </div>
 
     <div class="section" id="rights">
-      <div class="section-num">08 —</div>
+      <div class="section-num">10 —</div>
       <h2>Your Rights</h2>
-      <p>Because we collect no personal identifying information, most data rights requests are satisfied by design. However, you always have the right to:</p>
+      <p>You have the following rights regarding your data:</p>
       <ul>
         <li>Uninstall the app to remove all locally stored data from your device</li>
+        <li>Reset or delete your Google Advertising ID to opt out of personalized ads (Settings → Google → Ads)</li>
         <li>Contact us to request deletion of any analytics data associated with your app instance</li>
-        <li>Opt out of analytics by adjusting permissions in your device settings</li>
+        <li>Opt out of analytics by adjusting app permissions in your device settings</li>
+        <li>Manage or cancel in-app purchases and subscriptions via your Google Play account</li>
         <li>Request information about what data, if any, we hold related to you</li>
       </ul>
       <p>Users in the EU/EEA, UK, California (CCPA), and other jurisdictions with data protection laws may have additional rights. We honor all applicable requests.</p>
     </div>
 
     <div class="section" id="thirdparty">
-      <div class="section-num">09 —</div>
+      <div class="section-num">11 —</div>
       <h2>Third-Party Services</h2>
-      <p>Our apps may use the following third-party services, each governed by their own privacy policies:</p>
+      <p>Our apps use the following third-party services, each governed by their own privacy policies:</p>
       <ul>
-        <li><strong>Google Play Services</strong> — App distribution and in-app purchases</li>
+        <li><strong>Google AdMob</strong> — In-app advertising and ad personalization</li>
+        <li><strong>Google Play Services</strong> — App distribution, billing, and in-app purchases</li>
         <li><strong>Firebase Crashlytics</strong> — Crash reporting and diagnostics</li>
         <li><strong>Google Analytics for Firebase</strong> — Anonymous usage analytics</li>
       </ul>
@@ -396,14 +435,14 @@
     </div>
 
     <div class="section" id="changes">
-      <div class="section-num">10 —</div>
+      <div class="section-num">12 —</div>
       <h2>Policy Changes</h2>
       <p>We may update this policy as we launch new apps or features. When we do, we'll update the "Last updated" date at the top of this page. For significant changes, we'll notify users via an in-app notice.</p>
       <p>Continued use of our apps after changes constitutes acceptance of the updated policy.</p>
     </div>
 
     <div class="section" id="contact">
-      <div class="section-num">11 —</div>
+      <div class="section-num">13 —</div>
       <h2>Contact Us</h2>
       <p>Have a question, concern, or request about your privacy? We're here.</p>
       <a href="mailto:support@novasoftlabs.com" class="contact-block">✉ support@novasoftlabs.com</a>
@@ -412,7 +451,6 @@
 
   </main>
 </div>
-
 <footer>
   <p>© 2026 Nova Soft Labs. All rights reserved.</p>
   <div>
@@ -421,6 +459,5 @@
     <a href="https://novasoftlabs.com">Home</a>
   </div>
 </footer>
-
 </body>
 </html>
