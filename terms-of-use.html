@@ -9,7 +9,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
       --bg: #0a0a0f;
       --surface: #111118;
@@ -20,9 +19,7 @@
       --muted: #7a7a96;
       --tag-bg: #1a1a28;
     }
-
     html { scroll-behavior: smooth; }
-
     body {
       background: var(--bg);
       color: var(--text);
@@ -30,7 +27,6 @@
       line-height: 1.7;
       min-height: 100vh;
     }
-
     nav {
       position: sticky;
       top: 0;
@@ -59,7 +55,6 @@
       transition: color 0.2s;
     }
     .nav-link:hover { color: var(--accent2); }
-
     .hero {
       padding: 5rem 5vw 3rem;
       border-bottom: 1px solid var(--border);
@@ -69,9 +64,9 @@
     .hero::before {
       content: '';
       position: absolute;
-      top: -80px; right: -80px;
+      top: -80px; left: -80px;
       width: 420px; height: 420px;
-      background: radial-gradient(circle, rgba(0,229,255,0.08) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(108,99,255,0.12) 0%, transparent 70%);
       pointer-events: none;
     }
     .hero-tag {
@@ -96,7 +91,7 @@
     }
     .hero h1 em {
       font-style: normal;
-      color: var(--accent2);
+      color: var(--accent);
     }
     .hero-meta {
       font-family: 'Space Mono', monospace;
@@ -104,7 +99,6 @@
       color: var(--muted);
       margin-top: 1.2rem;
     }
-
     .layout {
       display: grid;
       grid-template-columns: 240px 1fr;
@@ -113,7 +107,6 @@
       margin: 0 auto;
       padding: 0 5vw 6rem;
     }
-
     .toc {
       padding: 3rem 2rem 3rem 0;
       position: sticky;
@@ -142,9 +135,8 @@
     }
     .toc a:hover {
       color: var(--text);
-      border-left-color: var(--accent2);
+      border-left-color: var(--accent);
     }
-
     .content {
       padding: 3rem 0 3rem 3rem;
     }
@@ -153,11 +145,13 @@
       padding-bottom: 3.5rem;
       border-bottom: 1px solid var(--border);
     }
-    .section:last-child { border-bottom: none; }
+    .section:last-child {
+      border-bottom: none;
+    }
     .section-num {
       font-family: 'Space Mono', monospace;
       font-size: 0.7rem;
-      color: var(--accent2);
+      color: var(--accent);
       letter-spacing: 0.1em;
       margin-bottom: 0.5rem;
     }
@@ -186,26 +180,29 @@
       content: '→';
       position: absolute;
       left: 0;
-      color: var(--accent2);
+      color: var(--accent);
       font-family: 'Space Mono', monospace;
       font-size: 0.8rem;
     }
     .highlight-box {
       background: var(--tag-bg);
       border: 1px solid var(--border);
-      border-left: 3px solid var(--accent2);
+      border-left: 3px solid var(--accent);
       padding: 1rem 1.2rem;
       border-radius: 4px;
       margin: 1rem 0;
       font-size: 0.9rem;
       color: #c0c0dc;
     }
+    .highlight-box.warning {
+      border-left-color: #ffaa00;
+    }
     .contact-block {
       display: inline-flex;
       align-items: center;
       gap: 0.6rem;
       background: var(--tag-bg);
-      border: 1px solid rgba(0,229,255,0.3);
+      border: 1px solid rgba(108,99,255,0.3);
       padding: 0.7rem 1.2rem;
       border-radius: 4px;
       margin-top: 0.5rem;
@@ -214,8 +211,7 @@
       color: var(--accent2);
       text-decoration: none;
     }
-    .contact-block:hover { border-color: var(--accent); }
-
+    .contact-block:hover { border-color: var(--accent2); }
     footer {
       border-top: 1px solid var(--border);
       padding: 2rem 5vw;
@@ -239,7 +235,6 @@
       transition: color 0.2s;
     }
     footer a:hover { color: var(--accent2); }
-
     @media (max-width: 700px) {
       .layout { grid-template-columns: 1fr; }
       .toc { display: none; }
@@ -248,7 +243,6 @@
   </style>
 </head>
 <body>
-
 <nav>
   <a href="https://novasoftlabs.com" class="logo">Nova<span>Soft</span> Labs</a>
   <a href="https://novasoftlabs.com" class="nav-link">← Back to Home</a>
@@ -268,6 +262,7 @@
     <a href="#description">App Description</a>
     <a href="#license">License to Use</a>
     <a href="#conduct">Acceptable Use</a>
+    <a href="#advertising">Advertising</a>
     <a href="#purchases">In-App Purchases</a>
     <a href="#ip">Intellectual Property</a>
     <a href="#disclaimer">Disclaimer</a>
@@ -286,6 +281,7 @@
       <h2>Acceptance of Terms</h2>
       <p>By downloading, installing, or using any application developed by Nova Soft Labs ("we," "our," or "us"), you agree to be bound by these Terms of Use. If you do not agree to these terms, please do not use our apps.</p>
       <p>These terms apply to all Nova Soft Labs applications including, but not limited to, Samsung Remote, Chromecast Remote, LG Remote, and any future apps we publish.</p>
+      <p>By using our apps, you also acknowledge that our apps display advertisements powered by Google AdMob and may offer in-app purchases processed through Google Play, both of which are subject to their respective terms and policies in addition to these Terms.</p>
     </div>
 
     <div class="section" id="description">
@@ -293,6 +289,7 @@
       <h2>App Description</h2>
       <p>Nova Soft Labs develops remote control applications that allow users to control compatible smart TVs, streaming devices, and home entertainment systems from their mobile device over a local Wi-Fi network.</p>
       <p>Our apps are utility tools. They require a compatible device and a local network connection to function. We do not guarantee compatibility with all device models or firmware versions.</p>
+      <p>Some features of our apps are available for free and supported by in-app advertising. Additional premium features may be unlocked through in-app purchases or subscriptions.</p>
     </div>
 
     <div class="section" id="license">
@@ -306,6 +303,7 @@
         <li>Sell, rent, lease, or sublicense the app to others</li>
         <li>Remove or alter any copyright, trademark, or proprietary notices</li>
         <li>Use the app for any commercial purpose without our written consent</li>
+        <li>Circumvent, disable, or interfere with any advertising or in-app purchase functionality</li>
       </ul>
     </div>
 
@@ -319,33 +317,57 @@
         <li>Attempt to gain unauthorized access to any system or network</li>
         <li>Use the app in any way that violates applicable local, national, or international law</li>
       </ul>
-      <div class="highlight-box">
+      <div class="highlight-box warning">
         ⚠️ Our apps are designed for use with devices you own or have permission to control. Unauthorized use of remote control functionality against devices you do not own is strictly prohibited.
       </div>
     </div>
 
-    <div class="section" id="purchases">
+    <div class="section" id="advertising">
       <div class="section-num">05 —</div>
+      <h2>Advertising</h2>
+      <p>Our apps display advertisements served by <strong>Google AdMob</strong>, a third-party advertising platform operated by Google LLC. Advertising allows us to offer free versions of our apps to users.</p>
+      <p>By using our apps, you acknowledge and agree that:</p>
+      <ul>
+        <li>Advertisements may be displayed within the app at any time during your use</li>
+        <li>Google AdMob may use your Google Advertising ID (GAID) and device information to serve personalized ads based on your interests</li>
+        <li>Ad content is determined by Google AdMob and we do not control which specific ads are shown</li>
+        <li>You may opt out of personalized advertising at any time through your device settings (Settings → Google → Ads → Delete Advertising ID)</li>
+        <li>Clicking on ads may take you to third-party websites or apps — we are not responsible for their content or practices</li>
+      </ul>
+      <div class="highlight-box">
+        📢 Ads help keep our apps free. If you prefer an ad-free experience, you may be able to remove ads through an in-app purchase where available.
+      </div>
+      <p>Google AdMob's use of data is governed by Google's Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" style="color:var(--accent2);">policies.google.com/privacy</a></p>
+    </div>
+
+    <div class="section" id="purchases">
+      <div class="section-num">06 —</div>
       <h2>In-App Purchases</h2>
-      <p>Some features may be available as in-app purchases or subscriptions processed through Google Play. All purchases are subject to Google Play's terms and policies.</p>
+      <p>Some features may be available as one-time in-app purchases or recurring subscriptions, processed securely through Google Play. All purchases are subject to Google Play's terms and policies.</p>
       <ul>
         <li>Prices are displayed in your local currency as set by Google Play</li>
-        <li>Subscriptions automatically renew unless cancelled at least 24 hours before the renewal date</li>
+        <li>All transactions are processed by Google Play — we do not collect or store your payment information</li>
+        <li>Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current billing period</li>
+        <li>You will be charged for renewal within 24 hours prior to the end of the current billing period</li>
+        <li>You can manage and cancel subscriptions at any time via your Google Play account settings</li>
         <li>Refunds are handled in accordance with Google Play's refund policy</li>
-        <li>We do not collect or store your payment information — all transactions are managed by Google</li>
+        <li>Purchasing a premium feature or subscription unlocks that feature for your account as described at the time of purchase</li>
       </ul>
+      <div class="highlight-box">
+        💳 Nova Soft Labs never sees or stores your payment details. All billing is managed securely by Google Play.
+      </div>
       <p>To cancel a subscription or request a refund, visit your Google Play subscription settings or contact us at <a href="mailto:support@novasoftlabs.com" style="color:var(--accent2);">support@novasoftlabs.com</a>.</p>
     </div>
 
     <div class="section" id="ip">
-      <div class="section-num">06 —</div>
+      <div class="section-num">07 —</div>
       <h2>Intellectual Property</h2>
       <p>All content, features, and functionality in our apps — including but not limited to code, graphics, logos, icons, and interface design — are owned by Nova Soft Labs and protected by applicable intellectual property laws.</p>
       <p>Third-party trademarks (such as Samsung®, Chromecast®, LG®) referenced in our apps are the property of their respective owners. Nova Soft Labs is not affiliated with, endorsed by, or officially connected to any of these companies.</p>
     </div>
 
     <div class="section" id="disclaimer">
-      <div class="section-num">07 —</div>
+      <div class="section-num">08 —</div>
       <h2>Disclaimer of Warranties</h2>
       <p>Our apps are provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind, either express or implied, including but not limited to:</p>
       <ul>
@@ -353,48 +375,64 @@
         <li>Uninterrupted, error-free, or secure operation</li>
         <li>Compatibility with any specific device, TV, or firmware version</li>
         <li>Accuracy or completeness of any content or features</li>
+        <li>Suitability, accuracy, or quality of any advertisements displayed within the app</li>
       </ul>
-      <p>We reserve the right to modify, suspend, or discontinue any feature at any time without notice.</p>
+      <p>We reserve the right to modify, suspend, or discontinue any feature — including free features supported by advertising — at any time without notice.</p>
     </div>
 
     <div class="section" id="liability">
-      <div class="section-num">08 —</div>
+      <div class="section-num">09 —</div>
       <h2>Limitation of Liability</h2>
       <p>To the fullest extent permitted by applicable law, Nova Soft Labs shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of, or inability to use, our apps.</p>
+      <p>This includes but is not limited to damages arising from:</p>
+      <ul>
+        <li>Inability to connect to or control a device</li>
+        <li>Any content, products, or services accessed via advertisements in our apps</li>
+        <li>Any issues related to in-app purchases, including unauthorized purchases made on your device</li>
+        <li>Data loss or device incompatibility</li>
+      </ul>
       <p>In no event shall our total liability to you for all claims exceed the amount you paid us in the twelve months prior to the event giving rise to the claim (or $5 USD if you have not made any purchases).</p>
     </div>
 
     <div class="section" id="thirdparty">
-      <div class="section-num">09 —</div>
+      <div class="section-num">10 —</div>
       <h2>Third-Party Services</h2>
-      <p>Our apps may use or integrate with third-party services such as Google Play, Firebase, and device manufacturer APIs. These services are governed by their own terms and privacy policies. We are not responsible for the practices of any third-party services.</p>
-      <p>Links or references to third-party services do not constitute an endorsement by Nova Soft Labs.</p>
+      <p>Our apps use or integrate with the following third-party services, each governed by their own terms and privacy policies:</p>
+      <ul>
+        <li><strong>Google AdMob</strong> — In-app advertising platform</li>
+        <li><strong>Google Play</strong> — App distribution, billing, and in-app purchases</li>
+        <li><strong>Firebase Crashlytics</strong> — Crash reporting and app stability</li>
+        <li><strong>Google Analytics for Firebase</strong> — Anonymous usage analytics</li>
+        <li><strong>Device manufacturer APIs</strong> — TV and device communication protocols</li>
+      </ul>
+      <p>We are not responsible for the practices, content, or policies of any third-party services. Links or references to third-party services do not constitute an endorsement by Nova Soft Labs.</p>
     </div>
 
     <div class="section" id="termination">
-      <div class="section-num">10 —</div>
+      <div class="section-num">11 —</div>
       <h2>Termination</h2>
       <p>We may terminate or suspend your access to our apps immediately, without prior notice, if you breach these Terms or engage in conduct that we determine is harmful to other users, us, or third parties.</p>
-      <p>Upon termination, your license to use the app is revoked. Provisions of these Terms that by their nature should survive termination shall continue in effect.</p>
+      <p>Upon termination, your license to use the app is revoked. Active subscriptions will continue until the end of the paid billing period, after which they will not renew. Refunds upon termination for breach of these Terms are subject to Google Play's refund policy.</p>
+      <p>Provisions of these Terms that by their nature should survive termination shall continue in effect.</p>
     </div>
 
     <div class="section" id="changes">
-      <div class="section-num">11 —</div>
+      <div class="section-num">12 —</div>
       <h2>Changes to Terms</h2>
       <p>We reserve the right to update these Terms at any time. When we do, we will update the "Last updated" date at the top of this page. For material changes, we may also notify users via an in-app notice.</p>
       <p>Your continued use of our apps after any changes constitutes your acceptance of the revised Terms.</p>
     </div>
 
     <div class="section" id="governing">
-      <div class="section-num">12 —</div>
+      <div class="section-num">13 —</div>
       <h2>Governing Law</h2>
       <p>These Terms shall be governed by and construed in accordance with applicable law. Any disputes arising from these Terms or your use of our apps shall be resolved through good-faith negotiation, and if necessary, through binding arbitration or courts of competent jurisdiction.</p>
     </div>
 
     <div class="section" id="contact">
-      <div class="section-num">13 —</div>
+      <div class="section-num">14 —</div>
       <h2>Contact Us</h2>
-      <p>If you have any questions about these Terms or need support with any of our apps, reach out to us:</p>
+      <p>If you have any questions about these Terms, your purchases, or need support with any of our apps, reach out to us:</p>
       <a href="mailto:support@novasoftlabs.com" class="contact-block">✉ support@novasoftlabs.com</a>
       <p style="margin-top:1rem;">We aim to respond to all inquiries within 48 hours.</p>
     </div>
@@ -410,6 +448,5 @@
     <a href="https://novasoftlabs.com">Home</a>
   </div>
 </footer>
-
 </body>
 </html>
