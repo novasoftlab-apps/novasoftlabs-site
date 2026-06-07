@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Subscription Policy — Nova Soft Labs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a0a0f;
+      --surface: #111118;
+      --border: #1e1e2e;
+      --accent: #6c63ff;
+      --accent2: #00e5ff;
+      --text: #e8e8f0;
+      --muted: #7a7a96;
+      --tag-bg: #1a1a28;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Syne', sans-serif;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 5vw;
+      background: rgba(10,10,15,0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .logo {
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .logo span { color: var(--accent); }
+    .nav-link {
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-decoration: none;
+      font-family: 'Space Mono', monospace;
+      transition: color 0.2s;
+    }
+    .nav-link:hover { color: var(--accent2); }
+    .hero {
+      padding: 5rem 5vw 3rem;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px; left: -80px;
+      width: 420px; height: 420px;
+      background: radial-gradient(circle, rgba(108,99,255,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-tag {
+      display: inline-block;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--accent2);
+      background: var(--tag-bg);
+      border: 1px solid rgba(0,229,255,0.2);
+      padding: 0.3rem 0.8rem;
+      border-radius: 2px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 1.4rem;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--accent);
+    }
+    .hero-meta {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 1.2rem;
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 0;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 5vw 6rem;
+    }
+    .toc {
+      padding: 3rem 2rem 3rem 0;
+      position: sticky;
+      top: 70px;
+      align-self: start;
+      height: fit-content;
+      border-right: 1px solid var(--border);
+    }
+    .toc-title {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    .toc a {
+      display: block;
+      font-size: 0.82rem;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 0.38rem 0;
+      border-left: 2px solid transparent;
+      padding-left: 0.8rem;
+      transition: all 0.2s;
+    }
+    .toc a:hover {
+      color: var(--text);
+      border-left-color: var(--accent);
+    }
+    .content {
+      padding: 3rem 0 3rem 3rem;
+    }
+    .section {
+      margin-bottom: 3.5rem;
+      padding-bottom: 3.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .section:last-child {
+      border-bottom: none;
+    }
+    .section-num {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+    }
+    .section h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+    .section p {
+      color: #b8b8d0;
+      font-size: 0.95rem;
+      margin-bottom: 0.9rem;
+    }
+    .section ul {
+      list-style: none;
+      margin: 0.6rem 0 0.9rem 0;
+    }
+    .section ul li {
+      color: #b8b8d0;
+      font-size: 0.95rem;
+      padding: 0.3rem 0 0.3rem 1.4rem;
+      position: relative;
+    }
+    .section ul li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.8rem;
+    }
+    .highlight-box {
+      background: var(--tag-bg);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      padding: 1rem 1.2rem;
+      border-radius: 4px;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+      color: #c0c0dc;
+    }
+    .highlight-box.warning {
+      border-left-color: #ffaa00;
+    }
+    .highlight-box.success {
+      border-left-color: #00e5a0;
+    }
+    .plan-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin: 1.2rem 0;
+    }
+    .plan-card {
+      background: var(--tag-bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.2rem;
+    }
+    .plan-card.featured {
+      border-color: var(--accent);
+    }
+    .plan-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+    .plan-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.3rem;
+    }
+    .plan-price {
+      font-family: 'Space Mono', monospace;
+      font-size: 1.1rem;
+      color: var(--accent2);
+      margin-bottom: 0.5rem;
+    }
+    .plan-trial {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .plan-badge {
+      display: inline-block;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.62rem;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.15rem 0.5rem;
+      border-radius: 2px;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.06em;
+    }
+    .steps {
+      counter-reset: steps;
+      margin: 0.8rem 0;
+    }
+    .step {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      padding: 0.6rem 0;
+      color: #b8b8d0;
+      font-size: 0.95rem;
+    }
+    .step-num {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--tag-bg);
+      border: 1px solid var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--accent);
+      margin-top: 2px;
+    }
+    .contact-block {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--tag-bg);
+      border: 1px solid rgba(108,99,255,0.3);
+      padding: 0.7rem 1.2rem;
+      border-radius: 4px;
+      margin-top: 0.5rem;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.82rem;
+      color: var(--accent2);
+      text-decoration: none;
+    }
+    .contact-block:hover { border-color: var(--accent2); }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 5vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    footer p {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+    footer a {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 1.2rem;
+      transition: color 0.2s;
+    }
+    footer a:hover { color: var(--accent2); }
+    @media (max-width: 700px) {
+      .layout { grid-template-columns: 1fr; }
+      .toc { display: none; }
+      .content { padding: 2rem 0; }
+      .plan-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="https://novasoftlabs.com" class="logo">Nova<span>Soft</span> Labs</a>
+  <a href="https://novasoftlabs.com" class="nav-link">← Back to Home</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-tag">// Legal</div>
+  <h1>Subscription <em>Policy</em></h1>
+  <p style="color:var(--muted);max-width:560px;font-size:0.95rem;">Everything you need to know about our plans, free trials, billing, cancellation, and refunds — clearly explained.</p>
+  <div class="hero-meta">Last updated: June 2026 &nbsp;·&nbsp; Applies to all Nova Soft Labs apps</div>
+</div>
+
+<div class="layout">
+  <aside class="toc">
+    <div class="toc-title">On this page</div>
+    <a href="#overview">Overview</a>
+    <a href="#plans">Available Plans</a>
+    <a href="#freetrial">Free Trial</a>
+    <a href="#billing">Billing &amp; Renewal</a>
+    <a href="#cancel">How to Cancel</a>
+    <a href="#refunds">Refunds</a>
+    <a href="#lifetime">Lifetime Purchase</a>
+    <a href="#manage">Managing Your Plan</a>
+    <a href="#contact">Contact &amp; Support</a>
+  </aside>
+
+  <main class="content">
+
+    <div class="section" id="overview">
+      <div class="section-num">01 —</div>
+      <h2>Overview</h2>
+      <p>Nova Soft Labs apps are available as free downloads with optional premium upgrades. Premium features can be unlocked through a monthly subscription, yearly subscription, or a one-time lifetime purchase — all processed securely through <strong>Google Play</strong>.</p>
+      <p>This policy applies to all current and future Nova Soft Labs apps including Samsung Remote, LG Remote, Chromecast Remote, Roku Remote, Fire TV Remote, and any other apps we publish.</p>
+      <div class="highlight-box success">
+        💳 Nova Soft Labs never sees or stores your payment information. All billing is handled entirely and securely by Google Play.
+      </div>
+    </div>
+
+    <div class="section" id="plans">
+      <div class="section-num">02 —</div>
+      <h2>Available Plans</h2>
+      <p>We offer three ways to unlock premium features. Pricing is displayed in your local currency at the time of purchase as determined by Google Play.</p>
+      <div class="plan-grid">
+        <div class="plan-card">
+          <div class="plan-label">Plan 01</div>
+          <div class="plan-name">Monthly</div>
+          <div class="plan-price">Billed monthly</div>
+          <div class="plan-trial">3-day free trial included</div>
+        </div>
+        <div class="plan-card featured">
+          <div class="plan-badge">Most Popular</div>
+          <div class="plan-label">Plan 02</div>
+          <div class="plan-name">Yearly</div>
+          <div class="plan-price">Billed once per year</div>
+          <div class="plan-trial">3-day free trial included</div>
+        </div>
+        <div class="plan-card">
+          <div class="plan-label">Plan 03</div>
+          <div class="plan-name">Lifetime</div>
+          <div class="plan-price">One-time payment</div>
+          <div class="plan-trial">No trial — permanent access</div>
+        </div>
+      </div>
+      <p>All plans unlock the same premium features: physical remote control, touchpad access, app launcher, and ad-free experience. Exact pricing is shown on the upgrade screen inside the app and may vary by region.</p>
+    </div>
+
+    <div class="section" id="freetrial">
+      <div class="section-num">03 —</div>
+      <h2>Free Trial</h2>
+      <p>Monthly and Yearly plans include a <strong>3-day free trial</strong> for eligible users. During the free trial you get full access to all premium features at no charge.</p>
+      <p><strong>How the free trial works:</strong></p>
+      <ul>
+        <li>The free trial begins immediately when you select a Monthly or Yearly plan</li>
+        <li>You will not be charged anything during the 3-day trial period</li>
+        <li>At the end of the trial, your subscription automatically converts to a paid plan at the regular price</li>
+        <li>To avoid being charged, you must cancel at least <strong>24 hours before</strong> the trial ends</li>
+        <li>Free trials are available to eligible users only — Google Play determines eligibility based on your account history</li>
+        <li>Each user is eligible for one free trial per subscription type</li>
+      </ul>
+      <div class="highlight-box warning">
+        ⚠️ If you do not cancel before the trial ends, you will be automatically charged for the first billing period. Cancelling after the trial has converted to a paid subscription will stop future renewals but will not trigger an automatic refund.
+      </div>
+    </div>
+
+    <div class="section" id="billing">
+      <div class="section-num">04 —</div>
+      <h2>Billing &amp; Renewal</h2>
+      <p>All subscriptions are managed and billed by Google Play. By purchasing a subscription, you authorise Google Play to charge your payment method on a recurring basis.</p>
+      <ul>
+        <li><strong>Monthly:</strong> Charged every month on the same date as your original purchase</li>
+        <li><strong>Yearly:</strong> Charged once per year on the anniversary of your original purchase</li>
+        <li>Renewal charges occur within 24 hours before the end of the current billing period</li>
+        <li>Prices may change — Google Play will notify you of any price changes before they take effect</li>
+        <li>If a payment fails, Google Play may retry the charge. Your subscription may be paused or cancelled if payment cannot be collected</li>
+      </ul>
+      <div class="highlight-box">
+        📅 You can see your next renewal date at any time by going to <strong>Google Play → Subscriptions → [App Name]</strong>.
+      </div>
+    </div>
+
+    <div class="section" id="cancel">
+      <div class="section-num">05 —</div>
+      <h2>How to Cancel</h2>
+      <p>You can cancel your subscription at any time. Cancelling stops future renewals — you retain access to premium features until the end of the current paid billing period.</p>
+      <p><strong>Steps to cancel on Android:</strong></p>
+      <div class="steps">
+        <div class="step"><div class="step-num">1</div><span>Open the <strong>Google Play Store</strong> app on your device</span></div>
+        <div class="step"><div class="step-num">2</div><span>Tap your <strong>profile icon</strong> in the top right corner</span></div>
+        <div class="step"><div class="step-num">3</div><span>Tap <strong>Payments &amp; subscriptions → Subscriptions</strong></span></div>
+        <div class="step"><div class="step-num">4</div><span>Find the Nova Soft Labs app subscription and tap it</span></div>
+        <div class="step"><div class="step-num">5</div><span>Tap <strong>Cancel subscription</strong> and follow the prompts</span></div>
+      </div>
+      <p>You can also manage subscriptions at <a href="https://play.google.com/store/account/subscriptions" target="_blank" style="color:var(--accent2);">play.google.com/store/account/subscriptions</a>.</p>
+      <div class="highlight-box">
+        ℹ️ Uninstalling the app does <strong>not</strong> cancel your subscription. You must cancel through Google Play as described above.
+      </div>
+    </div>
+
+    <div class="section" id="refunds">
+      <div class="section-num">06 —</div>
+      <h2>Refunds</h2>
+      <p>Refund requests are handled by Google Play in accordance with their refund policy. Nova Soft Labs does not process refunds directly as we do not have access to your payment information.</p>
+      <p><strong>How to request a refund:</strong></p>
+      <ul>
+        <li>Visit <a href="https://support.google.com/googleplay/answer/2479637" target="_blank" style="color:var(--accent2);">Google Play's refund page</a> to submit a refund request</li>
+        <li>Google Play typically allows refunds within <strong>48 hours</strong> of purchase for subscriptions</li>
+        <li>Refund eligibility is determined solely by Google Play's refund policy</li>
+        <li>Lifetime purchases are generally non-refundable after the Google Play refund window has passed</li>
+      </ul>
+      <p>If you are having trouble getting a refund through Google Play or believe you were charged in error, contact us at <a href="mailto:support@novasoftlabs.com" style="color:var(--accent2);">support@novasoftlabs.com</a> and we will do our best to assist you.</p>
+      <div class="highlight-box warning">
+        ⚠️ Refunds are not automatically issued when you cancel a subscription. Cancellation only stops future renewals — it does not refund the current billing period.
+      </div>
+    </div>
+
+    <div class="section" id="lifetime">
+      <div class="section-num">07 —</div>
+      <h2>Lifetime Purchase</h2>
+      <p>The Lifetime plan is a <strong>one-time purchase</strong> that unlocks all premium features permanently — there are no recurring charges.</p>
+      <ul>
+        <li>You are charged once at the time of purchase</li>
+        <li>No subscription, no renewals, no future charges</li>
+        <li>Premium access is tied to your Google Play account</li>
+        <li>If you uninstall and reinstall the app, your purchase can be restored by signing in with the same Google Play account</li>
+        <li>The Lifetime plan does not include a free trial</li>
+      </ul>
+      <div class="highlight-box">
+        ♾️ A Lifetime purchase gives you permanent access to premium features for that specific app. It does not apply across all Nova Soft Labs apps — each app requires its own purchase.
+      </div>
+    </div>
+
+    <div class="section" id="manage">
+      <div class="section-num">08 —</div>
+      <h2>Managing Your Plan</h2>
+      <p>Everything related to your subscription is managed through your Google Play account. Nova Soft Labs does not have a separate account system.</p>
+      <ul>
+        <li><strong>View your plan:</strong> Google Play → Profile → Payments &amp; subscriptions → Subscriptions</li>
+        <li><strong>Cancel:</strong> See the How to Cancel section above</li>
+        <li><strong>Change payment method:</strong> Google Play → Profile → Payments &amp; subscriptions → Payment methods</li>
+        <li><strong>Restore a purchase:</strong> Reinstall the app and sign in with the same Google Play account — your purchase will be restored automatically</li>
+        <li><strong>Switch plans:</strong> Cancel your current plan and purchase the new plan after your current period ends</li>
+      </ul>
+      <p>If you experience any issues with your subscription that cannot be resolved through Google Play, contact us directly — we are happy to help.</p>
+    </div>
+
+    <div class="section" id="contact">
+      <div class="section-num">09 —</div>
+      <h2>Contact &amp; Support</h2>
+      <p>Have a question about your subscription, a billing issue, or need help cancelling? Reach out to us directly:</p>
+      <a href="mailto:support@novasoftlabs.com" class="contact-block">✉ support@novasoftlabs.com</a>
+      <p style="margin-top:1rem;">We aim to respond to all inquiries within 48 hours. Please include the app name and a description of your issue so we can help you as quickly as possible.</p>
+    </div>
+
+  </main>
+</div>
+
+<footer>
+  <p>© 2026 Nova Soft Labs. All rights reserved.</p>
+  <div>
+    <a href="subscription-policy.html">Subscription Policy</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms-of-use.html">Terms of Use</a>
+    <a href="https://novasoftlabs.com">Home</a>
+  </div>
+</footer>
+
+</body>
+</html>
