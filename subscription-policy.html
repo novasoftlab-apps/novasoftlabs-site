@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Subscription Policy — Nova Soft Labs</title>
+  <meta name="description" content="Subscription, free trial, billing, cancellation and refund policy for Nova Soft Labs Android apps."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
@@ -139,11 +140,13 @@
     }
     .content {
       padding: 3rem 0 3rem 3rem;
+      min-width: 0;
     }
     .section {
       margin-bottom: 3.5rem;
       padding-bottom: 3.5rem;
       border-bottom: 1px solid var(--border);
+      scroll-margin-top: 80px;
     }
     .section:last-child {
       border-bottom: none;
@@ -160,6 +163,12 @@
       font-weight: 700;
       letter-spacing: -0.02em;
       margin-bottom: 1rem;
+    }
+    .section h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 1.8rem 0 0.6rem;
     }
     .section p {
       color: #b8b8d0;
@@ -184,6 +193,7 @@
       font-family: 'Space Mono', monospace;
       font-size: 0.8rem;
     }
+    .section a { color: var(--accent2); }
     .highlight-box {
       background: var(--tag-bg);
       border: 1px solid var(--border);
@@ -195,87 +205,7 @@
       color: #c0c0dc;
     }
     .highlight-box.warning {
-      border-left-color: #ffaa00;
-    }
-    .highlight-box.success {
-      border-left-color: #00e5a0;
-    }
-    .plan-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1rem;
-      margin: 1.2rem 0;
-    }
-    .plan-card {
-      background: var(--tag-bg);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 1.2rem;
-    }
-    .plan-card.featured {
-      border-color: var(--accent);
-    }
-    .plan-label {
-      font-family: 'Space Mono', monospace;
-      font-size: 0.68rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 0.4rem;
-    }
-    .plan-name {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--text);
-      margin-bottom: 0.3rem;
-    }
-    .plan-price {
-      font-family: 'Space Mono', monospace;
-      font-size: 1.1rem;
-      color: var(--accent2);
-      margin-bottom: 0.5rem;
-    }
-    .plan-trial {
-      font-size: 0.78rem;
-      color: var(--muted);
-    }
-    .plan-badge {
-      display: inline-block;
-      font-family: 'Space Mono', monospace;
-      font-size: 0.62rem;
-      background: var(--accent);
-      color: #fff;
-      padding: 0.15rem 0.5rem;
-      border-radius: 2px;
-      margin-bottom: 0.5rem;
-      letter-spacing: 0.06em;
-    }
-    .steps {
-      counter-reset: steps;
-      margin: 0.8rem 0;
-    }
-    .step {
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-      padding: 0.6rem 0;
-      color: #b8b8d0;
-      font-size: 0.95rem;
-    }
-    .step-num {
-      flex-shrink: 0;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      background: var(--tag-bg);
-      border: 1px solid var(--accent);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Space Mono', monospace;
-      font-size: 0.68rem;
-      color: var(--accent);
-      margin-top: 2px;
+      border-left-color: #ffb347;
     }
     .contact-block {
       display: inline-flex;
@@ -319,192 +249,191 @@
       .layout { grid-template-columns: 1fr; }
       .toc { display: none; }
       .content { padding: 2rem 0; }
-      .plan-grid { grid-template-columns: 1fr; }
+      footer a { margin-left: 0; margin-right: 1.2rem; }
     }
   </style>
 </head>
 <body>
-
 <nav>
   <a href="https://novasoftlabs.com" class="logo">Nova<span>Soft</span> Labs</a>
   <a href="https://novasoftlabs.com" class="nav-link">← Back to Home</a>
 </nav>
-
 <div class="hero">
   <div class="hero-tag">// Legal</div>
   <h1>Subscription <em>Policy</em></h1>
   <p style="color:var(--muted);max-width:560px;font-size:0.95rem;">Everything you need to know about our plans, free trials, billing, cancellation, and refunds — clearly explained.</p>
-  <div class="hero-meta">Last updated: June 2026 &nbsp;·&nbsp; Applies to all Nova Soft Labs apps</div>
+  <div class="hero-meta">Last updated: September 2026 &nbsp;·&nbsp; Applies to all Nova Soft Labs apps</div>
 </div>
-
 <div class="layout">
   <aside class="toc">
     <div class="toc-title">On this page</div>
     <a href="#overview">Overview</a>
-    <a href="#plans">Available Plans</a>
+    <a href="#plans">Purchase Options</a>
+    <a href="#byapp">Plans by App</a>
     <a href="#freetrial">Free Trial</a>
     <a href="#billing">Billing &amp; Renewal</a>
     <a href="#cancel">How to Cancel</a>
     <a href="#refunds">Refunds</a>
-    <a href="#lifetime">Lifetime Purchase</a>
+    <a href="#onetime">One-Time Purchases</a>
     <a href="#manage">Managing Your Plan</a>
     <a href="#governing">Governing Law</a>
     <a href="#contact">Contact &amp; Support</a>
   </aside>
-
   <main class="content">
 
     <div class="section" id="overview">
       <div class="section-num">01 —</div>
       <h2>Overview</h2>
-      <p>Nova Soft Labs apps are available as free downloads with optional premium upgrades. Premium features can be unlocked through a monthly subscription, yearly subscription, or a one-time lifetime purchase — all processed securely through <strong>Google Play</strong>.</p>
-      <p>This policy applies to all current and future Nova Soft Labs apps including Samsung Remote, LG Remote, Chromecast Remote, Roku Remote, Fire TV Remote, and any other apps we publish.</p>
-      <div class="highlight-box success">
+      <p>Nova Soft Labs apps are free to download. Some apps offer optional premium features or ad removal that you can unlock through a subscription or a one-time purchase — all processed securely through <strong>Google Play</strong>.</p>
+      <p>This policy applies to all current and future Nova Soft Labs apps, including our remote control apps, QR Code, PayShare, Arrow Escape, and any other apps we publish on Google Play. Not every app offers purchases, and each app's exact options are shown inside that app.</p>
+      <div class="highlight-box">
         💳 Nova Soft Labs never sees or stores your payment information. All billing is handled entirely and securely by Google Play.
       </div>
     </div>
 
     <div class="section" id="plans">
       <div class="section-num">02 —</div>
-      <h2>Available Plans</h2>
-      <p>We offer three ways to unlock premium features. Pricing is displayed in your local currency at the time of purchase as determined by Google Play.</p>
-      <div class="plan-grid">
-        <div class="plan-card">
-          <div class="plan-label">Plan 01</div>
-          <div class="plan-name">Monthly</div>
-          <div class="plan-price">Billed monthly</div>
-          <div class="plan-trial">3-day free trial included</div>
-        </div>
-        <div class="plan-card featured">
-          <div class="plan-badge">Most Popular</div>
-          <div class="plan-label">Plan 02</div>
-          <div class="plan-name">Yearly</div>
-          <div class="plan-price">Billed once per year</div>
-          <div class="plan-trial">3-day free trial included</div>
-        </div>
-        <div class="plan-card">
-          <div class="plan-label">Plan 03</div>
-          <div class="plan-name">Lifetime</div>
-          <div class="plan-price">One-time payment</div>
-          <div class="plan-trial">No trial — permanent access</div>
-        </div>
+      <h2>Purchase Options</h2>
+      <p>Depending on the app, you may see one or more of these options:</p>
+      <ul>
+        <li><strong>Monthly subscription</strong> — billed every month, renews automatically</li>
+        <li><strong>Yearly subscription</strong> — billed once per year, renews automatically</li>
+        <li><strong>Lifetime / one-time purchase</strong> — a single payment for permanent access to the features described, with no renewals</li>
+        <li><strong>Remove Ads or in-game items</strong> — one-time purchases available in some apps</li>
+      </ul>
+      <p>Before you buy, the upgrade screen inside the app and the Google Play purchase screen show the exact price in your local currency, the billing period, any free trial, and what features are included. Prices may vary by region.</p>
+    </div>
+
+    <div class="section" id="byapp">
+      <div class="section-num">03 —</div>
+      <h2>Plans by App</h2>
+
+      <h3>Remote Control Apps</h3>
+      <ul>
+        <li>Monthly and Yearly subscriptions, each with a 3-day free trial for eligible users</li>
+        <li>Lifetime one-time purchase (no trial)</li>
+        <li>Premium features may include ad-free use and advanced controls such as touchpad, keyboard, and app launcher, as described in each app</li>
+      </ul>
+
+      <h3>Other Apps (QR Code, PayShare, Arrow Escape and future apps)</h3>
+      <ul>
+        <li>Purchase options, if any, are shown on the upgrade or store screen inside each app</li>
+        <li>These may include a one-time purchase to remove ads, premium features, or in-game items such as hints</li>
+        <li>If an app offers a subscription, the terms in this policy (free trial, renewal, cancellation) apply to it</li>
+      </ul>
+
+      <div class="highlight-box">
+        ℹ️ A purchase applies only to the specific app where you bought it. It does not unlock features in other Nova Soft Labs apps.
       </div>
-      <p>All plans unlock the same premium features: physical remote control, touchpad access, app launcher, and ad-free experience. Exact pricing is shown on the upgrade screen inside the app and may vary by region.</p>
     </div>
 
     <div class="section" id="freetrial">
-      <div class="section-num">03 —</div>
+      <div class="section-num">04 —</div>
       <h2>Free Trial</h2>
-      <p>Monthly and Yearly plans include a <strong>3-day free trial</strong> for eligible users. During the free trial you get full access to all premium features at no charge.</p>
+      <p>Some subscriptions include a free trial for eligible users. The trial length is shown before you confirm. During the trial, you get full access to the premium features at no charge.</p>
       <p><strong>How the free trial works:</strong></p>
       <ul>
-        <li>The free trial begins immediately when you select a Monthly or Yearly plan</li>
-        <li>You will not be charged anything during the 3-day trial period</li>
-        <li>At the end of the trial, your subscription automatically converts to a paid plan at the regular price</li>
-        <li>To avoid being charged, you must cancel at least <strong>24 hours before</strong> the trial ends</li>
-        <li>Free trials are available to eligible users only — Google Play determines eligibility based on your account history</li>
-        <li>Each user is eligible for one free trial per subscription type</li>
+        <li>The trial starts when you confirm the subscription on the Google Play purchase screen</li>
+        <li>You will not be charged anything during the trial period</li>
+        <li>When the trial ends, your subscription automatically converts to a paid plan at the price shown when you subscribed</li>
+        <li>To avoid being charged, cancel at any time before the trial ends through Google Play</li>
+        <li>Google Play decides trial eligibility based on your account history — usually one free trial per app</li>
       </ul>
       <div class="highlight-box warning">
-        ⚠️ If you do not cancel before the trial ends, you will be automatically charged for the first billing period. Cancelling after the trial has converted to a paid subscription will stop future renewals but will not trigger an automatic refund.
+        ⚠️ If you do not cancel before the trial ends, you will be charged for the first billing period. Cancelling after that stops future renewals but does not automatically refund the current period.
       </div>
     </div>
 
     <div class="section" id="billing">
-      <div class="section-num">04 —</div>
+      <div class="section-num">05 —</div>
       <h2>Billing &amp; Renewal</h2>
-      <p>All subscriptions are managed and billed by Google Play. By purchasing a subscription, you authorise Google Play to charge your payment method on a recurring basis.</p>
+      <p>All subscriptions are billed and managed by Google Play. By subscribing, you authorise Google Play to charge your payment method on a recurring basis until you cancel.</p>
       <ul>
-        <li><strong>Monthly:</strong> Charged every month on the same date as your original purchase</li>
-        <li><strong>Yearly:</strong> Charged once per year on the anniversary of your original purchase</li>
-        <li>Renewal charges occur within 24 hours before the end of the current billing period</li>
-        <li>Prices may change — Google Play will notify you of any price changes before they take effect</li>
-        <li>If a payment fails, Google Play may retry the charge. Your subscription may be paused or cancelled if payment cannot be collected</li>
+        <li><strong>Monthly:</strong> charged every month, starting from the end of any free trial</li>
+        <li><strong>Yearly:</strong> charged once per year, starting from the end of any free trial</li>
+        <li>Subscriptions renew automatically at the end of each billing period unless you cancel before the renewal date</li>
+        <li>If the price changes, Google Play will notify you in advance, and where required you will be asked to accept the new price</li>
+        <li>If a payment fails, Google Play may retry the charge, and your subscription may be paused or cancelled if payment cannot be collected</li>
       </ul>
-      <p>All paid subscriptions <strong>automatically renew</strong> at the end of each billing period unless cancelled at least 24 hours before renewal. By purchasing a subscription, you authorise Google Play to charge your payment method automatically on each renewal date.</p>
       <div class="highlight-box">
-        📅 You can see your next renewal date at any time by going to <strong>Google Play → Subscriptions → [App Name]</strong>.
+        📅 You can see your next renewal date at any time in <strong>Google Play → Profile → Payments &amp; subscriptions → Subscriptions</strong>.
       </div>
     </div>
 
     <div class="section" id="cancel">
-      <div class="section-num">05 —</div>
+      <div class="section-num">06 —</div>
       <h2>How to Cancel</h2>
-      <p>You can cancel your subscription at any time. Cancelling stops future renewals — you retain access to premium features until the end of the current paid billing period.</p>
+      <p>You can cancel your subscription at any time. Cancelling stops future renewals, and you keep premium access until the end of the period you have already paid for.</p>
       <p><strong>Steps to cancel on Android:</strong></p>
-      <div class="steps">
-        <div class="step"><div class="step-num">1</div><span>Open the <strong>Google Play Store</strong> app on your device</span></div>
-        <div class="step"><div class="step-num">2</div><span>Tap your <strong>profile icon</strong> in the top right corner</span></div>
-        <div class="step"><div class="step-num">3</div><span>Tap <strong>Payments &amp; subscriptions → Subscriptions</strong></span></div>
-        <div class="step"><div class="step-num">4</div><span>Find the Nova Soft Labs app subscription and tap it</span></div>
-        <div class="step"><div class="step-num">5</div><span>Tap <strong>Cancel subscription</strong> and follow the prompts</span></div>
-      </div>
-      <p>You can also manage subscriptions at <a href="https://play.google.com/store/account/subscriptions" target="_blank" style="color:var(--accent2);">play.google.com/store/account/subscriptions</a>.</p>
-      <div class="highlight-box">
-        ℹ️ Uninstalling the app does <strong>not</strong> cancel your subscription. You must cancel through Google Play as described above.
+      <ul>
+        <li><strong>Step 1:</strong> Open the <strong>Google Play Store</strong> app</li>
+        <li><strong>Step 2:</strong> Tap your <strong>profile icon</strong> in the top right corner</li>
+        <li><strong>Step 3:</strong> Tap <strong>Payments &amp; subscriptions → Subscriptions</strong></li>
+        <li><strong>Step 4:</strong> Select the Nova Soft Labs app subscription</li>
+        <li><strong>Step 5:</strong> Tap <strong>Cancel subscription</strong> and follow the prompts</li>
+      </ul>
+      <p>You can also manage subscriptions at <a href="https://play.google.com/store/account/subscriptions" target="_blank" rel="noopener">play.google.com/store/account/subscriptions</a>.</p>
+      <div class="highlight-box warning">
+        ⚠️ Uninstalling the app does <strong>not</strong> cancel your subscription. You must cancel through Google Play as described above.
       </div>
     </div>
 
     <div class="section" id="refunds">
-      <div class="section-num">06 —</div>
+      <div class="section-num">07 —</div>
       <h2>Refunds</h2>
-      <p>Refund requests are handled by Google Play in accordance with their refund policy. Nova Soft Labs does not process refunds directly as we do not have access to your payment information.</p>
+      <p>Refunds are handled by Google Play in accordance with its refund policy. Because Google processes all payments, Nova Soft Labs cannot issue refunds directly.</p>
       <p><strong>How to request a refund:</strong></p>
       <ul>
-        <li>Visit <a href="https://support.google.com/googleplay/answer/2479637" target="_blank" style="color:var(--accent2);">Google Play's refund page</a> to submit a refund request</li>
-        <li>Google Play typically allows refunds within <strong>48 hours</strong> of purchase for subscriptions</li>
-        <li>Refund eligibility is determined solely by Google Play's refund policy</li>
-        <li>Lifetime purchases are generally non-refundable after the Google Play refund window has passed</li>
+        <li>Within 48 hours of a purchase, you can usually request a refund directly from Google Play using <a href="https://support.google.com/googleplay/answer/2479637" target="_blank" rel="noopener">Google Play's refund page</a></li>
+        <li>After 48 hours, contact us at <a href="mailto:support@novasoftlabs.com">support@novasoftlabs.com</a> with your app name and Google Play order number (starts with "GPA."), and we will review your request</li>
+        <li>Refund eligibility is decided under Google Play's refund policy and applicable consumer law</li>
       </ul>
-      <p>If you are having trouble getting a refund through Google Play or believe you were charged in error, contact us at <a href="mailto:support@novasoftlabs.com" style="color:var(--accent2);">support@novasoftlabs.com</a> and we will do our best to assist you.</p>
       <div class="highlight-box warning">
-        ⚠️ Refunds are not automatically issued when you cancel a subscription. Cancellation only stops future renewals — it does not refund the current billing period.
+        ⚠️ Cancelling a subscription does not automatically refund the current billing period. It only stops future renewals.
       </div>
     </div>
 
-    <div class="section" id="lifetime">
-      <div class="section-num">07 —</div>
-      <h2>Lifetime Purchase</h2>
-      <p>The Lifetime plan is a <strong>one-time purchase</strong> that unlocks all premium features permanently — there are no recurring charges.</p>
+    <div class="section" id="onetime">
+      <div class="section-num">08 —</div>
+      <h2>One-Time Purchases</h2>
+      <p>Lifetime plans and other one-time purchases (such as Remove Ads) are charged once, with no recurring charges.</p>
       <ul>
-        <li>You are charged once at the time of purchase</li>
-        <li>No subscription, no renewals, no future charges</li>
-        <li>Premium access is tied to your Google Play account</li>
-        <li>If you uninstall and reinstall the app, your purchase can be restored by signing in with the same Google Play account</li>
-        <li>The Lifetime plan does not include a free trial</li>
+        <li>You are charged once at the time of purchase — no subscription and no renewals</li>
+        <li>Your purchase is linked to your Google Play account</li>
+        <li>If you reinstall the app or move to a new device, you can restore it by using the same Google Play account</li>
+        <li>One-time purchases do not include a free trial</li>
+        <li>Consumable in-game items (such as hints) are used up when spent and cannot be restored after use</li>
       </ul>
-      <div class="highlight-box">
-        ♾️ A Lifetime purchase gives you permanent access to premium features for that specific app. It does not apply across all Nova Soft Labs apps — each app requires its own purchase.
-      </div>
     </div>
 
     <div class="section" id="manage">
-      <div class="section-num">08 —</div>
+      <div class="section-num">09 —</div>
       <h2>Managing Your Plan</h2>
-      <p>Everything related to your subscription is managed through your Google Play account. Nova Soft Labs does not have a separate account system.</p>
+      <p>Everything related to your purchases is managed through your Google Play account. Purchases are linked to your Google Play account, not to an app account (such as a PayShare login).</p>
       <ul>
         <li><strong>View your plan:</strong> Google Play → Profile → Payments &amp; subscriptions → Subscriptions</li>
-        <li><strong>Cancel:</strong> See the How to Cancel section above</li>
+        <li><strong>Cancel:</strong> see the How to Cancel section above</li>
         <li><strong>Change payment method:</strong> Google Play → Profile → Payments &amp; subscriptions → Payment methods</li>
-        <li><strong>Restore a purchase:</strong> Reinstall the app and sign in with the same Google Play account — your purchase will be restored automatically</li>
-        <li><strong>Switch plans:</strong> Cancel your current plan and purchase the new plan after your current period ends</li>
+        <li><strong>Restore a purchase:</strong> reinstall the app using the same Google Play account; where available, you can also tap "Restore purchases" in the app</li>
+        <li><strong>Switch plans:</strong> where the app supports it, you can change plans from the upgrade screen; otherwise, cancel your current plan and buy the new one after your current period ends</li>
       </ul>
-      <p>If you experience any issues with your subscription that cannot be resolved through Google Play, contact us directly — we are happy to help.</p>
+      <p>If you have an issue that cannot be solved through Google Play, contact us — we are happy to help.</p>
     </div>
 
     <div class="section" id="governing">
-      <div class="section-num">09 —</div>
+      <div class="section-num">10 —</div>
       <h2>Governing Law</h2>
-      <p>This Subscription Policy is governed by applicable consumer protection and commerce laws in the jurisdiction where Nova Soft Labs operates. All billing and payment processing is governed by Google Play's Terms of Service.</p>
-      <p>If you have an unresolved billing dispute, you may contact your local consumer protection authority. EU/EEA users may also use the EU Online Dispute Resolution platform at <a href="https://ec.europa.eu/consumers/odr" target="_blank" style="color:var(--accent2);">ec.europa.eu/consumers/odr</a>. Nothing in this policy limits your statutory rights as a consumer under the laws of your country.</p>
+      <p>This Subscription Policy is governed by the laws of Pakistan. All billing and payment processing is also governed by Google Play's Terms of Service.</p>
+      <p>If you have a billing issue we have not resolved, you may contact your local consumer protection authority. Nothing in this policy limits your statutory rights as a consumer under the laws of your country.</p>
     </div>
 
     <div class="section" id="contact">
-      <div class="section-num">10 —</div>
+      <div class="section-num">11 —</div>
       <h2>Contact &amp; Support</h2>
-      <p>Have a question about your subscription, a billing issue, or need help cancelling? Reach out to us directly:</p>
+      <p>Have a question about your subscription, a billing issue, or need help cancelling? Reach out to us:</p>
+      <p><strong>Nova Soft Labs</strong><br/>Lahore, Punjab, Pakistan</p>
       <a href="mailto:support@novasoftlabs.com" class="contact-block">✉ support@novasoftlabs.com</a>
-      <p style="margin-top:1rem;">We aim to respond to all inquiries within 48 hours. Please include the app name and a description of your issue so we can help you as quickly as possible.</p>
+      <p style="margin-top:1rem;">We aim to respond to all inquiries within 48 hours. Please include the app name and a description of your issue so we can help you quickly.</p>
     </div>
 
   </main>
@@ -516,9 +445,9 @@
     <a href="subscription-policy.html">Subscription Policy</a>
     <a href="privacy-policy.html">Privacy Policy</a>
     <a href="terms-of-use.html">Terms of Use</a>
+    <a href="delete-account.html">Delete Account</a>
     <a href="https://novasoftlabs.com">Home</a>
   </div>
 </footer>
-
 </body>
 </html>
