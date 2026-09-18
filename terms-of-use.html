@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Terms of Use — Nova Soft Labs</title>
+  <meta name="description" content="Terms of Use for all Nova Soft Labs Android apps, including remote control apps, QR Code, PayShare and Arrow Escape."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
@@ -139,11 +140,13 @@
     }
     .content {
       padding: 3rem 0 3rem 3rem;
+      min-width: 0;
     }
     .section {
       margin-bottom: 3.5rem;
       padding-bottom: 3.5rem;
       border-bottom: 1px solid var(--border);
+      scroll-margin-top: 80px;
     }
     .section:last-child {
       border-bottom: none;
@@ -160,6 +163,12 @@
       font-weight: 700;
       letter-spacing: -0.02em;
       margin-bottom: 1rem;
+    }
+    .section h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 1.8rem 0 0.6rem;
     }
     .section p {
       color: #b8b8d0;
@@ -184,6 +193,7 @@
       font-family: 'Space Mono', monospace;
       font-size: 0.8rem;
     }
+    .section a { color: var(--accent2); }
     .highlight-box {
       background: var(--tag-bg);
       border: 1px solid var(--border);
@@ -195,7 +205,7 @@
       color: #c0c0dc;
     }
     .highlight-box.warning {
-      border-left-color: #ffaa00;
+      border-left-color: #ffb347;
     }
     .contact-block {
       display: inline-flex;
@@ -239,6 +249,7 @@
       .layout { grid-template-columns: 1fr; }
       .toc { display: none; }
       .content { padding: 2rem 0; }
+      footer a { margin-left: 0; margin-right: 1.2rem; }
     }
   </style>
 </head>
@@ -247,19 +258,18 @@
   <a href="https://novasoftlabs.com" class="logo">Nova<span>Soft</span> Labs</a>
   <a href="https://novasoftlabs.com" class="nav-link">← Back to Home</a>
 </nav>
-
 <div class="hero">
   <div class="hero-tag">// Legal</div>
   <h1>Terms of <em>Use</em></h1>
   <p style="color:var(--muted);max-width:560px;font-size:0.95rem;">By using any Nova Soft Labs app, you agree to these terms. We've written them to be clear and fair — please read them.</p>
-  <div class="hero-meta">Last updated: June 2026 &nbsp;·&nbsp; Applies to all Nova Soft Labs apps</div>
+  <div class="hero-meta">Last updated: September 2026 &nbsp;·&nbsp; Applies to all Nova Soft Labs apps</div>
 </div>
-
 <div class="layout">
   <aside class="toc">
     <div class="toc-title">On this page</div>
     <a href="#acceptance">Acceptance of Terms</a>
-    <a href="#description">App Description</a>
+    <a href="#description">Our Apps</a>
+    <a href="#appterms">App-Specific Terms</a>
     <a href="#license">License to Use</a>
     <a href="#conduct">Acceptable Use</a>
     <a href="#advertising">Advertising</a>
@@ -273,34 +283,68 @@
     <a href="#governing">Governing Law</a>
     <a href="#contact">Contact Us</a>
   </aside>
-
   <main class="content">
 
     <div class="section" id="acceptance">
       <div class="section-num">01 —</div>
       <h2>Acceptance of Terms</h2>
       <p>By downloading, installing, or using any application developed by Nova Soft Labs ("we," "our," or "us"), you agree to be bound by these Terms of Use. If you do not agree to these terms, please do not use our apps.</p>
-      <p>These terms apply to all Nova Soft Labs applications including, but not limited to, Samsung Remote, LG Remote, Chromecast Remote, Roku Remote, Fire TV Remote, and any other current or future apps we publish on Google Play or other platforms.</p>
-      <p><strong>Age Requirement:</strong> Our apps are intended for users aged 13 and older. By using our apps, you confirm that you are at least 13 years of age. If you are under 13, you must not use our apps. If you are a parent or guardian and become aware that your child under 13 has used our apps, please contact us at <a href="mailto:support@novasoftlabs.com" style="color:var(--accent2);">support@novasoftlabs.com</a> immediately.</p>
-      <p>By using our apps, you also acknowledge that our apps display advertisements powered by Google AdMob and may offer in-app purchases processed through Google Play, both of which are subject to their respective terms and policies in addition to these Terms.</p>
+      <p>These terms apply to all Nova Soft Labs apps, including our remote control apps (such as Samsung Remote, LG Remote, Chromecast Remote, Roku Remote, Fire TV Remote, and Universal Remote), QR Code, PayShare, Arrow Escape, and any other current or future apps we publish on Google Play.</p>
+      <p><strong>Age Requirement:</strong> Our apps are intended for users aged 13 and older. By using our apps, you confirm that you are at least 13 years of age. If you are a parent or guardian and become aware that your child under 13 has used our apps, please contact us at <a href="mailto:support@novasoftlabs.com">support@novasoftlabs.com</a>.</p>
+      <p>Your use of our apps is also subject to our <a href="privacy-policy.html">Privacy Policy</a> and, where you make purchases, our <a href="subscription-policy.html">Subscription Policy</a>. Some apps display advertisements powered by Google AdMob and offer purchases processed through Google Play, which are subject to Google's own terms.</p>
     </div>
 
     <div class="section" id="description">
       <div class="section-num">02 —</div>
-      <h2>App Description</h2>
-      <p>Nova Soft Labs develops remote control applications that allow users to control compatible smart TVs, streaming devices, and home entertainment systems from their mobile device over a local Wi-Fi network.</p>
-      <p>Our apps are utility tools. They require a compatible device and a local network connection to function. We do not guarantee compatibility with all device models or firmware versions.</p>
-      <p>Some features of our apps are available for free and supported by in-app advertising. Additional premium features may be unlocked through in-app purchases or subscriptions.</p>
+      <h2>Our Apps</h2>
+      <p>Nova Soft Labs develops utility, productivity, and game apps for Android. Our apps are free to download. Some features are supported by in-app advertising, and some apps offer optional premium features through in-app purchases or subscriptions.</p>
+      <p>We work to keep our apps reliable, but features may change over time, and some features depend on your device, operating system, network, or third-party devices and services.</p>
+    </div>
+
+    <div class="section" id="appterms">
+      <div class="section-num">03 —</div>
+      <h2>App-Specific Terms</h2>
+
+      <h3>Remote Control Apps</h3>
+      <ul>
+        <li>Remote apps let you control compatible smart TVs and streaming devices over your local Wi-Fi network. Your phone and TV usually need to be on the same network.</li>
+        <li>We do not guarantee compatibility with every TV model, brand, or firmware version. Manufacturers may change their systems at any time, which can affect how our apps work.</li>
+        <li>Our remote apps are independent products and are not official apps of any TV or device manufacturer.</li>
+      </ul>
+
+      <h3>QR Code</h3>
+      <ul>
+        <li>QR Code scans and creates QR codes and barcodes. We do not control the content inside codes created by other people.</li>
+        <li>Scanned codes may contain links to websites or other content. Please check a link before opening it. We are not responsible for the content, safety, or practices of any website or content reached through a scanned code.</li>
+        <li>You are responsible for the content of QR codes you create and share, and you must not use the app to create codes that link to illegal, harmful, or misleading content.</li>
+      </ul>
+
+      <h3>PayShare</h3>
+      <ul>
+        <li>PayShare requires an account. You can sign in with Google or with an email address and password. You must give accurate information and keep your password secure, and you are responsible for activity on your account.</li>
+        <li>PayShare is a calculation tool that helps you track shared expenses and see who owes what. It does <strong>not</strong> send, receive, hold, or transfer money, and it is not a bank, payment service, or financial advisor.</li>
+        <li>Any payments between people are made outside the app and are solely between those people. We are not a party to any agreement or debt between users.</li>
+        <li>Information you add to a group, including your name and expenses, is visible to the other members of that group. Only add people who agree to be part of the group, and do not add false or abusive entries.</li>
+        <li>You are responsible for checking that the amounts you enter are correct. Results are based only on the information entered by group members.</li>
+        <li>You can delete your account at any time in the app or through our <a href="delete-account.html">Delete Account page</a>. We may suspend or delete accounts that break these Terms or are used to harass other people.</li>
+      </ul>
+
+      <h3>Arrow Escape</h3>
+      <ul>
+        <li>Arrow Escape is a puzzle game for entertainment. Game progress is stored on your device and may be lost if you uninstall the app or clear its data.</li>
+        <li>Any in-game items, hints, or rewards have no real-world money value and cannot be exchanged for cash.</li>
+        <li>Optional rewarded ads may offer in-game rewards. Rewards are given only after the ad is completed and may depend on ad availability.</li>
+      </ul>
     </div>
 
     <div class="section" id="license">
-      <div class="section-num">03 —</div>
+      <div class="section-num">04 —</div>
       <h2>License to Use</h2>
       <p>We grant you a limited, non-exclusive, non-transferable, revocable license to use our apps for personal, non-commercial purposes on devices you own or control, subject to these Terms.</p>
       <p>This license does not allow you to:</p>
       <ul>
         <li>Copy, modify, or create derivative works of our apps</li>
-        <li>Reverse-engineer, decompile, or disassemble the app</li>
+        <li>Reverse-engineer, decompile, or disassemble the app, except where the law allows it</li>
         <li>Sell, rent, lease, or sublicense the app to others</li>
         <li>Remove or alter any copyright, trademark, or proprietary notices</li>
         <li>Use the app for any commercial purpose without our written consent</li>
@@ -309,139 +353,142 @@
     </div>
 
     <div class="section" id="conduct">
-      <div class="section-num">04 —</div>
+      <div class="section-num">05 —</div>
       <h2>Acceptable Use</h2>
       <p>You agree to use our apps only for lawful purposes and in accordance with these Terms. You must not use our apps to:</p>
       <ul>
         <li>Control or access any device without the owner's permission</li>
+        <li>Create or share QR codes that link to malware, scams, illegal content, or misleading websites</li>
         <li>Interfere with or disrupt any network, server, or device</li>
         <li>Attempt to gain unauthorized access to any system or network</li>
+        <li>Cheat, exploit bugs, or use automated tools to obtain in-game rewards or premium features</li>
         <li>Use the app in any way that violates applicable local, national, or international law</li>
       </ul>
       <div class="highlight-box warning">
-        ⚠️ Our apps are designed for use with devices you own or have permission to control. Unauthorized use of remote control functionality against devices you do not own is strictly prohibited.
+        ⚠️ Our remote apps are designed for use with devices you own or have permission to control. Unauthorized use of remote control features on devices you do not own is strictly prohibited.
       </div>
     </div>
 
     <div class="section" id="advertising">
-      <div class="section-num">05 —</div>
+      <div class="section-num">06 —</div>
       <h2>Advertising</h2>
-      <p>Our apps display advertisements served by <strong>Google AdMob</strong>, a third-party advertising platform operated by Google LLC. Advertising allows us to offer free versions of our apps to users.</p>
-      <p>By using our apps, you acknowledge and agree that:</p>
+      <p>Some of our apps display advertisements served by <strong>Google AdMob</strong>, a third-party advertising platform operated by Google LLC. Advertising allows us to offer free versions of our apps.</p>
+      <p>By using our apps, you acknowledge that:</p>
       <ul>
-        <li>Advertisements may be displayed within the app at any time during your use</li>
-        <li>Google AdMob may use your Google Advertising ID (GAID) and device information to serve personalized ads based on your interests</li>
-        <li>Ad content is determined by Google AdMob and we do not control which specific ads are shown</li>
-        <li>You may opt out of personalized advertising at any time through your device settings (Settings → Google → Ads → Delete Advertising ID)</li>
-        <li>Clicking on ads may take you to third-party websites or apps — we are not responsible for their content or practices</li>
+        <li>Advertisements may appear as banners, full-screen ads, or optional rewarded ads</li>
+        <li>Google AdMob may use your advertising ID and device information to serve ads, including personalized ads where permitted and where you have given any required consent</li>
+        <li>Ad content is selected by Google AdMob, and we do not control which specific ads are shown</li>
+        <li>You may opt out of personalized ads at any time through your device settings (Settings → Google → Ads → Delete advertising ID) or through the app's privacy options where available</li>
+        <li>Clicking an ad may take you to third-party websites or apps — we are not responsible for their content or practices</li>
       </ul>
       <div class="highlight-box">
-        📢 Ads help keep our apps free. If you prefer an ad-free experience, you may be able to remove ads through an in-app purchase where available.
+        📢 Ads help keep our apps free. Where available, you can remove ads through an in-app purchase.
       </div>
-      <p>Google AdMob's use of data is governed by Google's Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" style="color:var(--accent2);">policies.google.com/privacy</a></p>
+      <p>More details about advertising and your data are in our <a href="privacy-policy.html">Privacy Policy</a>.</p>
     </div>
 
     <div class="section" id="purchases">
-      <div class="section-num">06 —</div>
+      <div class="section-num">07 —</div>
       <h2>In-App Purchases</h2>
-      <p>Some features may be available as one-time in-app purchases or recurring subscriptions, processed securely through Google Play. All purchases are subject to Google Play's terms and policies.</p>
+      <p>Some apps offer optional one-time purchases or recurring subscriptions, processed securely through Google Play. All purchases are also subject to Google Play's terms and policies.</p>
       <ul>
-        <li>Prices are displayed in your local currency as set by Google Play</li>
+        <li>Prices are shown in your local currency on the Google Play purchase screen before you confirm</li>
         <li>All transactions are processed by Google Play — we do not collect or store your payment information</li>
-        <li>Some subscriptions may include a <strong>free trial period</strong> (e.g. 3 days). Free trials automatically convert to a paid subscription unless cancelled at least 24 hours before the trial ends</li>
-        <li>Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current billing period</li>
-        <li>You will be charged for renewal within 24 hours prior to the end of the current billing period</li>
-        <li>You can manage and cancel subscriptions at any time via your Google Play account settings</li>
+        <li>Some subscriptions may include a free trial. If you do not cancel before the trial ends, it automatically converts to a paid subscription. You can cancel at any time before the trial ends</li>
+        <li>Subscriptions automatically renew at the end of each billing period unless you cancel before the renewal date</li>
+        <li>You can manage and cancel subscriptions at any time in your Google Play account settings</li>
         <li>Refunds are handled in accordance with Google Play's refund policy</li>
-        <li>Purchasing a premium feature or subscription unlocks that feature for your account as described at the time of purchase</li>
+        <li>A purchase unlocks the features described in the app at the time of purchase, for that specific app only</li>
       </ul>
-      <div class="highlight-box">
-        💳 Nova Soft Labs never sees or stores your payment details. All billing is managed securely by Google Play.
-      </div>
-      <p>To cancel a subscription or request a refund, visit your Google Play subscription settings or contact us at <a href="mailto:support@novasoftlabs.com" style="color:var(--accent2);">support@novasoftlabs.com</a>.
       <div class="highlight-box warning">
-        ⚠️ <strong>Important:</strong> Uninstalling the app does <strong>not</strong> cancel your subscription. You must cancel through Google Play to stop future charges. See our <a href="subscription-policy.html" style="color:var(--accent2);">Subscription Policy</a> for full cancellation steps.
-      </div></p>
+        ⚠️ <strong>Important:</strong> Uninstalling the app does <strong>not</strong> cancel your subscription. You must cancel through Google Play to stop future charges. See our <a href="subscription-policy.html">Subscription Policy</a> for full details.
+      </div>
     </div>
 
     <div class="section" id="ip">
-      <div class="section-num">07 —</div>
+      <div class="section-num">08 —</div>
       <h2>Intellectual Property</h2>
-      <p>All content, features, and functionality in our apps — including but not limited to code, graphics, logos, icons, and interface design — are owned by Nova Soft Labs and protected by applicable intellectual property laws.</p>
-      <p>Third-party trademarks referenced in our apps — including but not limited to Samsung®, LG®, Chromecast® (Google LLC), Roku®, Amazon Fire TV®, Sony®, Philips®, and other device or platform brands — are the property of their respective owners. Nova Soft Labs is not affiliated with, endorsed by, sponsored by, or officially connected to any of these companies or their products.</p>
+      <p>All content, features, and functionality in our apps — including code, graphics, logos, icons, game levels, and interface design — are owned by Nova Soft Labs and protected by applicable intellectual property laws.</p>
+      <p>Content you create in our apps (such as your QR codes or expense records) remains yours. For PayShare, you allow us to store your content and show it to the members of the groups you share it with, only as needed to run the app.</p>
+      <p>Third-party trademarks referenced in our apps — including Samsung®, LG®, Chromecast® (Google LLC), Roku®, Amazon Fire TV®, Sony®, Philips®, and other device or platform brands — are the property of their respective owners and are used only to describe compatibility. Nova Soft Labs is not affiliated with, endorsed by, sponsored by, or officially connected to any of these companies.</p>
     </div>
 
     <div class="section" id="disclaimer">
-      <div class="section-num">08 —</div>
+      <div class="section-num">09 —</div>
       <h2>Disclaimer of Warranties</h2>
-      <p>Our apps are provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind, either express or implied, including but not limited to:</p>
+      <p>To the extent permitted by law, our apps are provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind, either express or implied, including:</p>
       <ul>
         <li>Merchantability or fitness for a particular purpose</li>
         <li>Uninterrupted, error-free, or secure operation</li>
         <li>Compatibility with any specific device, TV, or firmware version</li>
-        <li>Accuracy or completeness of any content or features</li>
+        <li>Accuracy of calculations based on information you enter, or the safety of content reached through scanned codes</li>
         <li>Suitability, accuracy, or quality of any advertisements displayed within the app</li>
       </ul>
-      <p>We reserve the right to modify, suspend, or discontinue any feature — including free features supported by advertising — at any time without notice.</p>
+      <p>We may modify, suspend, or discontinue any feature at any time. If we permanently remove a paid feature you have purchased, we will try to provide a reasonable alternative, and your rights under Google Play's refund policy and applicable consumer law are not affected.</p>
     </div>
 
     <div class="section" id="liability">
-      <div class="section-num">09 —</div>
+      <div class="section-num">10 —</div>
       <h2>Limitation of Liability</h2>
       <p>To the fullest extent permitted by applicable law, Nova Soft Labs shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of, or inability to use, our apps.</p>
-      <p>This includes but is not limited to damages arising from:</p>
+      <p>This includes damages arising from:</p>
       <ul>
         <li>Inability to connect to or control a device</li>
-        <li>Any content, products, or services accessed via advertisements in our apps</li>
-        <li>Any issues related to in-app purchases, including unauthorized purchases made on your device</li>
-        <li>Data loss or device incompatibility</li>
+        <li>Websites, content, or files accessed through scanned QR codes or advertisements</li>
+        <li>Errors in amounts entered by users, or disputes between people about shared expenses</li>
+        <li>Loss of locally stored data, such as game progress or QR code history</li>
+        <li>Content added by other members of a PayShare group</li>
+        <li>Unauthorized purchases made on your device</li>
       </ul>
-      <p>In no event shall our total liability to you for all claims exceed the amount you paid us in the twelve months prior to the event giving rise to the claim (or $5 USD if you have not made any purchases).</p>
+      <p>In no event shall our total liability to you for all claims exceed the amount you paid us for the relevant app in the twelve months before the event giving rise to the claim (or $5 USD if you have not made any purchases). Nothing in these Terms limits any liability that cannot be limited under applicable law.</p>
     </div>
 
     <div class="section" id="thirdparty">
-      <div class="section-num">10 —</div>
+      <div class="section-num">11 —</div>
       <h2>Third-Party Services</h2>
-      <p>Our apps use or integrate with the following third-party services, each governed by their own terms and privacy policies:</p>
+      <p>Our apps may use or integrate with the following third-party services, each governed by its own terms and privacy policy. Not every app uses every service.</p>
       <ul>
-        <li><strong>Google AdMob</strong> — In-app advertising platform</li>
-        <li><strong>Google Play</strong> — App distribution, billing, and in-app purchases</li>
+        <li><strong>Google AdMob</strong> — In-app advertising</li>
+        <li><strong>Google Play &amp; Google Play Billing</strong> — App distribution, billing, and in-app purchases</li>
+        <li><strong>Firebase Authentication, Google Sign-In &amp; Firebase database</strong> — Account sign-in and cloud data storage (PayShare)</li>
         <li><strong>Firebase Crashlytics</strong> — Crash reporting and app stability</li>
-        <li><strong>Google Analytics for Firebase</strong> — Anonymous usage analytics</li>
-        <li><strong>Device manufacturer APIs</strong> — TV and device communication protocols</li>
+        <li><strong>Google Analytics for Firebase</strong> — Usage analytics</li>
+        <li><strong>Google ML Kit</strong> — On-device code scanning (QR Code app)</li>
+        <li><strong>Device communication protocols</strong> — Used by remote apps to communicate with compatible TVs and devices</li>
       </ul>
-      <p>We are not responsible for the practices, content, or policies of any third-party services. Links or references to third-party services do not constitute an endorsement by Nova Soft Labs.</p>
+      <p>We are not responsible for the practices, content, or policies of third-party services.</p>
     </div>
 
     <div class="section" id="termination">
-      <div class="section-num">11 —</div>
+      <div class="section-num">12 —</div>
       <h2>Termination</h2>
-      <p>We may terminate or suspend your access to our apps immediately, without prior notice, if you breach these Terms or engage in conduct that we determine is harmful to other users, us, or third parties.</p>
-      <p>Upon termination, your license to use the app is revoked. Active subscriptions will continue until the end of the paid billing period, after which they will not renew. Refunds upon termination for breach of these Terms are subject to Google Play's refund policy.</p>
+      <p>We may suspend or end your access to our apps if you seriously breach these Terms or use our apps in a way that is harmful to other users, us, or third parties.</p>
+      <p>You may stop using our apps at any time by uninstalling them. For PayShare, uninstalling does not delete your account — use the Delete account option. Uninstalling also does not cancel subscriptions — please cancel through Google Play. Active subscriptions continue until the end of the paid billing period and then do not renew.</p>
       <p>Provisions of these Terms that by their nature should survive termination shall continue in effect.</p>
     </div>
 
     <div class="section" id="changes">
-      <div class="section-num">12 —</div>
+      <div class="section-num">13 —</div>
       <h2>Changes to Terms</h2>
-      <p>We reserve the right to update these Terms at any time. When we do, we will update the "Last updated" date at the top of this page. For material changes, we may also notify users via an in-app notice.</p>
-      <p>Your continued use of our apps after any changes constitutes your acceptance of the revised Terms.</p>
+      <p>We may update these Terms from time to time. When we do, we will update the "Last updated" date at the top of this page. For material changes, we may also notify users through an in-app notice.</p>
+      <p>Your continued use of our apps after any changes means you accept the revised Terms.</p>
     </div>
 
     <div class="section" id="governing">
-      <div class="section-num">13 —</div>
+      <div class="section-num">14 —</div>
       <h2>Governing Law</h2>
-      <p>These Terms shall be governed by and construed in accordance with the laws of the jurisdiction in which Nova Soft Labs operates. Any disputes arising from these Terms or your use of our apps shall first be attempted to be resolved through good-faith negotiation by contacting us at <a href="mailto:support@novasoftlabs.com" style="color:var(--accent2);">support@novasoftlabs.com</a>.</p>
-      <p>If a dispute cannot be resolved informally, it shall be submitted to binding arbitration or the courts of competent jurisdiction in our operating jurisdiction, except where prohibited by applicable consumer protection laws in your region. Nothing in this section limits your statutory rights as a consumer under the laws of your country of residence.</p>
+      <p>These Terms are governed by the laws of Pakistan. Any dispute should first be raised with us at <a href="mailto:support@novasoftlabs.com">support@novasoftlabs.com</a> so we can try to resolve it informally in good faith.</p>
+      <p>If a dispute cannot be resolved informally, it may be brought before the competent courts of Lahore, Pakistan, unless the law of your country gives you the right to bring it in your local courts.</p>
       <div class="highlight-box">
-        🌍 If you are located in the EU/EEA, your use of our apps is also subject to the General Data Protection Regulation (GDPR). You may submit privacy complaints to your local data protection authority or use the EU Online Dispute Resolution platform at <a href="https://ec.europa.eu/consumers/odr" target="_blank" style="color:var(--accent2);">ec.europa.eu/consumers/odr</a>. To request deletion of data associated with your use of our apps, please refer to our <a href="privacy-policy.html" style="color:var(--accent2);">Privacy Policy</a> for the data deletion request process.
+        🌍 Nothing in these Terms limits your statutory rights as a consumer under the laws of your country of residence, including rights under EU/EEA and UK consumer and data protection laws.
       </div>
     </div>
 
     <div class="section" id="contact">
-      <div class="section-num">14 —</div>
+      <div class="section-num">15 —</div>
       <h2>Contact Us</h2>
-      <p>If you have any questions about these Terms, your purchases, or need support with any of our apps, reach out to us:</p>
+      <p>If you have questions about these Terms, your purchases, or need support with any of our apps, reach out to us:</p>
+      <p><strong>Nova Soft Labs</strong><br/>Lahore, Punjab, Pakistan</p>
       <a href="mailto:support@novasoftlabs.com" class="contact-block">✉ support@novasoftlabs.com</a>
       <p style="margin-top:1rem;">We aim to respond to all inquiries within 48 hours.</p>
     </div>
@@ -455,9 +502,9 @@
     <a href="subscription-policy.html">Subscription Policy</a>
     <a href="privacy-policy.html">Privacy Policy</a>
     <a href="terms-of-use.html">Terms of Use</a>
+    <a href="delete-account.html">Delete Account</a>
     <a href="https://novasoftlabs.com">Home</a>
   </div>
 </footer>
 </body>
 </html>
-
