@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Privacy Policy — Nova Soft Labs</title>
+  <meta name="description" content="Privacy Policy for all Nova Soft Labs Android apps, including remote control apps, QR Code, PayShare and Arrow Escape."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
@@ -139,11 +140,13 @@
     }
     .content {
       padding: 3rem 0 3rem 3rem;
+      min-width: 0;
     }
     .section {
       margin-bottom: 3.5rem;
       padding-bottom: 3.5rem;
       border-bottom: 1px solid var(--border);
+      scroll-margin-top: 80px;
     }
     .section:last-child {
       border-bottom: none;
@@ -160,6 +163,12 @@
       font-weight: 700;
       letter-spacing: -0.02em;
       margin-bottom: 1rem;
+    }
+    .section h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 1.8rem 0 0.6rem;
     }
     .section p {
       color: #b8b8d0;
@@ -184,6 +193,7 @@
       font-family: 'Space Mono', monospace;
       font-size: 0.8rem;
     }
+    .section a { color: var(--accent2); }
     .highlight-box {
       background: var(--tag-bg);
       border: 1px solid var(--border);
@@ -239,6 +249,7 @@
       .layout { grid-template-columns: 1fr; }
       .toc { display: none; }
       .content { padding: 2rem 0; }
+      footer a { margin-left: 0; margin-right: 1.2rem; }
     }
   </style>
 </head>
@@ -251,13 +262,15 @@
   <div class="hero-tag">// Legal</div>
   <h1>Privacy <em>Policy</em></h1>
   <p style="color:var(--muted);max-width:560px;font-size:0.95rem;">We believe privacy is a right, not a checkbox. Here's exactly what we collect, why, and how we protect it.</p>
-  <div class="hero-meta">Last updated: June 2026 &nbsp;·&nbsp; Applies to all Nova Soft Labs apps</div>
+  <div class="hero-meta">Last updated: September 2026 &nbsp;·&nbsp; Applies to all Nova Soft Labs apps</div>
 </div>
 <div class="layout">
   <aside class="toc">
     <div class="toc-title">On this page</div>
     <a href="#overview">Overview</a>
     <a href="#information">Information We Collect</a>
+    <a href="#apps">App-Specific Information</a>
+    <a href="#permissions">Device Permissions</a>
     <a href="#usage">How We Use It</a>
     <a href="#advertising">Advertising (AdMob)</a>
     <a href="#consent">Consent Management</a>
@@ -278,63 +291,133 @@
     <div class="section" id="overview">
       <div class="section-num">01 —</div>
       <h2>Overview</h2>
-      <p>Nova Soft Labs ("we," "our," or "us") operates a suite of remote control and device management applications for Android, including but not limited to Samsung Remote, LG Remote, Chromecast Remote, Roku Remote, Fire TV Remote, and any other current or future apps we publish on Google Play. This Privacy Policy explains how we handle information when you use any of our apps.</p>
-      <p>Our apps are designed as remote control utilities. We are committed to being transparent about how data is collected and used — including by third-party services such as advertising and analytics providers integrated into our apps.</p>
+      <p>Nova Soft Labs ("we," "our," or "us") is an independent app developer based in Lahore, Pakistan. We publish utility, productivity, and game apps for Android on Google Play. This Privacy Policy explains how we handle information when you use any of our apps.</p>
+      <p>Our apps currently include:</p>
+      <ul>
+        <li><strong>Remote control apps</strong> — including Samsung Remote, LG Remote, Chromecast Remote, Roku Remote, Fire TV Remote, and Universal Remote</li>
+        <li><strong>QR Code</strong> — a QR code and barcode scanner and generator</li>
+        <li><strong>PayShare</strong> — a bill and expense splitting app</li>
+        <li><strong>Arrow Escape</strong> — a puzzle game</li>
+        <li>Any other current or future app published by Nova Soft Labs on Google Play</li>
+      </ul>
+      <p>We are committed to being transparent about how data is collected and used — including by third-party services such as advertising and analytics providers integrated into our apps.</p>
       <div class="highlight-box">
-        📱 This policy applies universally across all current and future Nova Soft Labs apps available on Google Play and other platforms — regardless of which specific remote control app you are using.
+        📱 This policy applies to all current and future Nova Soft Labs apps. Sections 02 and 04–18 apply to every app. Section 03 explains the data and features that are specific to each app. Not every app uses every service described here — for example, some apps may not show ads or offer purchases.
       </div>
     </div>
 
     <div class="section" id="information">
       <div class="section-num">02 —</div>
       <h2>Information We Collect</h2>
-      <p>We collect only what is necessary to make the app function. We do <strong>not</strong> require account registration or collect personal identifying information to use our apps.</p>
-      <p><strong>Automatically collected (non-personal):</strong></p>
+      <p>We collect only what is necessary to make our apps work and to keep them free. Most of our apps do <strong>not</strong> require an account and do not ask for your name, email address, or phone number. <strong>PayShare</strong> is the exception: it requires you to sign in so your groups and expenses can be saved and shared with your group members. The account data PayShare collects is described in Section 03.</p>
+      <p><strong>Automatically collected (non-identifying):</strong></p>
       <ul>
         <li>Device type, operating system version, and app version (for crash diagnostics)</li>
-        <li>Anonymous usage statistics (e.g. feature usage frequency, session duration)</li>
+        <li>Pseudonymous usage statistics linked to a random app instance ID, not to your identity (e.g. feature usage frequency, session duration)</li>
         <li>Crash logs and error reports to improve stability</li>
       </ul>
-      <p><strong>Network &amp; local device data:</strong></p>
+      <p><strong>Content you create inside an app:</strong></p>
       <ul>
-        <li>Local network information (IP addresses on your home/local network) used solely to discover and connect to your TV or device — never transmitted to our servers</li>
-        <li>Device names visible on your local network, used only within the app session</li>
+        <li>Some apps let you enter or create content — for example, QR codes you generate or scan in QR Code, or game progress in Arrow Escape. This content is stored locally on your device. In PayShare, groups and expenses are stored in our cloud database (Google Firebase) so they can sync across devices and be shared with your group members. See Section 03 for details.</li>
       </ul>
       <p><strong>Collected by third-party SDKs (advertising &amp; analytics):</strong></p>
       <ul>
         <li>Advertising ID (Google Advertising ID / GAID) — collected by Google AdMob for ad serving</li>
-        <li>Device information (model, OS version, screen size) — used by AdMob for ad targeting</li>
+        <li>Device information (model, OS version, screen size) — used by AdMob for ad serving and measurement</li>
         <li>App interaction data (ad impressions, clicks) — collected by AdMob</li>
         <li>Approximate location (derived from IP address) — may be used by AdMob for geo-targeted ads</li>
       </ul>
       <p><strong>We do NOT collect:</strong></p>
       <ul>
-        <li>Your name, email, phone number, or any account information</li>
+        <li>Your name, email, phone number, or any account information — except in PayShare, where you choose to create an account (see Section 03)</li>
         <li>Precise location data (GPS)</li>
-        <li>Contacts, photos, messages, or any unrelated device content</li>
+        <li>Your contacts list, photo library, messages, or files — apps only access a specific photo or contact when you choose it yourself for a feature, as described in Section 03, and that item stays on your device</li>
         <li>Browsing history or cross-app activity (beyond what AdMob collects for ad personalization)</li>
         <li>Payment information (purchases are handled entirely by Google Play)</li>
       </ul>
     </div>
 
-    <div class="section" id="usage">
+    <div class="section" id="apps">
       <div class="section-num">03 —</div>
-      <h2>How We Use Information</h2>
-      <p>Any data collected by us is used exclusively for:</p>
+      <h2>App-Specific Information</h2>
+      <p>This section explains the data and features that are specific to each of our apps, in addition to the general information above.</p>
+
+      <h3>Remote Control Apps (Samsung, LG, Chromecast, Roku, Fire TV, Universal Remote and others)</h3>
       <ul>
-        <li>Enabling core app functionality (device discovery, remote control operation)</li>
+        <li><strong>Local network information:</strong> the app scans your Wi-Fi network to find compatible TVs and streaming devices, and reads their local IP addresses and device names. This is used only to connect to and control your device and is never sent to our servers.</li>
+        <li><strong>Paired devices:</strong> the names and addresses of devices you have connected to are saved on your phone so you don't need to reconnect each time.</li>
+        <li><strong>Voice input (where available):</strong> if an app offers voice search or voice typing, the microphone is used only while you press the voice button. Speech is converted to text using your device's speech recognition service and sent to your TV. We do not record or store audio.</li>
+        <li><strong>Commands:</strong> button presses, keyboard text, and touchpad movements are sent directly from your phone to your TV over your local network.</li>
+      </ul>
+
+      <h3>QR Code</h3>
+      <ul>
+        <li><strong>Camera:</strong> used only to scan QR codes and barcodes while the scanner screen is open. Camera images are processed on your device and are never saved, uploaded, or shared.</li>
+        <li><strong>Scanning from an image:</strong> if you choose to scan a code from an image, you pick that single image yourself using the Android photo picker. The app reads only the image you choose and does not access the rest of your photo library.</li>
+        <li><strong>Scan and create history:</strong> codes you scan or generate may be saved in a history list on your device. You can delete this history inside the app at any time.</li>
+        <li><strong>Saving and sharing:</strong> if you save or share a QR code you created, it is saved to your device or shared through the app you select. We do not receive a copy.</li>
+        <li><strong>Opening scanned content:</strong> when you open a scanned link, it opens in your browser or another app you choose. Websites you visit are governed by their own privacy policies. We do not track which links you open.</li>
+      </ul>
+
+      <h3>PayShare</h3>
+      <p>PayShare requires an account so your groups and expenses can be saved online, synced across your devices, and shared with the people in your groups.</p>
+      <ul>
+        <li><strong>Sign-in:</strong> you can sign in with <strong>Google Sign-In</strong> or with an <strong>email address and password</strong>. Sign-in is handled by Firebase Authentication (Google).</li>
+        <li><strong>Account information we collect:</strong> your email address, your name, and (if you use Google Sign-In) your Google profile photo, plus a unique user ID created by Firebase. If you sign in with email and password, your password is securely handled by Firebase Authentication — we never see or store it.</li>
+        <li><strong>Information you enter:</strong> group names, member names, expense amounts, descriptions, notes, and settlement records that you add in the app.</li>
+        <li><strong>Where it is stored:</strong> your account and group data are stored in Google Firebase cloud services (Firebase Authentication and Firebase database), so you can access them on any device where you sign in.</li>
+        <li><strong>Who can see your data:</strong> when you create or join a group, your name, and the expenses and payments in that group, are visible to the other members of that group. Other members can also add expenses that include you. Please only add people who agree to be part of the group. Your data is not public and is not shown to people outside your groups.</li>
+        <li><strong>Adding members:</strong> if the app lets you pick a person from your contacts, only the contact you select is read, using the Android contact picker. The app does not read or upload your full contacts list.</li>
+        <li><strong>Sharing summaries:</strong> if you share a bill or settlement summary outside the app, it is sent through the app you choose (for example WhatsApp or SMS).</li>
+        <li><strong>No payments:</strong> PayShare only helps you calculate and track who owes what. It does not send, receive, or process money between people, and we do not collect bank or card details.</li>
+        <li><strong>Deleting your account:</strong> you can delete your PayShare account and data at any time inside the app, or by using our <a href="delete-account.html">Delete Account page</a>. See Section 14.</li>
+      </ul>
+
+      <h3>Arrow Escape</h3>
+      <ul>
+        <li><strong>Game progress:</strong> your levels, scores, hints, and settings (such as sound and music) are saved locally on your device.</li>
+        <li><strong>Rewarded ads:</strong> the game may offer optional ads that you can choose to watch in exchange for in-game rewards such as hints or extra moves. Watching these ads is always your choice.</li>
+        <li><strong>No chat or social features:</strong> the game does not include chat, user profiles, or any way to communicate with other players.</li>
+      </ul>
+    </div>
+
+    <div class="section" id="permissions">
+      <div class="section-num">04 —</div>
+      <h2>Device Permissions</h2>
+      <p>Our apps only request permissions needed for their features. Depending on the app, these may include:</p>
+      <ul>
+        <li><strong>Internet &amp; network state</strong> — to load ads, check purchases, send crash reports, and (for remote apps) connect to devices on your Wi-Fi</li>
+        <li><strong>Wi-Fi state / nearby devices</strong> — remote apps only, to discover TVs and streaming devices on your local network</li>
+        <li><strong>Camera</strong> — QR Code only, to scan codes</li>
+        <li><strong>Microphone</strong> — remote apps with voice input only, used only while you press the voice button</li>
+        <li><strong>Notifications</strong> — if an app sends notifications, you can turn them off at any time in your device settings</li>
+        <li><strong>Advertising ID</strong> — apps with ads, used by Google AdMob as described in Section 06</li>
+        <li><strong>Google account access</strong> — PayShare only, when you choose Google Sign-In; the app receives only your name, email address, and profile photo</li>
+      </ul>
+      <p>You can review and revoke permissions at any time in <strong>Settings → Apps → [App Name] → Permissions</strong>. Some features may not work without the related permission.</p>
+    </div>
+
+    <div class="section" id="usage">
+      <div class="section-num">05 —</div>
+      <h2>How We Use Information</h2>
+      <p>Any data collected by us is used only for:</p>
+      <ul>
+        <li>Providing each app's core features (for example, controlling your TV, scanning QR codes, splitting bills, or saving game progress)</li>
+        <li>Creating and securing your PayShare account, syncing your data across devices, and showing shared groups to their members</li>
+        <li>Responding to your support and deletion requests</li>
         <li>Diagnosing crashes and fixing bugs to improve app stability</li>
         <li>Understanding which features are most useful to improve future versions</li>
         <li>Displaying advertisements through Google AdMob to support free app features</li>
+        <li>Unlocking premium features you have purchased</li>
         <li>Complying with legal obligations</li>
       </ul>
       <p>Data collected by third-party SDKs (such as Google AdMob) is used by those providers in accordance with their own privacy policies, which may include ad personalization and cross-app tracking.</p>
     </div>
 
     <div class="section" id="advertising">
-      <div class="section-num">04 —</div>
+      <div class="section-num">06 —</div>
       <h2>Advertising (Google AdMob)</h2>
-      <p>Our apps display advertisements provided by <strong>Google AdMob</strong>, a third-party advertising service operated by Google LLC. AdMob helps us keep our apps free by showing relevant ads to users.</p>
+      <p>Some of our apps display advertisements provided by <strong>Google AdMob</strong>, a third-party advertising service operated by Google LLC. AdMob helps us keep our apps free by showing relevant ads to users. Ads may appear as banners, full-screen ads, or optional rewarded ads.</p>
       <p><strong>What AdMob collects:</strong></p>
       <ul>
         <li>Google Advertising ID (GAID) — a resettable device identifier used for ad targeting</li>
@@ -343,154 +426,174 @@
         <li>Approximate location based on IP address (for geo-targeted ads)</li>
         <li>App usage context (to serve relevant ads)</li>
       </ul>
-      <p><strong>Personalized Ads:</strong> By default, AdMob may serve personalized advertisements based on your interests and past interactions across apps and websites. This is done using the Google Advertising ID on your device.</p>
+      <p><strong>Personalized Ads:</strong> Where permitted, AdMob may serve personalized advertisements based on your interests and past interactions across apps and websites. This is done using the Google Advertising ID on your device.</p>
       <div class="highlight-box">
-        🔧 <strong>Opt-Out of Personalized Ads:</strong> You can reset or delete your Google Advertising ID at any time by going to <strong>Settings → Google → Ads</strong> on your Android device. Selecting "Delete advertising ID" will prevent all apps on your device from using it for personalized advertising.
+        🔧 <strong>Opt-Out of Personalized Ads:</strong> You can reset or delete your Google Advertising ID at any time by going to <strong>Settings → Google → Ads</strong> (on some devices: <strong>Settings → Privacy → Ads</strong>). Selecting "Delete advertising ID" will prevent all apps on your device from using it for personalized advertising.
       </div>
-      <p>AdMob's data collection and use is governed by Google's Privacy Policy. We encourage you to review it at <a href="https://policies.google.com/privacy" target="_blank" style="color:var(--accent2);">policies.google.com/privacy</a>.</p>
-      <p>For more information on how Google uses data from apps that use AdMob, visit: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" style="color:var(--accent2);">policies.google.com/technologies/partner-sites</a>.</p>
+      <p>AdMob's data collection and use is governed by Google's Privacy Policy. We encourage you to review it at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+      <p>For more information on how Google uses data from apps that use AdMob, visit: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">policies.google.com/technologies/partner-sites</a>.</p>
     </div>
 
     <div class="section" id="consent">
-      <div class="section-num">05 —</div>
+      <div class="section-num">07 —</div>
       <h2>Consent Management (EEA, UK &amp; Switzerland)</h2>
-      <p>For users located in the European Economic Area (EEA), United Kingdom, or Switzerland, we are required under the General Data Protection Regulation (GDPR) to obtain your consent before serving personalized advertisements.</p>
-      <p>We use <strong>Google's User Messaging Platform (UMP)</strong> — a certified Consent Management Platform (CMP) — to collect and manage your consent preferences before any personalized ads are shown. When you first launch our app, you will be presented with a consent dialog that allows you to:</p>
+      <p>For users located in the European Economic Area (EEA), United Kingdom, or Switzerland, we are required under the General Data Protection Regulation (GDPR) and similar laws to obtain your consent before serving personalized advertisements.</p>
+      <p>Our apps that show ads use <strong>Google's User Messaging Platform (UMP)</strong> — a Google-certified Consent Management Platform (CMP) — to collect and manage your consent preferences. When you first launch the app in these regions, you will see a consent message that allows you to:</p>
       <ul>
         <li>Accept personalized ads based on your interests</li>
         <li>Reject personalized ads and receive non-personalized ads only</li>
         <li>Review the list of advertising partners and their purposes</li>
-        <li>Change your consent preferences at any time through the app settings</li>
+        <li>Change your consent preferences at any time using the "Privacy options" or "Ad consent" option in the app's settings</li>
       </ul>
       <div class="highlight-box">
-        🇪🇺 If you are in the EEA, UK, or Switzerland, personalized ads will only be served after you have given explicit consent. You may withdraw or update your consent at any time.
+        🇪🇺 If you are in the EEA, UK, or Switzerland, personalized ads will only be served after you have given consent. You may withdraw or update your consent at any time.
       </div>
-      <p>Your consent choices are stored locally on your device and respected across all ad requests. No personalized data is used for advertising until consent is confirmed.</p>
+      <p>Your consent choices are stored locally on your device and respected across all ad requests.</p>
     </div>
 
     <div class="section" id="purchases">
-      <div class="section-num">06 —</div>
+      <div class="section-num">08 —</div>
       <h2>In-App Purchases</h2>
-      <p>Some of our apps offer in-app purchases or premium features that can be unlocked through a one-time purchase or subscription. All transactions are processed securely by <strong>Google Play</strong>.</p>
+      <p>Some of our apps offer optional premium features that can be unlocked through a one-time purchase or subscription. All transactions are processed securely by <strong>Google Play</strong>.</p>
       <p><strong>What this means for your data:</strong></p>
       <ul>
         <li>We do not collect, store, or have access to your payment card details or billing information — this is handled entirely by Google Play</li>
-        <li>Google Play may share a purchase confirmation with us (e.g. whether a purchase was completed) solely to unlock the relevant premium feature in the app</li>
+        <li>Google Play shares a purchase confirmation with the app (for example, whether a purchase was completed) solely to unlock the relevant premium feature</li>
         <li>Purchase history is managed through your Google Play account</li>
       </ul>
-      <p><strong>Free Trials:</strong> Some subscriptions may include a free trial period (for example, 3 days). Free trials automatically convert to a paid subscription at the end of the trial period unless you cancel at least 24 hours before the trial ends. You will not be charged during the trial period.</p>
-      <p><strong>Subscriptions:</strong> If you purchase a subscription, it will automatically renew unless cancelled at least 24 hours before the end of the current billing period. You can manage or cancel subscriptions at any time through your Google Play account settings.</p>
-      <p><strong>Refunds:</strong> Refund requests are handled in accordance with Google Play's refund policy. You may also contact us at <a href="mailto:support@novasoftlabs.com" style="color:var(--accent2);">support@novasoftlabs.com</a> for assistance.</p>
+      <p><strong>Free Trials:</strong> Some subscriptions may include a free trial. The trial length and price are shown inside the app and on the Google Play purchase screen before you confirm. You will not be charged during the trial. If you do not cancel before the trial ends, it automatically converts to a paid subscription. You can cancel at any time before the trial ends through Google Play.</p>
+      <p><strong>Subscriptions:</strong> Subscriptions automatically renew at the end of each billing period unless you cancel before the renewal date. You can manage or cancel subscriptions at any time through your Google Play account settings. Full details are in our <a href="subscription-policy.html">Subscription Policy</a>.</p>
+      <p><strong>Refunds:</strong> Refund requests are handled in accordance with Google Play's refund policy. You may also contact us at <a href="mailto:support@novasoftlabs.com">support@novasoftlabs.com</a> for assistance.</p>
       <div class="highlight-box">
         💳 Nova Soft Labs never sees or stores your payment information. All billing is managed securely by Google Play.
       </div>
     </div>
 
     <div class="section" id="sharing">
-      <div class="section-num">07 —</div>
+      <div class="section-num">09 —</div>
       <h2>Sharing &amp; Disclosure</h2>
-      <p>We do not sell, rent, or trade your personal data with third parties for their own commercial purposes.</p>
+      <p>We do not sell your personal data for money, and we do not rent or trade it with third parties for their own commercial purposes.</p>
       <p>We may share limited data only in these circumstances:</p>
       <ul>
-        <li><strong>Advertising partners:</strong> Google AdMob receives device and usage data as described in the Advertising section above, for the purpose of serving ads in our apps</li>
-        <li><strong>Service providers:</strong> Trusted tools like Firebase (Google) for crash analytics, used under strict data processing agreements</li>
+        <li><strong>Advertising partners:</strong> Google AdMob receives device and usage data as described in Section 06, for the purpose of serving and measuring ads in our apps</li>
+        <li><strong>Service providers:</strong> Google Firebase for sign-in, cloud data storage (PayShare), crash reporting, and analytics, which process data on our behalf</li>
+        <li><strong>Your group members (PayShare):</strong> your name and the expenses in a shared group are visible to the other members of that group, because that is how the app works</li>
         <li><strong>Legal requirements:</strong> If required by law, court order, or to protect the rights and safety of our users or the public</li>
-        <li><strong>Business transfer:</strong> In the unlikely event of a merger or acquisition, user data would be disclosed as part of that transaction with the same privacy commitments</li>
+        <li><strong>Business transfer:</strong> In the unlikely event of a merger or acquisition, data may be transferred as part of that transaction, and this policy will continue to apply to it</li>
       </ul>
+      <p>Under some U.S. state laws (such as California's CCPA/CPRA), allowing ad partners to use your advertising ID for personalized ads may be considered "sharing." You can opt out at any time by deleting your advertising ID as described in Section 06, or by rejecting personalized ads in the app's consent options where available.</p>
     </div>
 
     <div class="section" id="storage">
-      <div class="section-num">08 —</div>
+      <div class="section-num">10 —</div>
       <h2>Data Storage &amp; Security</h2>
-      <p>App preferences and settings are stored locally on your device. Any analytics data transmitted to our service providers is encrypted in transit (TLS) and at rest.</p>
-      <p>Local network data (such as your TV's IP address) is stored only on-device and is never uploaded to any server.</p>
+      <p>App preferences, settings, and content you create in most apps (such as QR code history and game progress) are stored locally on your device.</p>
+      <p>PayShare account and group data is stored in Google Firebase cloud services. Access to each group's data is limited to signed-in members of that group through security rules. Data is encrypted in transit using TLS and encrypted at rest by Google.</p>
+      <p>Local network data (such as your TV's IP address) is stored only on your device and is never uploaded to any server.</p>
       <div class="highlight-box">
-        🔒 No sensitive personal data is transmitted to or stored on Nova Soft Labs servers. Data collected by third-party services (AdMob, Firebase) is stored on their respective infrastructure under their own security standards.
+        🔒 Nova Soft Labs does not run its own servers. Cloud data (PayShare accounts and groups) and data collected by third-party services (AdMob, Firebase, Google Play) is stored on Google's infrastructure under Google's security standards. No method of storage is 100% secure, but we take reasonable steps to protect your data.
       </div>
     </div>
 
     <div class="section" id="retention">
-      <div class="section-num">09 —</div>
+      <div class="section-num">11 —</div>
       <h2>Data Retention</h2>
-      <p>Crash and analytics data retained by third-party services is typically held for 90 days before automatic deletion. Local app data (settings, paired devices) remains on your device until you uninstall the app or clear its data.</p>
-      <p>Data retained by Google AdMob and Google Play is subject to Google's own data retention policies, which you can review at <a href="https://policies.google.com/privacy" target="_blank" style="color:var(--accent2);">policies.google.com/privacy</a>.</p>
+      <p><strong>PayShare accounts:</strong> your account and group data are kept for as long as your account is active. When you delete your account, your account and personal data are deleted from our active systems right away and fully removed within 30 days.</p>
+      <p>Crash reports in Firebase Crashlytics are kept for up to 90 days. Analytics data in Google Analytics for Firebase is kept according to the retention period set in our Firebase settings, after which it is automatically deleted. Local app data (settings, history, expenses, paired devices, game progress) stays on your device until you delete it in the app, clear the app's data, or uninstall the app.</p>
+      <p>Data retained by Google AdMob and Google Play is subject to Google's own data retention policies, which you can review at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
     </div>
 
     <div class="section" id="children">
-      <div class="section-num">10 —</div>
+      <div class="section-num">12 —</div>
       <h2>Children's Privacy</h2>
-      <p>Our apps are general-purpose remote control utilities intended for users aged <strong>13 and above</strong>. We do not knowingly collect personal information from children under 13 (or the applicable age of digital consent in your region).</p>
-      <p>Because our apps use Google AdMob for advertising, which may serve personalized ads, our apps are <strong>not directed at or intended for children under 13</strong>. This is reflected in our Google Play Console target audience settings.</p>
-      <p>If you are a parent or guardian and believe your child under 13 has used our app, please contact us immediately at <a href="mailto:support@novasoftlabs.com" style="color:var(--accent2);">support@novasoftlabs.com</a> and we will take prompt action, including deletion of any associated data.</p>
+      <p>Our apps, including our games, are intended for users aged <strong>13 and above</strong> and are not directed at children under 13. We do not knowingly collect personal information from children under 13 (or the applicable age of digital consent in your region).</p>
+      <p>Because our apps may use Google AdMob, which can serve personalized ads, our apps are not designed for children under 13. This is reflected in our Google Play Console target audience settings.</p>
+      <p>If you are a parent or guardian and believe your child under 13 has used one of our apps, please contact us at <a href="mailto:support@novasoftlabs.com">support@novasoftlabs.com</a> and we will take prompt action, including deletion of any associated data.</p>
       <div class="highlight-box warning">
-        ⚠️ Our apps are rated for users 13 and older. If you are under 13, please do not use our apps or provide any information to us.
+        ⚠️ Our apps are intended for users 13 and older. If you are under 13, please do not use our apps or provide any information to us.
       </div>
     </div>
 
     <div class="section" id="rights">
-      <div class="section-num">11 —</div>
+      <div class="section-num">13 —</div>
       <h2>Your Rights</h2>
       <p>You have the following rights regarding your data:</p>
       <ul>
-        <li>Uninstall the app to remove all locally stored data from your device</li>
+        <li>Delete content you created (history, expenses, game progress) inside the app, or uninstall the app to remove locally stored data</li>
+        <li>View and update your PayShare profile information inside the app</li>
+        <li>Delete your PayShare account and its data at any time (see Section 14)</li>
         <li>Reset or delete your Google Advertising ID to opt out of personalized ads (Settings → Google → Ads)</li>
-        <li>Contact us to request deletion of any analytics data associated with your app instance</li>
-        <li>Opt out of analytics by adjusting app permissions in your device settings</li>
+        <li>Revoke app permissions (such as camera or microphone) at any time in your device settings</li>
+        <li>Contact us to request deletion of analytics or crash data associated with your app instance</li>
         <li>Manage or cancel in-app purchases and subscriptions via your Google Play account</li>
         <li>Request information about what data, if any, we hold related to you</li>
-        <li>For EEA/UK users: update or withdraw your ad consent preferences at any time through the app settings</li>
+        <li>For EEA/UK/Swiss users: update or withdraw your ad consent at any time through the app's privacy options</li>
       </ul>
-      <p>Users in the EU/EEA, UK, California (CCPA), and other jurisdictions with data protection laws may have additional rights. We honor all applicable requests.</p>
+      <p>Users in the EU/EEA, UK, California, and other places with data protection laws may have additional rights, such as the right to access, correct, delete, or object to processing of their data. We honor all applicable requests.</p>
     </div>
 
     <div class="section" id="deletion">
-      <div class="section-num">12 —</div>
+      <div class="section-num">14 —</div>
       <h2>Data Deletion Requests</h2>
-      <p>You have the right to request deletion of any data associated with your use of our apps. To submit a data deletion request:</p>
+      <h3>PayShare account deletion</h3>
+      <p>You can delete your PayShare account and its data at any time:</p>
       <ul>
-        <li>Email us at <a href="mailto:support@novasoftlabs.com" style="color:var(--accent2);">support@novasoftlabs.com</a> with the subject line <strong>"Data Deletion Request"</strong></li>
+        <li><strong>In the app:</strong> open PayShare → <strong>Settings</strong> → <strong>Delete account</strong>, and confirm</li>
+        <li><strong>On the web:</strong> if you no longer have the app, follow the steps on our <a href="delete-account.html">Delete Account page</a></li>
+      </ul>
+      <p>When your account is deleted, your login, profile (name, email, photo), and the data linked to your account are deleted within 30 days. Expense entries in groups shared with other people may remain in those groups so other members' balances stay correct, but they will no longer be linked to your account or show your personal details.</p>
+
+      <h3>Other apps</h3>
+      <p>Our other apps do not use accounts, and their data is stored only on your device. You can delete it at any time by clearing data in the app, clearing the app's storage, or uninstalling the app.</p>
+      <p>To request deletion of any other data associated with your use of our apps (such as analytics or crash data):</p>
+      <ul>
+        <li>Email us at <a href="mailto:support@novasoftlabs.com">support@novasoftlabs.com</a> with the subject line <strong>"Data Deletion Request"</strong></li>
         <li>Include the app name and your device's approximate region so we can identify and remove relevant data</li>
         <li>We will process your request and confirm deletion within <strong>30 days</strong></li>
       </ul>
-      <p>Please note that data held by third-party services (Google AdMob, Firebase) must be requested directly from Google. You can manage Google's data about you at <a href="https://myaccount.google.com/data-and-privacy" target="_blank" style="color:var(--accent2);">myaccount.google.com/data-and-privacy</a>.</p>
+      <p>Data held by Google as an independent controller (for example, for ad personalization) can be managed directly with Google at <a href="https://myaccount.google.com/data-and-privacy" target="_blank" rel="noopener">myaccount.google.com/data-and-privacy</a>.</p>
       <div class="highlight-box">
-        🗑️ To delete all local app data immediately, you can also go to <strong>Settings → Apps → [App Name] → Clear Data</strong> on your Android device, or simply uninstall the app.
+        🗑️ To delete all local app data immediately, go to <strong>Settings → Apps → [App Name] → Storage → Clear Data</strong> on your Android device, or simply uninstall the app. For PayShare, uninstalling does not delete your online account — use the Delete account option.
       </div>
     </div>
 
     <div class="section" id="thirdparty">
-      <div class="section-num">13 —</div>
+      <div class="section-num">15 —</div>
       <h2>Third-Party Services</h2>
-      <p>Our apps use the following third-party services, each governed by their own privacy policies:</p>
+      <p>Our apps may use the following third-party services, each governed by its own privacy policy. Not every app uses every service.</p>
       <ul>
-        <li><strong>Google AdMob</strong> — In-app advertising and ad personalization</li>
-        <li><strong>Google UMP (User Messaging Platform)</strong> — Consent management for EEA/UK users</li>
-        <li><strong>Google Play Services</strong> — App distribution, billing, and in-app purchases</li>
+        <li><strong>Google AdMob</strong> — In-app advertising</li>
+        <li><strong>Google UMP (User Messaging Platform)</strong> — Ad consent management</li>
+        <li><strong>Google Play Services &amp; Google Play Billing</strong> — App distribution, billing, and in-app purchases</li>
+        <li><strong>Firebase Authentication &amp; Google Sign-In</strong> — Account sign-in (PayShare)</li>
+        <li><strong>Firebase cloud database</strong> — Storing and syncing groups and expenses (PayShare)</li>
         <li><strong>Firebase Crashlytics</strong> — Crash reporting and diagnostics</li>
-        <li><strong>Google Analytics for Firebase</strong> — Anonymous usage analytics</li>
+        <li><strong>Google Analytics for Firebase</strong> — Usage analytics</li>
+        <li><strong>Google ML Kit</strong> — On-device QR code and barcode scanning (QR Code app); processing happens on your device</li>
       </ul>
-      <p>We encourage you to review Google's Privacy Policy for details on how these services handle data: <a href="https://policies.google.com/privacy" target="_blank" style="color:var(--accent2);">policies.google.com/privacy</a></p>
-      <p>Third-party brand names referenced in our apps — including Samsung®, LG®, Chromecast®, Roku®, Amazon Fire TV®, Sony®, and Philips® — are trademarks of their respective owners. Nova Soft Labs is not affiliated with, endorsed by, or officially connected to any of these brands.</p>
+      <p>We encourage you to review Google's Privacy Policy for details on how these services handle data: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></p>
+      <p>Third-party brand names referenced in our apps — including Samsung®, LG®, Chromecast® (Google LLC), Roku®, Amazon Fire TV®, Sony®, and Philips® — are trademarks of their respective owners. Nova Soft Labs is not affiliated with, endorsed by, or officially connected to any of these brands.</p>
     </div>
 
     <div class="section" id="changes">
-      <div class="section-num">14 —</div>
+      <div class="section-num">16 —</div>
       <h2>Policy Changes</h2>
       <p>We may update this policy as we launch new apps or features. When we do, we'll update the "Last updated" date at the top of this page. For significant changes, we'll notify users via an in-app notice.</p>
-      <p>Continued use of our apps after changes constitutes acceptance of the updated policy.</p>
+      <p>Continued use of our apps after changes means you accept the updated policy.</p>
     </div>
 
     <div class="section" id="governing">
-      <div class="section-num">15 —</div>
+      <div class="section-num">17 —</div>
       <h2>Governing Law</h2>
-      <p>This Privacy Policy is governed by applicable data protection laws in the jurisdiction where Nova Soft Labs operates. Where required by law — including the General Data Protection Regulation (GDPR) for EEA/UK users and the California Consumer Privacy Act (CCPA) for California residents — we comply fully with your regional rights and obligations.</p>
-      <p>If you have an unresolved privacy concern that we have not addressed satisfactorily, you may contact your local data protection authority. EU/EEA users may also use the EU Online Dispute Resolution platform at <a href="https://ec.europa.eu/consumers/odr" target="_blank" style="color:var(--accent2);">ec.europa.eu/consumers/odr</a>.</p>
+      <p>This Privacy Policy is governed by the laws of Pakistan. Where the law of your country gives you additional rights — including the General Data Protection Regulation (GDPR) for EEA/UK users and the California Consumer Privacy Act (CCPA/CPRA) for California residents — we respect those rights.</p>
+      <p>If you have an unresolved privacy concern that we have not addressed satisfactorily, you may contact your local data protection authority.</p>
     </div>
 
     <div class="section" id="contact">
-      <div class="section-num">16 —</div>
+      <div class="section-num">18 —</div>
       <h2>Contact Us</h2>
       <p>Have a question, concern, or request about your privacy? We're here.</p>
+      <p><strong>Nova Soft Labs</strong><br/>Lahore, Punjab, Pakistan</p>
       <a href="mailto:support@novasoftlabs.com" class="contact-block">✉ support@novasoftlabs.com</a>
       <p style="margin-top:1rem;">We aim to respond to all inquiries within 48 hours.</p>
     </div>
@@ -503,6 +606,7 @@
     <a href="subscription-policy.html">Subscription Policy</a>
     <a href="privacy-policy.html">Privacy Policy</a>
     <a href="terms-of-use.html">Terms of Use</a>
+    <a href="delete-account.html">Delete Account</a>
     <a href="https://novasoftlabs.com">Home</a>
   </div>
 </footer>
