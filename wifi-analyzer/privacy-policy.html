@@ -1,1 +1,225 @@
-hello
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b10">
+  <meta name="description" content="Privacy Policy for Network Analyzer by Nova Soft. Learn how network diagnostics, local history, exports, and Google AdMob data are handled.">
+  <title>Network Analyzer Privacy Policy — NovaSoft</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400;500&display=swap');
+
+:root{color-scheme:dark;--bg:#080b10;--panel:#0d121a;--panel2:#101721;--ink:#e8edf5;--muted:#91a0b4;--line:rgba(255,255,255,.1);--accent:#00f5c4;--blue:#00aaff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.8 'DM Mono',monospace}
+body:before{content:'';position:fixed;inset:0;z-index:-1;background:linear-gradient(rgba(255,255,255,.017) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.017) 1px,transparent 1px);background-size:64px 64px;mask-image:linear-gradient(#000,transparent 85%);pointer-events:none}
+a{color:var(--accent);text-underline-offset:3px}
+a:hover{color:#70ffe2}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:5px;border-radius:2px}
+.wrap{width:min(1180px,calc(100% - 48px));margin-inline:auto}
+.site-header{border-bottom:1px solid var(--line);background:rgba(8,11,16,.88);backdrop-filter:blur(16px);position:sticky;top:0;z-index:20}
+.header-inner{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{text-decoration:none;color:var(--ink);font:800 24px/1 'Syne',sans-serif;letter-spacing:-.06em}
+.brand span{color:var(--accent)}
+.header-nav{display:flex;align-items:center;gap:30px}
+.header-nav a{color:var(--muted);text-decoration:none;text-transform:uppercase;font-size:11px;letter-spacing:.15em;white-space:nowrap}
+.header-nav a[aria-current=page],.header-nav a:hover{color:var(--accent)}
+.header-nav .home-link{border:1px solid rgba(0,245,196,.45);padding:10px 16px;color:var(--accent)}
+.hero{padding:85px 0 64px;border-bottom:1px solid var(--line)}
+.eyebrow{color:var(--accent);font-size:11px;letter-spacing:.16em;text-transform:uppercase;margin:0 0 20px}
+.eyebrow:before{content:'• ';font-size:18px;vertical-align:-1px}
+h1,h2,h3,p{margin-top:0}
+h1,h2,h3{font-family:'Syne',sans-serif;line-height:1.1}
+h1{font-size:clamp(48px,7vw,86px);letter-spacing:-.065em;margin-bottom:24px;font-weight:800}
+h1 .gradient{background:linear-gradient(90deg,var(--accent),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{max-width:760px;color:#aab7c8;font-size:16px;line-height:1.85}
+.meta{display:flex;flex-wrap:wrap;gap:12px 26px;margin-top:30px;color:var(--muted);font-size:12px}
+.meta strong{color:var(--ink);font-weight:500}
+.main-grid{display:grid;grid-template-columns:220px minmax(0,1fr);gap:72px;padding-top:60px;padding-bottom:100px}
+.toc{align-self:start;position:sticky;top:110px;padding:22px 0;border-top:1px solid var(--accent)}
+.toc-title{color:var(--accent);font-size:10px;letter-spacing:.17em;text-transform:uppercase;margin-bottom:18px}
+.toc a{display:block;color:var(--muted);font-size:12px;line-height:1.5;text-decoration:none;padding:8px 0}
+.toc a:hover{color:var(--accent)}
+.policy{min-width:0;max-width:830px}
+.summary{padding:28px 30px;background:linear-gradient(135deg,rgba(0,245,196,.075),rgba(0,170,255,.035));border:1px solid rgba(0,245,196,.22);margin-bottom:44px}
+.summary-label{font-size:11px;letter-spacing:.16em;color:var(--accent);text-transform:uppercase;margin-bottom:10px}
+.summary p:last-child{margin-bottom:0}
+.policy section{padding:34px 0 36px;border-top:1px solid var(--line);scroll-margin-top:110px}
+.policy section:first-of-type{border-top:0}
+.section-number{font:400 11px/1.5 'DM Mono',monospace;color:var(--accent);letter-spacing:.1em;margin-bottom:12px}
+h2{font-size:clamp(25px,3vw,34px);letter-spacing:-.04em;margin-bottom:20px;font-weight:800}
+h3{font-size:17px;letter-spacing:-.025em;margin:28px 0 12px;font-weight:700}
+p,li{color:#b8c3d1}
+p{margin-bottom:16px}
+ul{padding-left:20px;margin:0 0 18px}
+li{padding-left:5px;margin:7px 0}
+li::marker{color:var(--accent)}
+.data-card{border:1px solid var(--line);background:var(--panel);padding:22px 24px;margin:18px 0}
+.data-card h3{margin:0 0 10px}
+.data-card p:last-child{margin-bottom:0}
+.note{border-left:2px solid var(--accent);background:var(--panel2);padding:18px 22px;margin:24px 0}
+.note p:last-child{margin:0}
+.site-footer{border-top:1px solid var(--line);padding:32px 0 42px}
+.footer-inner{display:flex;justify-content:space-between;gap:24px;align-items:center}
+.footer-inner p{font-size:12px;color:var(--muted);margin:8px 0 0}
+.footer-links{display:flex;gap:22px;flex-wrap:wrap}
+.footer-links a{font-size:12px;color:var(--muted);text-decoration:none}
+.footer-links a:hover{color:var(--accent)}
+@media(max-width:850px){.main-grid{grid-template-columns:1fr;gap:24px}.toc{position:static;display:flex;flex-wrap:wrap;gap:0 18px;padding:16px 0}.toc-title{width:100%;margin-bottom:6px}.toc a{font-size:11px}.hero{padding:65px 0 48px}}
+@media(max-width:600px){.wrap{width:min(100% - 32px,1180px)}.header-inner{min-height:70px;align-items:flex-start;padding:16px 0}.brand{font-size:21px;margin-top:7px}.header-nav{gap:12px;justify-content:flex-end;flex-wrap:wrap}.header-nav a{font-size:10px}.header-nav .home-link{padding:5px 8px}.hero{padding-top:54px}.lead{font-size:14px}.meta{font-size:11px}.main-grid{padding-top:32px;padding-bottom:65px}.summary{padding:22px}.footer-inner{align-items:flex-start;flex-direction:column}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="https://novasoftlabs.com/" aria-label="NovaSoft home">Nova<span>Soft</span></a>
+      <nav class="header-nav" aria-label="Policy navigation">
+        <a href="privacy-policy.html" aria-current="page">Privacy</a>
+        <a href="terms-of-use.html">Terms</a>
+        <a class="home-link" href="https://novasoftlabs.com/">Back to home ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Network Analyzer / Legal</p>
+        <h1>Privacy <span class="gradient">Policy.</span></h1>
+        <p class="lead">A clear explanation of what Network Analyzer uses to run its tools, what stays on your device, and what Google AdMob may process to show ads.</p>
+        <div class="meta"><span><strong>App:</strong> Network Analyzer</span><span><strong>Publisher:</strong> Nova Soft</span><span><strong>Effective:</strong> 21 October 2026</span></div>
+      </div>
+    </div>
+
+    <div class="wrap main-grid">
+      <nav class="toc" aria-label="On this page">
+        <div class="toc-title">// On this page</div>
+        <a href="#overview">01 &nbsp; Overview</a>
+        <a href="#network-data">02 &nbsp; Network data</a>
+        <a href="#how-used">03 &nbsp; How data is used</a>
+        <a href="#requests">04 &nbsp; Network requests</a>
+        <a href="#advertising">05 &nbsp; Advertising</a>
+        <a href="#sharing">06 &nbsp; Sharing</a>
+        <a href="#retention">07 &nbsp; Retention &amp; deletion</a>
+        <a href="#choices">08 &nbsp; Your choices</a>
+        <a href="#security">09 &nbsp; Security</a>
+        <a href="#changes">10 &nbsp; Changes &amp; contact</a>
+      </nav>
+
+      <article class="policy">
+        <div class="summary">
+          <div class="summary-label">// At a glance</div>
+          <p>Network Analyzer provides speed tests, LAN/device scans, ping, DNS lookups, traceroute, Wi-Fi details, and local history/export. Diagnostic results are stored locally on your device; Nova Soft does not run an account or cloud-sync service for those results. Tests communicate with the networks and endpoints you choose. The app also uses Google AdMob, which can process device, usage, and advertising information as described below.</p>
+        </div>
+
+        <section id="overview">
+          <div class="section-number">01 / SCOPE</div>
+          <h2>Who this policy covers</h2>
+          <p>This Privacy Policy applies to the Network Analyzer mobile app published by Nova Soft ("we," "us," or "our"). It describes the app's diagnostic features and its use of Google AdMob. It does not cover the separate NovaSoft website or third-party sites and services that you may visit.</p>
+          <p>Some network information, including IP addresses, device names, and Wi-Fi identifiers, can be personal data in context. We treat it accordingly.</p>
+        </section>
+
+        <section id="network-data">
+          <div class="section-number">02 / APP DATA</div>
+          <h2>Information the app accesses</h2>
+          <div class="data-card">
+            <h3>Connection and Wi-Fi details</h3>
+            <p>The app may read the device's current connection information, including local and public IP addresses, network name (SSID), access point identifier (BSSID), gateway, DNS servers, signal information, and related network settings, where available from your device and permitted by its operating system.</p>
+          </div>
+          <div class="data-card">
+            <h3>LAN and diagnostic results</h3>
+            <p>When you use a tool, the app may process addresses and names of devices found on your local network; ping latency and reachability; DNS responses; traceroute hops; and speed-test results such as download speed, upload speed, and latency.</p>
+          </div>
+          <div class="data-card">
+            <h3>Saved history and exports</h3>
+            <p>The app stores diagnostic history on your device so you can review it. If you export results, the exported file or text is handled by the destination you choose, such as your device's share sheet, files app, or another app.</p>
+          </div>
+          <p>Network Analyzer does not require an account. Nova Soft does not receive or store your scan results or diagnostic history on its servers. Operating-system permissions may be needed to show Wi-Fi information or use network features; the permission prompt on your device controls that access.</p>
+        </section>
+
+        <section id="how-used">
+          <div class="section-number">03 / PURPOSES</div>
+          <h2>How the information is used</h2>
+          <ul>
+            <li>To display your current network and Wi-Fi details.</li>
+            <li>To run the speed test, LAN/device scan, ping, DNS, and traceroute tools you select.</li>
+            <li>To keep history locally and create exports when you ask for them.</li>
+            <li>To serve, measure, and protect advertising through Google AdMob.</li>
+          </ul>
+          <p>We do not use your locally stored diagnostic history to build an advertising profile.</p>
+        </section>
+
+        <section id="requests">
+          <div class="section-number">04 / NETWORK TRAFFIC</div>
+          <h2>What happens when you run a test</h2>
+          <p>Network tests work by sending requests or packets. A LAN scan communicates with devices on the network you scan. Ping, DNS, and traceroute communicate with the destination or resolver used by the test. A speed test communicates with its test endpoint and transfers data to measure performance. Those destinations and the networks carrying the traffic may see information normally included in network communication, such as your public IP address, request time, queried domain, or target address.</p>
+          <p>Network Analyzer does not control the privacy practices of a destination you choose, your internet provider, your DNS resolver, or the speed-test endpoint. Do not export or share a result containing information you wish to keep private.</p>
+        </section>
+
+        <section id="advertising">
+          <div class="section-number">05 / GOOGLE ADMOB</div>
+          <h2>Advertising and Google AdMob</h2>
+          <p>The app uses Google AdMob to display ads. Google's Mobile Ads SDK may automatically collect or receive your IP address (which can indicate approximate location), app interactions and ad activity, diagnostic and performance information, and device or advertising identifiers where available. Google may use this information to deliver and measure ads, provide analytics for ads, and prevent fraud. This AdMob processing is separate from the local diagnostic history described above.</p>
+          <p>Google may use advertising information to personalize ads where permitted. You can manage ad personalization through your device's advertising settings and Google's controls. Network Analyzer does not currently provide an in-app ad-consent form or a screen for reopening ad privacy choices. We will update this policy when those controls are added.</p>
+          <p>See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a> and <a href="https://myadcenter.google.com/" target="_blank" rel="noopener noreferrer">My Ad Center</a> for Google's practices and ad controls.</p>
+        </section>
+
+        <section id="sharing">
+          <div class="section-number">06 / RECIPIENTS</div>
+          <h2>When information is shared</h2>
+          <ul>
+            <li><strong>Google AdMob:</strong> ad-related and device information described above is shared with Google through its SDK. Google handles this data under its published privacy policy. We require third parties that receive app data through our integrations to provide protections consistent with this policy and applicable platform requirements.</li>
+            <li><strong>Test destinations:</strong> the target devices, DNS resolvers, and test endpoints involved in a test receive the network traffic needed to perform that test.</li>
+            <li><strong>Your chosen export destination:</strong> information you export or share goes to the app, service, or person you select.</li>
+          </ul>
+          <p>We do not sell your diagnostic results or send your locally saved history to our own servers.</p>
+        </section>
+
+        <section id="retention">
+          <div class="section-number">07 / LIFECYCLE</div>
+          <h2>Retention and deletion</h2>
+          <p>Diagnostic history is kept on your device until you remove it using any available in-app history controls or uninstall the app. Exported copies are under the control of the destination where you saved or shared them; deleting app history does not delete those copies. We cannot delete information retained by a network destination or your internet provider as a result of a test.</p>
+          <p>Nova Soft has no account or cloud copy of your diagnostic history to delete. Google determines retention of data processed through AdMob under its own policies and controls. You can use Google's privacy controls or contact us at <a href="mailto:hello@novasoft.io">hello@novasoft.io</a> with a privacy request; we will respond as applicable to data we control.</p>
+        </section>
+
+        <section id="choices">
+          <div class="section-number">08 / CONTROLS</div>
+          <h2>Your privacy choices</h2>
+          <ul>
+            <li>You can decide whether to run a diagnostic test or export a result.</li>
+            <li>You can manage app permissions, including Wi-Fi or location-related access where required by your operating system, in your device settings. Denying a permission may limit a related feature.</li>
+            <li>You can remove locally stored app data using available history controls or by uninstalling the app.</li>
+            <li>You can manage advertising preferences through your device settings, Apple's tracking setting on iOS, and Google's ad controls. At present, the app has no in-app screen for changing ad consent.</li>
+          </ul>
+          <p>For questions about access, consent, or deletion, email <a href="mailto:hello@novasoft.io">hello@novasoft.io</a>.</p>
+        </section>
+
+        <section id="security">
+          <div class="section-number">09 / PROTECTION</div>
+          <h2>Security</h2>
+          <p>Diagnostic history is stored locally using the protections of your device and operating system. No method of storage or network transmission is completely secure. Some diagnostic tools use ordinary network protocols that are not encrypted by design, and devices or operators on the tested network may observe their traffic. Use these tools only on networks where you are authorized to do so.</p>
+        </section>
+
+        <section id="changes">
+          <div class="section-number">10 / UPDATES</div>
+          <h2>Changes and contact</h2>
+          <p>We may update this policy when the app, its advertising setup, or legal requirements change. The effective date at the top shows when this version took effect. Material changes will be communicated through the app or this page where appropriate.</p>
+          <p>For privacy questions or requests, contact Nova Soft at <a href="mailto:hello@novasoft.io">hello@novasoft.io</a>.</p>
+          <div class="note"><p>Looking for the rules for using the app? Read the <a href="terms-of-use.html">Network Analyzer Terms of Use</a>.</p></div>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div><a class="brand" href="https://novasoftlabs.com/">Nova<span>Soft</span></a><p>© 2026 Nova Soft. Network Analyzer legal pages.</p></div>
+      <div class="footer-links"><a href="https://novasoftlabs.com/">Home</a><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-use.html">Terms of Use</a><a href="mailto:hello@novasoft.io">Contact</a></div>
+    </div>
+  </footer>
+</body>
+</html>
+
