@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b10">
+  <meta name="description" content="Terms of Use for Network Analyzer by Nova Soft, including permitted network testing, diagnostic limitations, advertising, and contact information.">
+  <title>Network Analyzer Terms of Use — NovaSoft</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400;500&display=swap');
+
+:root{color-scheme:dark;--bg:#080b10;--panel:#0d121a;--panel2:#101721;--ink:#e8edf5;--muted:#91a0b4;--line:rgba(255,255,255,.1);--accent:#00f5c4;--blue:#00aaff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.8 'DM Mono',monospace}
+body:before{content:'';position:fixed;inset:0;z-index:-1;background:linear-gradient(rgba(255,255,255,.017) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.017) 1px,transparent 1px);background-size:64px 64px;mask-image:linear-gradient(#000,transparent 85%);pointer-events:none}
+a{color:var(--accent);text-underline-offset:3px}
+a:hover{color:#70ffe2}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:5px;border-radius:2px}
+.wrap{width:min(1180px,calc(100% - 48px));margin-inline:auto}
+.site-header{border-bottom:1px solid var(--line);background:rgba(8,11,16,.88);backdrop-filter:blur(16px);position:sticky;top:0;z-index:20}
+.header-inner{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{text-decoration:none;color:var(--ink);font:800 24px/1 'Syne',sans-serif;letter-spacing:-.06em}
+.brand span{color:var(--accent)}
+.header-nav{display:flex;align-items:center;gap:30px}
+.header-nav a{color:var(--muted);text-decoration:none;text-transform:uppercase;font-size:11px;letter-spacing:.15em;white-space:nowrap}
+.header-nav a[aria-current=page],.header-nav a:hover{color:var(--accent)}
+.header-nav .home-link{border:1px solid rgba(0,245,196,.45);padding:10px 16px;color:var(--accent)}
+.hero{padding:85px 0 64px;border-bottom:1px solid var(--line)}
+.eyebrow{color:var(--accent);font-size:11px;letter-spacing:.16em;text-transform:uppercase;margin:0 0 20px}
+.eyebrow:before{content:'• ';font-size:18px;vertical-align:-1px}
+h1,h2,h3,p{margin-top:0}
+h1,h2,h3{font-family:'Syne',sans-serif;line-height:1.1}
+h1{font-size:clamp(48px,7vw,86px);letter-spacing:-.065em;margin-bottom:24px;font-weight:800}
+h1 .gradient{background:linear-gradient(90deg,var(--accent),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{max-width:760px;color:#aab7c8;font-size:16px;line-height:1.85}
+.meta{display:flex;flex-wrap:wrap;gap:12px 26px;margin-top:30px;color:var(--muted);font-size:12px}
+.meta strong{color:var(--ink);font-weight:500}
+.main-grid{display:grid;grid-template-columns:220px minmax(0,1fr);gap:72px;padding-top:60px;padding-bottom:100px}
+.toc{align-self:start;position:sticky;top:110px;padding:22px 0;border-top:1px solid var(--accent)}
+.toc-title{color:var(--accent);font-size:10px;letter-spacing:.17em;text-transform:uppercase;margin-bottom:18px}
+.toc a{display:block;color:var(--muted);font-size:12px;line-height:1.5;text-decoration:none;padding:8px 0}
+.toc a:hover{color:var(--accent)}
+.policy{min-width:0;max-width:830px}
+.summary{padding:28px 30px;background:linear-gradient(135deg,rgba(0,245,196,.075),rgba(0,170,255,.035));border:1px solid rgba(0,245,196,.22);margin-bottom:44px}
+.summary-label{font-size:11px;letter-spacing:.16em;color:var(--accent);text-transform:uppercase;margin-bottom:10px}
+.summary p:last-child{margin-bottom:0}
+.policy section{padding:34px 0 36px;border-top:1px solid var(--line);scroll-margin-top:110px}
+.policy section:first-of-type{border-top:0}
+.section-number{font:400 11px/1.5 'DM Mono',monospace;color:var(--accent);letter-spacing:.1em;margin-bottom:12px}
+h2{font-size:clamp(25px,3vw,34px);letter-spacing:-.04em;margin-bottom:20px;font-weight:800}
+h3{font-size:17px;letter-spacing:-.025em;margin:28px 0 12px;font-weight:700}
+p,li{color:#b8c3d1}
+p{margin-bottom:16px}
+ul{padding-left:20px;margin:0 0 18px}
+li{padding-left:5px;margin:7px 0}
+li::marker{color:var(--accent)}
+.data-card{border:1px solid var(--line);background:var(--panel);padding:22px 24px;margin:18px 0}
+.data-card h3{margin:0 0 10px}
+.data-card p:last-child{margin-bottom:0}
+.note{border-left:2px solid var(--accent);background:var(--panel2);padding:18px 22px;margin:24px 0}
+.note p:last-child{margin:0}
+.site-footer{border-top:1px solid var(--line);padding:32px 0 42px}
+.footer-inner{display:flex;justify-content:space-between;gap:24px;align-items:center}
+.footer-inner p{font-size:12px;color:var(--muted);margin:8px 0 0}
+.footer-links{display:flex;gap:22px;flex-wrap:wrap}
+.footer-links a{font-size:12px;color:var(--muted);text-decoration:none}
+.footer-links a:hover{color:var(--accent)}
+@media(max-width:850px){.main-grid{grid-template-columns:1fr;gap:24px}.toc{position:static;display:flex;flex-wrap:wrap;gap:0 18px;padding:16px 0}.toc-title{width:100%;margin-bottom:6px}.toc a{font-size:11px}.hero{padding:65px 0 48px}}
+@media(max-width:600px){.wrap{width:min(100% - 32px,1180px)}.header-inner{min-height:70px;align-items:flex-start;padding:16px 0}.brand{font-size:21px;margin-top:7px}.header-nav{gap:12px;justify-content:flex-end;flex-wrap:wrap}.header-nav a{font-size:10px}.header-nav .home-link{padding:5px 8px}.hero{padding-top:54px}.lead{font-size:14px}.meta{font-size:11px}.main-grid{padding-top:32px;padding-bottom:65px}.summary{padding:22px}.footer-inner{align-items:flex-start;flex-direction:column}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="https://novasoftlabs.com/" aria-label="NovaSoft home">Nova<span>Soft</span></a>
+      <nav class="header-nav" aria-label="Policy navigation">
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="terms-of-use.html" aria-current="page">Terms</a>
+        <a class="home-link" href="https://novasoftlabs.com/">Back to home ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Network Analyzer / Legal</p>
+        <h1>Terms of <span class="gradient">Use.</span></h1>
+        <p class="lead">The rules for using Network Analyzer and its speed test, LAN scan, ping, DNS, traceroute, Wi-Fi details, history, and export tools.</p>
+        <div class="meta"><span><strong>App:</strong> Network Analyzer</span><span><strong>Publisher:</strong> Nova Soft</span><span><strong>Effective:</strong> 21 October 2026</span></div>
+      </div>
+    </div>
+
+    <div class="wrap main-grid">
+      <nav class="toc" aria-label="On this page">
+        <div class="toc-title">// On this page</div>
+        <a href="#agreement">01 &nbsp; Agreement</a>
+        <a href="#license">02 &nbsp; App license</a>
+        <a href="#authorized-use">03 &nbsp; Authorized use</a>
+        <a href="#results">04 &nbsp; Results</a>
+        <a href="#exports">05 &nbsp; History &amp; exports</a>
+        <a href="#ads">06 &nbsp; Ads &amp; privacy</a>
+        <a href="#availability">07 &nbsp; Availability</a>
+        <a href="#disclaimers">08 &nbsp; Disclaimers</a>
+        <a href="#liability">09 &nbsp; Liability</a>
+        <a href="#termination">10 &nbsp; Changes &amp; contact</a>
+      </nav>
+
+      <article class="policy">
+        <div class="summary">
+          <div class="summary-label">// The short version</div>
+          <p>Use Network Analyzer only on devices and networks you own or are allowed to test. Results are estimates and can vary with your device, connection, and test destination. You control what you export. The app displays ads through Google AdMob.</p>
+        </div>
+
+        <section id="agreement">
+          <div class="section-number">01 / ACCEPTANCE</div>
+          <h2>Agreement and scope</h2>
+          <p>These Terms of Use ("Terms") govern your use of the Network Analyzer mobile app provided by Nova Soft ("we," "us," or "our"). By downloading or using the app, you agree to these Terms. If you do not agree, do not use the app.</p>
+          <p>Your app-store provider may also apply its own terms to your download and use of the app. These Terms are between you and Nova Soft.</p>
+        </section>
+
+        <section id="license">
+          <div class="section-number">02 / LICENSE</div>
+          <h2>Permission to use the app</h2>
+          <p>We grant you a limited, non-exclusive, non-transferable, revocable license to install and use Network Analyzer on devices you own or control, for lawful personal or internal business network diagnostics, subject to these Terms and applicable app-store rules. We retain ownership of the app, its design, code, and related intellectual property.</p>
+          <p>You may not copy, sell, sublicense, or distribute the app except as allowed by applicable law or the app store. You may not interfere with the app's security or misuse its functionality.</p>
+        </section>
+
+        <section id="authorized-use">
+          <div class="section-number">03 / RESPONSIBLE TESTING</div>
+          <h2>Use only with authorization</h2>
+          <p>Network Analyzer can send traffic to local devices, internet hosts, DNS resolvers, and speed-test endpoints. Only scan or test a network, system, or service when you own it or have permission from its owner or operator. You are responsible for the targets you enter and how you use the results.</p>
+          <ul>
+            <li>Do not use the app to disrupt a network or service, evade access controls, or violate another person's privacy.</li>
+            <li>Do not run tests at a volume or frequency that could degrade a network or breach the rules of a network you use.</li>
+            <li>Comply with applicable laws, your internet provider's rules, and the policies of the networks and services you test.</li>
+          </ul>
+        </section>
+
+        <section id="results">
+          <div class="section-number">04 / DIAGNOSTICS</div>
+          <h2>Results are informational</h2>
+          <p>Speed, latency, device discovery, DNS, route, and Wi-Fi results are snapshots from a particular time and setup. They can be affected by device hardware, operating-system limits, Wi-Fi conditions, provider routing, server load, firewalls, permissions, and test destinations. A result is not a guarantee of network performance, security, availability, or the identity of a discovered device.</p>
+          <p>The app is a diagnostic aid. You should verify important findings with other appropriate tools or a qualified professional before making operational or security decisions.</p>
+        </section>
+
+        <section id="exports">
+          <div class="section-number">05 / YOUR CONTENT</div>
+          <h2>History and exports</h2>
+          <p>Diagnostic history is stored locally on your device. If you export or share it, you choose the recipient or destination and are responsible for checking whether the result contains IP addresses, device names, network identifiers, or other information that should remain private. We do not own your exported diagnostic results.</p>
+          <p>You are responsible for your own device, backups, exported copies, and any charges your provider may apply to data-intensive tests such as speed tests.</p>
+        </section>
+
+        <section id="ads">
+          <div class="section-number">06 / ADS &amp; DATA</div>
+          <h2>Advertising and privacy</h2>
+          <p>Network Analyzer displays advertising through Google AdMob. Ads and linked third-party content are provided by their respective publishers; we are not responsible for third-party sites or offers reached through an ad. Your use of those services is governed by their own terms and policies.</p>
+          <p>Our <a href="privacy-policy.html">Privacy Policy</a> explains the app's local diagnostic data and the information Google AdMob may process for advertising.</p>
+        </section>
+
+        <section id="availability">
+          <div class="section-number">07 / SERVICE</div>
+          <h2>Availability and updates</h2>
+          <p>We may update, modify, suspend, or discontinue app features for maintenance, security, technical, or legal reasons. Some features depend on the permissions you grant, your device and operating system, a working connection, and third-party network services. We cannot promise that every tool will work on every device or network.</p>
+        </section>
+
+        <section id="disclaimers">
+          <div class="section-number">08 / WARRANTIES</div>
+          <h2>Disclaimers</h2>
+          <p>To the extent permitted by applicable law, Network Analyzer is provided "as is" and "as available," without warranties of uninterrupted operation, error-free results, fitness for a particular purpose, or a specific network outcome. Nothing in these Terms excludes a warranty or consumer right that cannot lawfully be excluded.</p>
+        </section>
+
+        <section id="liability">
+          <div class="section-number">09 / LIMITS</div>
+          <h2>Limits of liability</h2>
+          <p>To the extent permitted by applicable law, Nova Soft is not liable for indirect, incidental, special, consequential, or punitive losses arising from use of the app, including lost data, interrupted service, or decisions made from diagnostic results. This does not limit liability or consumer rights that cannot legally be limited or excluded.</p>
+        </section>
+
+        <section id="termination">
+          <div class="section-number">10 / CONTACT</div>
+          <h2>Changes, ending use, and contact</h2>
+          <p>You may stop using the app at any time by uninstalling it. We may end or restrict your permission to use the app if you materially violate these Terms, subject to applicable law.</p>
+          <p>We may update these Terms as the app changes. The effective date at the top identifies the current version. Continued use after revised Terms take effect means you accept them, where permitted by law.</p>
+          <p>For questions about these Terms, contact Nova Soft at <a href="mailto:hello@novasoft.io">hello@novasoft.io</a>.</p>
+          <div class="note"><p>For details about app data, read the <a href="privacy-policy.html">Network Analyzer Privacy Policy</a>.</p></div>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div><a class="brand" href="https://novasoftlabs.com/">Nova<span>Soft</span></a><p>© 2026 Nova Soft. Network Analyzer legal pages.</p></div>
+      <div class="footer-links"><a href="https://novasoftlabs.com/">Home</a><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-use.html">Terms of Use</a><a href="mailto:hello@novasoft.io">Contact</a></div>
+    </div>
+  </footer>
+</body>
+</html>
+
