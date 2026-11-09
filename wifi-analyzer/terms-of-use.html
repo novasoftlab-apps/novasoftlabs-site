@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#080b10">
-  <meta name="description" content="Terms of Use for Network Analyzer by Nova Soft, including permitted network testing, diagnostic limitations, advertising, and contact information.">
-  <title>Network Analyzer Terms of Use — NovaSoft</title>
+  <meta name="description" content="Terms of Use for WiFi Analyzer - Network Tool by Nova Soft: authorized network testing, the scanning and security tools, background scans, advertising, disclaimers and contact information.">
+  <title>Terms of Use — WiFi Analyzer | NovaSoft</title>
   <style>
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400;500&display=swap');
 
@@ -14,13 +14,14 @@
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.8 'DM Mono',monospace}
 body:before{content:'';position:fixed;inset:0;z-index:-1;background:linear-gradient(rgba(255,255,255,.017) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.017) 1px,transparent 1px);background-size:64px 64px;mask-image:linear-gradient(#000,transparent 85%);pointer-events:none}
-a{color:var(--accent);text-underline-offset:3px}
+a{color:var(--accent);text-underline-offset:3px;overflow-wrap:anywhere}
 a:hover{color:#70ffe2}
 a:focus-visible{outline:2px solid var(--accent);outline-offset:5px;border-radius:2px}
+code{font:inherit;color:var(--ink);background:rgba(255,255,255,.06);padding:1px 5px;border-radius:2px;overflow-wrap:anywhere}
 .wrap{width:min(1180px,calc(100% - 48px));margin-inline:auto}
 .site-header{border-bottom:1px solid var(--line);background:rgba(8,11,16,.88);backdrop-filter:blur(16px);position:sticky;top:0;z-index:20}
 .header-inner{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.brand{text-decoration:none;color:var(--ink);font:800 24px/1 'Syne',sans-serif;letter-spacing:-.06em}
+.brand{text-decoration:none;color:var(--ink);font:800 24px/1 'Syne',sans-serif;letter-spacing:-.06em;white-space:nowrap}
 .brand span{color:var(--accent)}
 .header-nav{display:flex;align-items:center;gap:30px}
 .header-nav a{color:var(--muted);text-decoration:none;text-transform:uppercase;font-size:11px;letter-spacing:.15em;white-space:nowrap}
@@ -39,11 +40,12 @@ h1 .gradient{background:linear-gradient(90deg,var(--accent),var(--blue));-webkit
 .main-grid{display:grid;grid-template-columns:220px minmax(0,1fr);gap:72px;padding-top:60px;padding-bottom:100px}
 .toc{align-self:start;position:sticky;top:110px;padding:22px 0;border-top:1px solid var(--accent)}
 .toc-title{color:var(--accent);font-size:10px;letter-spacing:.17em;text-transform:uppercase;margin-bottom:18px}
-.toc a{display:block;color:var(--muted);font-size:12px;line-height:1.5;text-decoration:none;padding:8px 0}
+.toc a{display:block;color:var(--muted);font-size:12px;line-height:1.5;text-decoration:none;padding:6px 0}
 .toc a:hover{color:var(--accent)}
 .policy{min-width:0;max-width:830px}
 .summary{padding:28px 30px;background:linear-gradient(135deg,rgba(0,245,196,.075),rgba(0,170,255,.035));border:1px solid rgba(0,245,196,.22);margin-bottom:44px}
 .summary-label{font-size:11px;letter-spacing:.16em;color:var(--accent);text-transform:uppercase;margin-bottom:10px}
+.summary ul{margin-bottom:0}
 .summary p:last-child{margin-bottom:0}
 .policy section{padding:34px 0 36px;border-top:1px solid var(--line);scroll-margin-top:110px}
 .policy section:first-of-type{border-top:0}
@@ -52,12 +54,13 @@ h2{font-size:clamp(25px,3vw,34px);letter-spacing:-.04em;margin-bottom:20px;font-
 h3{font-size:17px;letter-spacing:-.025em;margin:28px 0 12px;font-weight:700}
 p,li{color:#b8c3d1}
 p{margin-bottom:16px}
+strong{color:var(--ink);font-weight:500}
 ul{padding-left:20px;margin:0 0 18px}
 li{padding-left:5px;margin:7px 0}
 li::marker{color:var(--accent)}
 .data-card{border:1px solid var(--line);background:var(--panel);padding:22px 24px;margin:18px 0}
 .data-card h3{margin:0 0 10px}
-.data-card p:last-child{margin-bottom:0}
+.data-card p:last-child,.data-card ul:last-child{margin-bottom:0}
 .note{border-left:2px solid var(--accent);background:var(--panel2);padding:18px 22px;margin:24px 0}
 .note p:last-child{margin:0}
 .site-footer{border-top:1px solid var(--line);padding:32px 0 42px}
@@ -67,10 +70,9 @@ li::marker{color:var(--accent)}
 .footer-links a{font-size:12px;color:var(--muted);text-decoration:none}
 .footer-links a:hover{color:var(--accent)}
 @media(max-width:850px){.main-grid{grid-template-columns:1fr;gap:24px}.toc{position:static;display:flex;flex-wrap:wrap;gap:0 18px;padding:16px 0}.toc-title{width:100%;margin-bottom:6px}.toc a{font-size:11px}.hero{padding:65px 0 48px}}
-@media(max-width:600px){.wrap{width:min(100% - 32px,1180px)}.header-inner{min-height:70px;align-items:flex-start;padding:16px 0}.brand{font-size:21px;margin-top:7px}.header-nav{gap:12px;justify-content:flex-end;flex-wrap:wrap}.header-nav a{font-size:10px}.header-nav .home-link{padding:5px 8px}.hero{padding-top:54px}.lead{font-size:14px}.meta{font-size:11px}.main-grid{padding-top:32px;padding-bottom:65px}.summary{padding:22px}.footer-inner{align-items:flex-start;flex-direction:column}}
+@media(max-width:600px){.wrap{width:min(100% - 32px,1180px)}.header-inner{min-height:70px;align-items:flex-start;padding:16px 0}.brand{font-size:21px;margin-top:7px}.header-nav{gap:12px;justify-content:flex-end;flex-wrap:wrap}.header-nav a{font-size:10px}.header-nav .home-link{padding:5px 8px}.hero{padding-top:54px}.lead{font-size:14px}.meta{font-size:11px}.main-grid{padding-top:32px;padding-bottom:65px}.summary{padding:22px}.data-card{padding:18px}.footer-inner{align-items:flex-start;flex-direction:column}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-
-</style>
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -87,10 +89,10 @@ li::marker{color:var(--accent)}
   <main>
     <div class="hero">
       <div class="wrap">
-        <p class="eyebrow">Network Analyzer / Legal</p>
+        <p class="eyebrow">WiFi Analyzer - Network Tool / Legal</p>
         <h1>Terms of <span class="gradient">Use.</span></h1>
-        <p class="lead">The rules for using Network Analyzer and its speed test, LAN scan, ping, DNS, traceroute, Wi-Fi details, history, and export tools.</p>
-        <div class="meta"><span><strong>App:</strong> Network Analyzer</span><span><strong>Publisher:</strong> Nova Soft</span><span><strong>Effective:</strong> 21 October 2026</span></div>
+        <p class="lead">The rules for using WiFi Analyzer: device discovery, Wi-Fi analysis, the network and security tools, speed test, alerts, history and export.</p>
+        <div class="meta"><span><strong>App:</strong> WiFi Analyzer - Network Tool</span><span><strong>Package:</strong> com.novasoftapps.networktool</span><span><strong>Publisher:</strong> Nova Soft</span><span><strong>Effective:</strong> 9 November 2026</span></div>
       </div>
     </div>
 
@@ -100,92 +102,143 @@ li::marker{color:var(--accent)}
         <a href="#agreement">01 &nbsp; Agreement</a>
         <a href="#license">02 &nbsp; App license</a>
         <a href="#authorized-use">03 &nbsp; Authorized use</a>
-        <a href="#results">04 &nbsp; Results</a>
-        <a href="#exports">05 &nbsp; History &amp; exports</a>
-        <a href="#ads">06 &nbsp; Ads &amp; privacy</a>
-        <a href="#availability">07 &nbsp; Availability</a>
-        <a href="#disclaimers">08 &nbsp; Disclaimers</a>
-        <a href="#liability">09 &nbsp; Liability</a>
-        <a href="#termination">10 &nbsp; Changes &amp; contact</a>
+        <a href="#tools">04 &nbsp; Scanning &amp; security tools</a>
+        <a href="#results">05 &nbsp; Results</a>
+        <a href="#background">06 &nbsp; Alerts &amp; background scans</a>
+        <a href="#exports">07 &nbsp; History &amp; exports</a>
+        <a href="#third-party">08 &nbsp; Third-party services</a>
+        <a href="#ads">09 &nbsp; Ads &amp; privacy</a>
+        <a href="#availability">10 &nbsp; Price &amp; availability</a>
+        <a href="#disclaimers">11 &nbsp; Disclaimers</a>
+        <a href="#liability">12 &nbsp; Liability</a>
+        <a href="#termination">13 &nbsp; Changes &amp; contact</a>
       </nav>
 
       <article class="policy">
         <div class="summary">
           <div class="summary-label">// The short version</div>
-          <p>Use Network Analyzer only on devices and networks you own or are allowed to test. Results are estimates and can vary with your device, connection, and test destination. You control what you export. The app displays ads through Google AdMob.</p>
+          <ul>
+            <li>Scan and test only devices and networks you own or have permission to test.</li>
+            <li>Results are estimates. The app cannot guarantee it finds every device, open port, camera or security problem.</li>
+            <li>Your history stays on your phone; you decide what to export and who receives it.</li>
+            <li>The app is free and shows ads from Google AdMob. Some tests use outside services such as Cloudflare.</li>
+          </ul>
         </div>
 
         <section id="agreement">
           <div class="section-number">01 / ACCEPTANCE</div>
           <h2>Agreement and scope</h2>
-          <p>These Terms of Use ("Terms") govern your use of the Network Analyzer mobile app provided by Nova Soft ("we," "us," or "our"). By downloading or using the app, you agree to these Terms. If you do not agree, do not use the app.</p>
-          <p>Your app-store provider may also apply its own terms to your download and use of the app. These Terms are between you and Nova Soft.</p>
+          <p>These Terms of Use ("Terms") govern your use of the Android app <strong>WiFi Analyzer - Network Tool</strong> (package <code>com.novasoftapps.networktool</code>), provided by Nova Soft ("we," "us," or "our"). By downloading or using the app, you agree to these Terms. If you do not agree, do not use the app.</p>
+          <p>Google Play's terms also apply to how you download and update the app. These Terms are between you and Nova Soft, and Google is not responsible for the app or its content.</p>
         </section>
 
         <section id="license">
           <div class="section-number">02 / LICENSE</div>
           <h2>Permission to use the app</h2>
-          <p>We grant you a limited, non-exclusive, non-transferable, revocable license to install and use Network Analyzer on devices you own or control, for lawful personal or internal business network diagnostics, subject to these Terms and applicable app-store rules. We retain ownership of the app, its design, code, and related intellectual property.</p>
-          <p>You may not copy, sell, sublicense, or distribute the app except as allowed by applicable law or the app store. You may not interfere with the app's security or misuse its functionality.</p>
+          <p>We grant you a limited, personal, non-exclusive, non-transferable, revocable license to install and use WiFi Analyzer on Android devices you own or control, for lawful personal or internal business network diagnostics, subject to these Terms and Google Play's rules. We keep ownership of the app, its design, code, graphics and related intellectual property. The device-maker table bundled in the app is based on the public IEEE registry; product names and trademarks shown in results belong to their owners.</p>
+          <p>You may not copy, modify, sell, rent, sublicense or redistribute the app, or reverse-engineer it, except where applicable law allows. You may not remove ads by tampering with the app, generate fake ad views or clicks, or interfere with the app's security.</p>
         </section>
 
         <section id="authorized-use">
           <div class="section-number">03 / RESPONSIBLE TESTING</div>
           <h2>Use only with authorization</h2>
-          <p>Network Analyzer can send traffic to local devices, internet hosts, DNS resolvers, and speed-test endpoints. Only scan or test a network, system, or service when you own it or have permission from its owner or operator. You are responsible for the targets you enter and how you use the results.</p>
+          <p>WiFi Analyzer sends traffic to devices on your local network and to internet hosts, DNS and Whois servers, and speed-test endpoints. Only scan or test a network, device, system or service when you own it or have permission from its owner or operator. You are responsible for the targets you enter, the networks you scan and how you use the results.</p>
           <ul>
-            <li>Do not use the app to disrupt a network or service, evade access controls, or violate another person's privacy.</li>
-            <li>Do not run tests at a volume or frequency that could degrade a network or breach the rules of a network you use.</li>
-            <li>Comply with applicable laws, your internet provider's rules, and the policies of the networks and services you test.</li>
+            <li>Do not use the app to gain unauthorized access to a network or device, bypass security, or prepare an attack.</li>
+            <li>Do not use the app to disrupt a network or service, or to run scans or tests at a volume or frequency that could degrade it.</li>
+            <li>Do not use the app to monitor, track or collect information about other people without their knowledge or a lawful basis.</li>
+            <li>Follow applicable laws, your internet provider's rules, and the policies of the networks you use, including public, workplace, school and hotel Wi-Fi.</li>
           </ul>
         </section>
 
+        <section id="tools">
+          <div class="section-number">04 / TOOLS</div>
+          <h2>Scanning and security tools</h2>
+          <p>Some tools need particular care:</p>
+          <div class="data-card">
+            <h3>Device scan and port scanner</h3>
+            <p>Probe devices on your network and check which ports answer. Scanning networks or hosts you do not control may be prohibited by law or by the network's rules. Scan internet hosts only with the owner's permission.</p>
+          </div>
+          <div class="data-card">
+            <h3>Hidden-camera finder</h3>
+            <p>Looks for devices on the <strong>same Wi-Fi network</strong> that identify themselves as cameras (ONVIF, RTSP or known camera makers). It cannot detect cameras that are offline, on another network, use mobile data, record locally, or hide their identity. A "nothing found" result does not mean a room is free of cameras. If you believe you are being recorded unlawfully, contact the property owner, the platform you booked through, or the police.</p>
+          </div>
+          <div class="data-card">
+            <h3>Router security check</h3>
+            <p>Reports likely weaknesses such as weak Wi-Fi encryption, WPS, Telnet, FTP, TR-069, an HTTP-only admin page or UPnP. It is a quick check, not a full security audit, and it does not change any settings. Change router settings only on equipment you manage.</p>
+          </div>
+          <div class="data-card">
+            <h3>Wake on LAN</h3>
+            <p>Sends a wake-up packet on your local network. Use it only for devices you own or are allowed to manage.</p>
+          </div>
+          <div class="data-card">
+            <h3>Ping, traceroute, DNS, Whois, outage check and speed test</h3>
+            <p>Contact the hosts and services described in the <a href="privacy-policy.html#requests">Privacy Policy</a>. Whois data comes from public registries and may be incomplete, out of date or subject to the registries' own terms of use.</p>
+          </div>
+        </section>
+
         <section id="results">
-          <div class="section-number">04 / DIAGNOSTICS</div>
+          <div class="section-number">05 / DIAGNOSTICS</div>
           <h2>Results are informational</h2>
-          <p>Speed, latency, device discovery, DNS, route, and Wi-Fi results are snapshots from a particular time and setup. They can be affected by device hardware, operating-system limits, Wi-Fi conditions, provider routing, server load, firewalls, permissions, and test destinations. A result is not a guarantee of network performance, security, availability, or the identity of a discovered device.</p>
-          <p>The app is a diagnostic aid. You should verify important findings with other appropriate tools or a qualified professional before making operational or security decisions.</p>
+          <p>Speed, latency, signal, channel, device, port, DNS, route, outage and security results are snapshots from a particular time and setup. They can be affected by device hardware, Android limits (for example, Android hides most MAC addresses and limits Wi-Fi scans), Wi-Fi conditions, guest-network or client isolation, firewalls, provider routing, server load and the permissions you grant. Device names, makers and types are best guesses from what devices announce.</p>
+          <p>A result is not a guarantee of network performance, security, availability, or the identity or ownership of a device. The app is a diagnostic aid: check important findings with other tools or a qualified professional before making operational, security or purchasing decisions.</p>
+        </section>
+
+        <section id="background">
+          <div class="section-number">06 / BACKGROUND</div>
+          <h2>New-device alerts and background scans</h2>
+          <p>New-device alerts and background scans are optional and off by default. If you turn them on, the app periodically scans the Wi-Fi network you are connected to and may notify you when a new device appears. Android, battery-saving settings and your device maker can delay or stop background work, so alerts may arrive late or not at all. Do not rely on them as a security or intrusion-detection system. You can turn them off at any time in Settings.</p>
         </section>
 
         <section id="exports">
-          <div class="section-number">05 / YOUR CONTENT</div>
+          <div class="section-number">07 / YOUR CONTENT</div>
           <h2>History and exports</h2>
-          <p>Diagnostic history is stored locally on your device. If you export or share it, you choose the recipient or destination and are responsible for checking whether the result contains IP addresses, device names, network identifiers, or other information that should remain private. We do not own your exported diagnostic results.</p>
-          <p>You are responsible for your own device, backups, exported copies, and any charges your provider may apply to data-intensive tests such as speed tests.</p>
+          <p>History, device notes and speed results are stored only on your device and are not backed up by the app. We cannot recover them if they are deleted, if you uninstall the app or if you change phones.</p>
+          <p>When you export a CSV file, you choose the recipient or destination and are responsible for checking whether it contains IP addresses, MAC addresses, device names, network identifiers or other information that should stay private. We do not own your exported results.</p>
+          <p>You are responsible for any charges from your mobile or internet provider, especially for data-heavy tests such as the speed test, which downloads and uploads test data over several seconds.</p>
+        </section>
+
+        <section id="third-party">
+          <div class="section-number">08 / OTHER SERVICES</div>
+          <h2>Third-party services</h2>
+          <p>Some features rely on services we do not operate, including Cloudflare (speed test and public IP), Google, Cloudflare and Apple connectivity endpoints (outage check), DNS resolvers, IANA and registry Whois servers, Google AdMob and Google Play. These services may change, limit or stop without notice, which may affect the related feature. Your use of them is subject to their own terms and privacy policies. Device web pages and links you open from the app load in your browser and are the responsibility of their owners.</p>
         </section>
 
         <section id="ads">
-          <div class="section-number">06 / ADS &amp; DATA</div>
+          <div class="section-number">09 / ADS &amp; DATA</div>
           <h2>Advertising and privacy</h2>
-          <p>Network Analyzer displays advertising through Google AdMob. Ads and linked third-party content are provided by their respective publishers; we are not responsible for third-party sites or offers reached through an ad. Your use of those services is governed by their own terms and policies.</p>
-          <p>Our <a href="privacy-policy.html">Privacy Policy</a> explains the app's local diagnostic data and the information Google AdMob may process for advertising.</p>
+          <p>WiFi Analyzer is free and is supported by full-screen ads from Google AdMob. Ads are not shown while a scan, speed test or tool is running. Where required by law, you are asked for ad consent and can change it in <strong>Settings &gt; Ad privacy choices</strong>.</p>
+          <p>Ads and the sites, apps or offers they lead to are provided by third-party advertisers. We do not control or endorse them and are not responsible for their content, products or practices. Do not click ads you are not interested in, and do not use tools or methods to generate artificial ad impressions or clicks.</p>
+          <p>Our <a href="privacy-policy.html">Privacy Policy</a> explains what the app keeps on your device, which services a test contacts and what Google AdMob may process. It forms part of these Terms.</p>
         </section>
 
         <section id="availability">
-          <div class="section-number">07 / SERVICE</div>
-          <h2>Availability and updates</h2>
-          <p>We may update, modify, suspend, or discontinue app features for maintenance, security, technical, or legal reasons. Some features depend on the permissions you grant, your device and operating system, a working connection, and third-party network services. We cannot promise that every tool will work on every device or network.</p>
+          <div class="section-number">10 / SERVICE</div>
+          <h2>Price, availability and updates</h2>
+          <p>The app is currently free to download and use and offers no paid plans or in-app purchases. If we add paid features in the future, their price and terms will be shown before you buy, and payments will be handled by Google Play.</p>
+          <p>We may update, change, suspend or discontinue features for maintenance, security, technical or legal reasons. Some features depend on the permissions you grant, your Android version and device, a working connection and third-party services. We cannot promise that every tool will work on every device or network. Keeping the app updated helps it work correctly.</p>
         </section>
 
         <section id="disclaimers">
-          <div class="section-number">08 / WARRANTIES</div>
+          <div class="section-number">11 / WARRANTIES</div>
           <h2>Disclaimers</h2>
-          <p>To the extent permitted by applicable law, Network Analyzer is provided "as is" and "as available," without warranties of uninterrupted operation, error-free results, fitness for a particular purpose, or a specific network outcome. Nothing in these Terms excludes a warranty or consumer right that cannot lawfully be excluded.</p>
+          <p>To the extent permitted by applicable law, WiFi Analyzer is provided "as is" and "as available," without warranties of any kind, including warranties of uninterrupted operation, error-free or complete results, accuracy, merchantability, fitness for a particular purpose, or that it will find every device, camera, port or vulnerability. Nothing in these Terms excludes a warranty or consumer right that cannot lawfully be excluded.</p>
         </section>
 
         <section id="liability">
-          <div class="section-number">09 / LIMITS</div>
+          <div class="section-number">12 / LIMITS</div>
           <h2>Limits of liability</h2>
-          <p>To the extent permitted by applicable law, Nova Soft is not liable for indirect, incidental, special, consequential, or punitive losses arising from use of the app, including lost data, interrupted service, or decisions made from diagnostic results. This does not limit liability or consumer rights that cannot legally be limited or excluded.</p>
+          <p>To the extent permitted by applicable law, Nova Soft is not liable for indirect, incidental, special, consequential or punitive losses arising from your use of the app, including lost data, service interruption, data charges, security incidents, or decisions made from diagnostic results. You are responsible for any claims that arise from your use of the app on networks or devices you were not authorized to test.</p>
+          <p>This section does not limit liability for death or personal injury caused by negligence, for fraud, or any other liability or consumer right that cannot legally be limited or excluded.</p>
         </section>
 
         <section id="termination">
-          <div class="section-number">10 / CONTACT</div>
-          <h2>Changes, ending use, and contact</h2>
-          <p>You may stop using the app at any time by uninstalling it. We may end or restrict your permission to use the app if you materially violate these Terms, subject to applicable law.</p>
-          <p>We may update these Terms as the app changes. The effective date at the top identifies the current version. Continued use after revised Terms take effect means you accept them, where permitted by law.</p>
-          <p>For questions about these Terms, contact Nova Soft at <a href="mailto:hello@novasoft.io">hello@novasoft.io</a>.</p>
-          <div class="note"><p>For details about app data, read the <a href="privacy-policy.html">Network Analyzer Privacy Policy</a>.</p></div>
+          <div class="section-number">13 / CONTACT</div>
+          <h2>Changes, ending use and contact</h2>
+          <p>You may stop using the app at any time by uninstalling it. We may end or restrict your permission to use the app if you materially break these Terms, subject to applicable law.</p>
+          <p>We may update these Terms as the app changes. The effective date at the top shows the current version, and significant changes will be announced on this page and, where appropriate, in the app. Continuing to use the app after revised Terms take effect means you accept them, where the law allows.</p>
+          <p>For questions about these Terms, contact Nova Soft at <a href="mailto:support@novasoftlabs.com">support@novasoftlabs.com</a>.</p>
+          <div class="note"><p>For details about app data, read the <a href="privacy-policy.html">WiFi Analyzer Privacy Policy</a>.</p></div>
         </section>
       </article>
     </div>
@@ -193,10 +246,9 @@ li::marker{color:var(--accent)}
 
   <footer class="site-footer">
     <div class="wrap footer-inner">
-      <div><a class="brand" href="https://novasoftlabs.com/">Nova<span>Soft</span></a><p>© 2026 Nova Soft. Network Analyzer legal pages.</p></div>
-      <div class="footer-links"><a href="https://novasoftlabs.com/">Home</a><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-use.html">Terms of Use</a><a href="mailto:hello@novasoft.io">Contact</a></div>
+      <div><a class="brand" href="https://novasoftlabs.com/">Nova<span>Soft</span></a><p>© 2026 Nova Soft. WiFi Analyzer legal pages.</p></div>
+      <div class="footer-links"><a href="https://novasoftlabs.com/">Home</a><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-use.html">Terms of Use</a><a href="mailto:support@novasoftlabs.com">Contact</a></div>
     </div>
   </footer>
 </body>
 </html>
-
