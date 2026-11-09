@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#080b10">
-  <meta name="description" content="Privacy Policy for Network Analyzer by Nova Soft. Learn how network diagnostics, local history, exports, and Google AdMob data are handled.">
-  <title>Network Analyzer Privacy Policy — NovaSoft</title>
+  <meta name="description" content="Privacy Policy for WiFi Analyzer - Network Tool by Nova Soft: what the app reads on your device, what stays on your phone, which services a test contacts, and how Google AdMob processes data to show ads.">
+  <title>Privacy Policy — WiFi Analyzer | NovaSoft</title>
   <style>
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400;500&display=swap');
 
@@ -14,13 +14,14 @@
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.8 'DM Mono',monospace}
 body:before{content:'';position:fixed;inset:0;z-index:-1;background:linear-gradient(rgba(255,255,255,.017) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.017) 1px,transparent 1px);background-size:64px 64px;mask-image:linear-gradient(#000,transparent 85%);pointer-events:none}
-a{color:var(--accent);text-underline-offset:3px}
+a{color:var(--accent);text-underline-offset:3px;overflow-wrap:anywhere}
 a:hover{color:#70ffe2}
 a:focus-visible{outline:2px solid var(--accent);outline-offset:5px;border-radius:2px}
+code{font:inherit;color:var(--ink);background:rgba(255,255,255,.06);padding:1px 5px;border-radius:2px;overflow-wrap:anywhere}
 .wrap{width:min(1180px,calc(100% - 48px));margin-inline:auto}
 .site-header{border-bottom:1px solid var(--line);background:rgba(8,11,16,.88);backdrop-filter:blur(16px);position:sticky;top:0;z-index:20}
 .header-inner{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.brand{text-decoration:none;color:var(--ink);font:800 24px/1 'Syne',sans-serif;letter-spacing:-.06em}
+.brand{text-decoration:none;color:var(--ink);font:800 24px/1 'Syne',sans-serif;letter-spacing:-.06em;white-space:nowrap}
 .brand span{color:var(--accent)}
 .header-nav{display:flex;align-items:center;gap:30px}
 .header-nav a{color:var(--muted);text-decoration:none;text-transform:uppercase;font-size:11px;letter-spacing:.15em;white-space:nowrap}
@@ -39,11 +40,12 @@ h1 .gradient{background:linear-gradient(90deg,var(--accent),var(--blue));-webkit
 .main-grid{display:grid;grid-template-columns:220px minmax(0,1fr);gap:72px;padding-top:60px;padding-bottom:100px}
 .toc{align-self:start;position:sticky;top:110px;padding:22px 0;border-top:1px solid var(--accent)}
 .toc-title{color:var(--accent);font-size:10px;letter-spacing:.17em;text-transform:uppercase;margin-bottom:18px}
-.toc a{display:block;color:var(--muted);font-size:12px;line-height:1.5;text-decoration:none;padding:8px 0}
+.toc a{display:block;color:var(--muted);font-size:12px;line-height:1.5;text-decoration:none;padding:6px 0}
 .toc a:hover{color:var(--accent)}
 .policy{min-width:0;max-width:830px}
 .summary{padding:28px 30px;background:linear-gradient(135deg,rgba(0,245,196,.075),rgba(0,170,255,.035));border:1px solid rgba(0,245,196,.22);margin-bottom:44px}
 .summary-label{font-size:11px;letter-spacing:.16em;color:var(--accent);text-transform:uppercase;margin-bottom:10px}
+.summary ul{margin-bottom:0}
 .summary p:last-child{margin-bottom:0}
 .policy section{padding:34px 0 36px;border-top:1px solid var(--line);scroll-margin-top:110px}
 .policy section:first-of-type{border-top:0}
@@ -52,12 +54,20 @@ h2{font-size:clamp(25px,3vw,34px);letter-spacing:-.04em;margin-bottom:20px;font-
 h3{font-size:17px;letter-spacing:-.025em;margin:28px 0 12px;font-weight:700}
 p,li{color:#b8c3d1}
 p{margin-bottom:16px}
+strong{color:var(--ink);font-weight:500}
 ul{padding-left:20px;margin:0 0 18px}
 li{padding-left:5px;margin:7px 0}
 li::marker{color:var(--accent)}
 .data-card{border:1px solid var(--line);background:var(--panel);padding:22px 24px;margin:18px 0}
 .data-card h3{margin:0 0 10px}
-.data-card p:last-child{margin-bottom:0}
+.data-card p:last-child,.data-card ul:last-child{margin-bottom:0}
+.table-wrap{overflow-x:auto;margin:18px 0 22px;border:1px solid var(--line);background:var(--panel)}
+table{width:100%;border-collapse:collapse;font-size:13px;line-height:1.65}
+th,td{text-align:left;vertical-align:top;padding:13px 16px;border-bottom:1px solid var(--line)}
+tr:last-child td{border-bottom:0}
+th{color:var(--accent);font-weight:400;font-size:10px;letter-spacing:.15em;text-transform:uppercase;background:var(--panel2)}
+td{color:#b8c3d1}
+td:first-child{color:var(--ink);min-width:150px}
 .note{border-left:2px solid var(--accent);background:var(--panel2);padding:18px 22px;margin:24px 0}
 .note p:last-child{margin:0}
 .site-footer{border-top:1px solid var(--line);padding:32px 0 42px}
@@ -67,10 +77,9 @@ li::marker{color:var(--accent)}
 .footer-links a{font-size:12px;color:var(--muted);text-decoration:none}
 .footer-links a:hover{color:var(--accent)}
 @media(max-width:850px){.main-grid{grid-template-columns:1fr;gap:24px}.toc{position:static;display:flex;flex-wrap:wrap;gap:0 18px;padding:16px 0}.toc-title{width:100%;margin-bottom:6px}.toc a{font-size:11px}.hero{padding:65px 0 48px}}
-@media(max-width:600px){.wrap{width:min(100% - 32px,1180px)}.header-inner{min-height:70px;align-items:flex-start;padding:16px 0}.brand{font-size:21px;margin-top:7px}.header-nav{gap:12px;justify-content:flex-end;flex-wrap:wrap}.header-nav a{font-size:10px}.header-nav .home-link{padding:5px 8px}.hero{padding-top:54px}.lead{font-size:14px}.meta{font-size:11px}.main-grid{padding-top:32px;padding-bottom:65px}.summary{padding:22px}.footer-inner{align-items:flex-start;flex-direction:column}}
+@media(max-width:600px){.wrap{width:min(100% - 32px,1180px)}.header-inner{min-height:70px;align-items:flex-start;padding:16px 0}.brand{font-size:21px;margin-top:7px}.header-nav{gap:12px;justify-content:flex-end;flex-wrap:wrap}.header-nav a{font-size:10px}.header-nav .home-link{padding:5px 8px}.hero{padding-top:54px}.lead{font-size:14px}.meta{font-size:11px}.main-grid{padding-top:32px;padding-bottom:65px}.summary{padding:22px}.data-card{padding:18px}th,td{padding:11px 12px}td:first-child{min-width:120px}.footer-inner{align-items:flex-start;flex-direction:column}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-
-</style>
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -87,128 +96,222 @@ li::marker{color:var(--accent)}
   <main>
     <div class="hero">
       <div class="wrap">
-        <p class="eyebrow">Network Analyzer / Legal</p>
+        <p class="eyebrow">WiFi Analyzer - Network Tool / Legal</p>
         <h1>Privacy <span class="gradient">Policy.</span></h1>
-        <p class="lead">A clear explanation of what Network Analyzer uses to run its tools, what stays on your device, and what Google AdMob may process to show ads.</p>
-        <div class="meta"><span><strong>App:</strong> Network Analyzer</span><span><strong>Publisher:</strong> Nova Soft</span><span><strong>Effective:</strong> 21 October 2026</span></div>
+        <p class="lead">What WiFi Analyzer reads on your phone to run its tools, what it keeps only on your device, which outside services a test contacts, and what Google AdMob processes to show ads.</p>
+        <div class="meta"><span><strong>App:</strong> WiFi Analyzer - Network Tool</span><span><strong>Package:</strong> com.novasoftapps.networktool</span><span><strong>Publisher:</strong> Nova Soft</span><span><strong>Effective:</strong> 9 November 2026</span></div>
       </div>
     </div>
 
     <div class="wrap main-grid">
       <nav class="toc" aria-label="On this page">
         <div class="toc-title">// On this page</div>
-        <a href="#overview">01 &nbsp; Overview</a>
-        <a href="#network-data">02 &nbsp; Network data</a>
-        <a href="#how-used">03 &nbsp; How data is used</a>
-        <a href="#requests">04 &nbsp; Network requests</a>
-        <a href="#advertising">05 &nbsp; Advertising</a>
-        <a href="#sharing">06 &nbsp; Sharing</a>
-        <a href="#retention">07 &nbsp; Retention &amp; deletion</a>
-        <a href="#choices">08 &nbsp; Your choices</a>
-        <a href="#security">09 &nbsp; Security</a>
-        <a href="#changes">10 &nbsp; Changes &amp; contact</a>
+        <a href="#overview">01 &nbsp; Scope</a>
+        <a href="#app-data">02 &nbsp; Data the app handles</a>
+        <a href="#permissions">03 &nbsp; Permissions</a>
+        <a href="#how-used">04 &nbsp; How data is used</a>
+        <a href="#background">05 &nbsp; Alerts &amp; widget</a>
+        <a href="#requests">06 &nbsp; Network requests</a>
+        <a href="#advertising">07 &nbsp; Google AdMob</a>
+        <a href="#ratings">08 &nbsp; Google Play ratings</a>
+        <a href="#sharing">09 &nbsp; Sharing</a>
+        <a href="#retention">10 &nbsp; Retention &amp; deletion</a>
+        <a href="#rights">11 &nbsp; Your rights &amp; choices</a>
+        <a href="#children">12 &nbsp; Children</a>
+        <a href="#security">13 &nbsp; Security</a>
+        <a href="#changes">14 &nbsp; Changes &amp; contact</a>
       </nav>
 
       <article class="policy">
         <div class="summary">
           <div class="summary-label">// At a glance</div>
-          <p>Network Analyzer provides speed tests, LAN/device scans, ping, DNS lookups, traceroute, Wi-Fi details, and local history/export. Diagnostic results are stored locally on your device; Nova Soft does not run an account or cloud-sync service for those results. Tests communicate with the networks and endpoints you choose. The app also uses Google AdMob, which can process device, usage, and advertising information as described below.</p>
+          <ul>
+            <li>No account, no sign-in, and no analytics SDK. Nova Soft does not run a server that receives your scans, device lists or test results.</li>
+            <li>Scan results, device details, notes, history and speed results are stored only on your phone. They are excluded from Android cloud backup and device-to-device transfer.</li>
+            <li>Location permission is needed only because Android requires it to show the Wi-Fi name, router BSSID and nearby networks. The app does not read, store or send your GPS location.</li>
+            <li>Some tools contact outside services (Cloudflare, Google, Apple, DNS and Whois servers) only to perform the test.</li>
+            <li>The app shows full-screen ads from Google AdMob. Google may collect your IP address, advertising ID, device and usage information. Where required by law, you are asked for consent first and can change it any time in <strong>Settings &gt; Ad privacy choices</strong>.</li>
+          </ul>
         </div>
 
         <section id="overview">
           <div class="section-number">01 / SCOPE</div>
           <h2>Who this policy covers</h2>
-          <p>This Privacy Policy applies to the Network Analyzer mobile app published by Nova Soft ("we," "us," or "our"). It describes the app's diagnostic features and its use of Google AdMob. It does not cover the separate NovaSoft website or third-party sites and services that you may visit.</p>
-          <p>Some network information, including IP addresses, device names, and Wi-Fi identifiers, can be personal data in context. We treat it accordingly.</p>
+          <p>This Privacy Policy applies to the Android app <strong>WiFi Analyzer - Network Tool</strong> (package <code>com.novasoftapps.networktool</code>), published by Nova Soft ("we," "us," or "our"), and to the Google services built into it. It does not cover the NovaSoft website, the networks or devices you test, or third-party sites and services you open from the app.</p>
+          <p>Some network information, such as IP addresses, MAC addresses, device names and Wi-Fi identifiers, can be personal data in context, including information about other people's devices on a network. We treat it accordingly and design the app so this information stays on your phone.</p>
+          <p>Questions about this policy can be sent to <a href="mailto:support@novasoftlabs.com">support@novasoftlabs.com</a>.</p>
         </section>
 
-        <section id="network-data">
+        <section id="app-data">
           <div class="section-number">02 / APP DATA</div>
-          <h2>Information the app accesses</h2>
+          <h2>Information the app handles</h2>
+          <p>The information below is read or created on your phone to make the features work. Unless section 06 or 07 says otherwise, it is not sent to Nova Soft or anyone else.</p>
           <div class="data-card">
-            <h3>Connection and Wi-Fi details</h3>
-            <p>The app may read the device's current connection information, including local and public IP addresses, network name (SSID), access point identifier (BSSID), gateway, DNS servers, signal information, and related network settings, where available from your device and permitted by its operating system.</p>
+            <h3>Your connection and Wi-Fi</h3>
+            <p>Network name (SSID), router identifier (BSSID), signal strength, security type, Wi-Fi standard, channel and frequency, link speed, local IPv4 and IPv6 addresses, subnet mask, gateway, DNS servers and MTU, as made available by Android. The Wi-Fi screen also shows your public IP address and its country (see section 06).</p>
           </div>
           <div class="data-card">
-            <h3>LAN and diagnostic results</h3>
-            <p>When you use a tool, the app may process addresses and names of devices found on your local network; ping latency and reachability; DNS responses; traceroute hops; and speed-test results such as download speed, upload speed, and latency.</p>
+            <h3>Nearby Wi-Fi networks</h3>
+            <p>Names, BSSIDs, channels, signal strengths and security of the networks your phone can see, used for the nearby-networks list, channel graph and best-channel advice.</p>
           </div>
           <div class="data-card">
-            <h3>Saved history and exports</h3>
-            <p>The app stores diagnostic history on your device so you can review it. If you export results, the exported file or text is handled by the destination you choose, such as your device's share sheet, files app, or another app.</p>
+            <h3>Devices on your local network</h3>
+            <p>When you run a device scan, the app may learn each device's IP address, host name, MAC address (only when the device announces it), manufacturer (looked up in a vendor table bundled inside the app, with no network request), model, announced services (such as Bonjour, UPnP or casting), open ports and an automatically guessed device type. The phone and router are always listed.</p>
           </div>
-          <p>Network Analyzer does not require an account. Nova Soft does not receive or store your scan results or diagnostic history on its servers. Operating-system permissions may be needed to show Wi-Fi information or use network features; the permission prompt on your device controls that access.</p>
+          <div class="data-card">
+            <h3>Diagnostic results and what you enter</h3>
+            <p>Results of ping, traceroute, DNS lookup, Whois, port scan, Wake on LAN, Bonjour &amp; UPnP browser, hidden-camera finder, outage check, router security check and speed test, plus the host names, domains, IP addresses and port ranges you type into these tools. You can also add your own device names, types, notes and "trusted" markings.</p>
+          </div>
+          <div class="data-card">
+            <h3>Settings and history</h3>
+            <p>A history of scans, events and speed results, and app settings such as theme, onboarding status, new-device alerts and background-scan interval.</p>
+          </div>
+          <p>WiFi Analyzer does not access your contacts, photos, files, microphone, camera, call logs, SMS or accounts, and does not read your precise or approximate location.</p>
+        </section>
+
+        <section id="permissions">
+          <div class="section-number">03 / PERMISSIONS</div>
+          <h2>Android permissions and why they are needed</h2>
+          <p>Android asks for your approval before the app gets location, nearby Wi-Fi devices or notification access. You can grant or withdraw them at any time in Android settings; denying one only limits the related feature.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th scope="col">Permission</th><th scope="col">Why the app needs it</th></tr></thead>
+              <tbody>
+                <tr><td>Location (precise and approximate)</td><td>Android only reveals the Wi-Fi name, router BSSID and nearby-network scan results to apps with location permission. The app uses that permission only to read Wi-Fi information. It does not request GPS fixes, and it does not store or send your location.</td></tr>
+                <tr><td>Nearby Wi-Fi devices (Android 13+)</td><td>Reading Wi-Fi details and scanning nearby networks. Declared with Android's "never for location" flag.</td></tr>
+                <tr><td>Notifications (Android 13+)</td><td>Only if you turn on new-device alerts, to tell you when an unknown device joins your Wi-Fi.</td></tr>
+                <tr><td>Wi-Fi state, Wi-Fi multicast and network state</td><td>Reading connection details, starting nearby-network scans, and receiving mDNS, SSDP and ONVIF replies during a device scan.</td></tr>
+                <tr><td>Internet and local network access</td><td>Sending the network traffic each tool needs (section 06) and loading ads (section 07).</td></tr>
+              </tbody>
+            </table>
+          </div>
         </section>
 
         <section id="how-used">
-          <div class="section-number">03 / PURPOSES</div>
+          <div class="section-number">04 / PURPOSES</div>
           <h2>How the information is used</h2>
           <ul>
-            <li>To display your current network and Wi-Fi details.</li>
-            <li>To run the speed test, LAN/device scan, ping, DNS, and traceroute tools you select.</li>
-            <li>To keep history locally and create exports when you ask for them.</li>
-            <li>To serve, measure, and protect advertising through Google AdMob.</li>
+            <li>To show your current connection, Wi-Fi details, nearby networks and channel advice.</li>
+            <li>To discover and identify devices on your network, remember them between scans and flag new ones.</li>
+            <li>To run the tools you choose and show their results.</li>
+            <li>To keep a local history and create CSV exports when you ask for them.</li>
+            <li>To run background scans and send new-device alerts if you turn them on.</li>
+            <li>To show ads through Google AdMob, which keeps the app free (section 07).</li>
           </ul>
-          <p>We do not use your locally stored diagnostic history to build an advertising profile.</p>
+          <p>We do not use your network data, device lists or history for advertising, and we do not pass them to the ads SDK.</p>
+        </section>
+
+        <section id="background">
+          <div class="section-number">05 / BACKGROUND</div>
+          <h2>New-device alerts, background scans and the widget</h2>
+          <p>New-device alerts and background scans are <strong>off by default</strong>. If you turn them on in Settings, the app periodically scans the Wi-Fi network you are connected to (at the interval you choose, from 15 minutes to 6 hours, on Wi-Fi only) and shows a notification when a device it has not seen before appears. Results are stored on your phone like any other scan. You can turn this off at any time in Settings.</p>
+          <p>The optional home-screen widget shows the number of devices from your latest scan and a Scan button. It reads the same local data and sends nothing elsewhere.</p>
         </section>
 
         <section id="requests">
-          <div class="section-number">04 / NETWORK TRAFFIC</div>
+          <div class="section-number">06 / NETWORK TRAFFIC</div>
           <h2>What happens when you run a test</h2>
-          <p>Network tests work by sending requests or packets. A LAN scan communicates with devices on the network you scan. Ping, DNS, and traceroute communicate with the destination or resolver used by the test. A speed test communicates with its test endpoint and transfers data to measure performance. Those destinations and the networks carrying the traffic may see information normally included in network communication, such as your public IP address, request time, queried domain, or target address.</p>
-          <p>Network Analyzer does not control the privacy practices of a destination you choose, your internet provider, your DNS resolver, or the speed-test endpoint. Do not export or share a result containing information you wish to keep private.</p>
+          <p>Network tools work by sending packets or requests. Whoever receives them, and the networks that carry them, can see information that is part of normal network communication, such as your IP address, the time and what was requested. All internet requests made by the app's tools use HTTPS, except DNS and Whois queries, which use their standard unencrypted protocols.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th scope="col">Feature</th><th scope="col">Who is contacted, and what they receive</th></tr></thead>
+              <tbody>
+                <tr><td>Device scan, port scan, hidden-camera finder, router security check, Wake on LAN, Bonjour &amp; UPnP browser</td><td>Devices on the local network you are connected to, using ICMP, TCP, NetBIOS, mDNS/Bonjour, SSDP/UPnP and ONVIF requests, and your router's DNS server to look up device names. This traffic stays on your local network.</td></tr>
+                <tr><td>Public IP on the Wi-Fi screen</td><td>Cloudflare (<code>www.cloudflare.com</code>), which returns your public IP address and country. Requested when you open the Wi-Fi details screen or tap Refresh.</td></tr>
+                <tr><td>Speed test</td><td>Cloudflare (<code>speed.cloudflare.com</code>). Test data is downloaded and uploaded to measure speed; Cloudflare sees your public IP address.</td></tr>
+                <tr><td>Outage check</td><td>Google (<code>www.google.com</code>), Cloudflare (<code>1.1.1.1</code>) and Apple (<code>captive.apple.com</code>) connectivity endpoints, plus DNS lookups of google.com, cloudflare.com and wikipedia.org.</td></tr>
+                <tr><td>Ping, traceroute and DNS lookup</td><td>The host you enter and the routers along the way. DNS queries go to your network's DNS server, or to Cloudflare (1.1.1.1) or Google (8.8.8.8) if it does not answer.</td></tr>
+                <tr><td>Whois</td><td>IANA (<code>whois.iana.org</code>) and the registry servers it refers to, which receive the domain or IP address you enter.</td></tr>
+                <tr><td>Opening a device's web page</td><td>Opens in your browser, which handles it under its own privacy policy.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>These services process requests under their own policies, for example <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare</a>, <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google</a>, <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple</a> and <a href="https://www.iana.org/help/privacy-policy" target="_blank" rel="noopener noreferrer">IANA</a>. Nova Soft does not receive copies of these requests or their results.</p>
+          <div class="note"><p>Scan only networks and devices you own or are authorized to test. Port scanning and device discovery on networks you do not control may break local rules or laws. See the <a href="terms-of-use.html">Terms of Use</a>.</p></div>
         </section>
 
         <section id="advertising">
-          <div class="section-number">05 / GOOGLE ADMOB</div>
+          <div class="section-number">07 / GOOGLE ADMOB</div>
           <h2>Advertising and Google AdMob</h2>
-          <p>The app uses Google AdMob to display ads. Google's Mobile Ads SDK may automatically collect or receive your IP address (which can indicate approximate location), app interactions and ad activity, diagnostic and performance information, and device or advertising identifiers where available. Google may use this information to deliver and measure ads, provide analytics for ads, and prevent fraud. This AdMob processing is separate from the local diagnostic history described above.</p>
-          <p>Google may use advertising information to personalize ads where permitted. You can manage ad personalization through your device's advertising settings and Google's controls. Network Analyzer does not currently provide an in-app ad-consent form or a screen for reopening ad privacy choices. We will update this policy when those controls are added.</p>
-          <p>See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a> and <a href="https://myadcenter.google.com/" target="_blank" rel="noopener noreferrer">My Ad Center</a> for Google's practices and ad controls.</p>
+          <p>The app is free and shows full-screen (interstitial) ads from Google AdMob, using the Google Mobile Ads SDK. Ads appear at most once every 10 taps, only when you move between screens, and never while a scan, speed test or other tool is running.</p>
+          <h3>What Google may collect</h3>
+          <p>When ads load or are shown, the Google Mobile Ads SDK may automatically collect and share with Google:</p>
+          <ul>
+            <li><strong>Device identifiers:</strong> the Android advertising ID and app set ID.</li>
+            <li><strong>IP address</strong>, which Google may use to estimate your general (approximate) location.</li>
+            <li><strong>App and ad interactions:</strong> app launches, ad views, taps and similar activity.</li>
+            <li><strong>Diagnostics:</strong> crash logs and performance data related to the ads SDK.</li>
+            <li><strong>Device information:</strong> such as device model, operating system version, language and network type.</li>
+          </ul>
+          <p>Google uses this information to deliver, personalise and measure ads, provide ad reporting, and detect and prevent fraud and abuse. Google may also use cookies and similar identifiers for these purposes. Learn more in <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">How Google uses information from sites or apps that use its services</a> and <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">How Google uses cookies in advertising</a>. Google acts under its own <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.</p>
+          <h3>Consent and your ad choices</h3>
+          <ul>
+            <li><strong>EEA, UK and Switzerland:</strong> before any ad is requested, the app shows Google's consent form (Google User Messaging Platform). You can consent to personalised ads, or decline. If you decline, Google may still show non-personalised or limited ads, which use data such as your IP address and device information for delivery, frequency capping, measurement and fraud prevention, but not to personalise ads.</li>
+            <li><strong>Change your choice at any time:</strong> where a consent form applies, open <strong>Settings &gt; Ad privacy choices</strong> in the app.</li>
+            <li><strong>US state privacy laws:</strong> where Google's consent tools offer an opt-out of personalised ads for your state, it will appear in the same Ad privacy choices option.</li>
+            <li><strong>On any Android device:</strong> you can delete or reset your advertising ID in Android settings (Settings &gt; Privacy &gt; Ads, or Settings &gt; Google &gt; Ads), and manage ad personalisation at <a href="https://myadcenter.google.com/" target="_blank" rel="noopener noreferrer">My Ad Center</a>.</li>
+          </ul>
+          <p>Nova Soft receives only aggregated reports from AdMob, such as the number of ads shown and earnings. We do not receive your advertising ID or individual ad activity, and we do not combine AdMob data with your network data.</p>
+        </section>
+
+        <section id="ratings">
+          <div class="section-number">08 / GOOGLE PLAY</div>
+          <h2>Ratings through Google Play</h2>
+          <p>The app may show Google Play's in-app rating sheet when you open the app or after a speed test, and Settings has a Rate this app option that opens the Play Store. Google Play decides how often the sheet appears. Any rating or review you give is sent to Google Play under your Google account and Google's policies; the app never receives it or learns whether you rated.</p>
         </section>
 
         <section id="sharing">
-          <div class="section-number">06 / RECIPIENTS</div>
+          <div class="section-number">09 / RECIPIENTS</div>
           <h2>When information is shared</h2>
           <ul>
-            <li><strong>Google AdMob:</strong> ad-related and device information described above is shared with Google through its SDK. Google handles this data under its published privacy policy. We require third parties that receive app data through our integrations to provide protections consistent with this policy and applicable platform requirements.</li>
-            <li><strong>Test destinations:</strong> the target devices, DNS resolvers, and test endpoints involved in a test receive the network traffic needed to perform that test.</li>
-            <li><strong>Your chosen export destination:</strong> information you export or share goes to the app, service, or person you select.</li>
+            <li><strong>Google (AdMob):</strong> the advertising-related data described in section 07, collected directly by Google's SDK.</li>
+            <li><strong>Google Play:</strong> ratings you choose to submit (section 08).</li>
+            <li><strong>Test destinations:</strong> the devices, routers, DNS resolvers, Whois servers and Cloudflare, Google or Apple endpoints involved in a test receive the network traffic needed to perform it (section 06).</li>
+            <li><strong>Your chosen export destination:</strong> when you export a CSV file, Android's share sheet sends it to the app, service or person you choose. The export can include device names, IP and MAC addresses, makers and open ports, so share it with care.</li>
+            <li><strong>Legal requirements:</strong> we would disclose information we hold only if required by law. Because your app data stays on your phone, we generally have none to disclose.</li>
           </ul>
-          <p>We do not sell your diagnostic results or send your locally saved history to our own servers.</p>
+          <p>We do not sell your network data, device lists or diagnostic history, and we do not send them to our own servers.</p>
         </section>
 
         <section id="retention">
-          <div class="section-number">07 / LIFECYCLE</div>
+          <div class="section-number">10 / LIFECYCLE</div>
           <h2>Retention and deletion</h2>
-          <p>Diagnostic history is kept on your device until you remove it using any available in-app history controls or uninstall the app. Exported copies are under the control of the destination where you saved or shared them; deleting app history does not delete those copies. We cannot delete information retained by a network destination or your internet provider as a result of a test.</p>
-          <p>Nova Soft has no account or cloud copy of your diagnostic history to delete. Google determines retention of data processed through AdMob under its own policies and controls. You can use Google's privacy controls or contact us at <a href="mailto:hello@novasoft.io">hello@novasoft.io</a> with a privacy request; we will respond as applicable to data we control.</p>
+          <p>Scans, devices, notes, trust choices, events and speed results stay on your phone until you delete them. To remove them, use <strong>Settings &gt; Delete local history</strong>. Uninstalling the app, or clearing its storage in Android settings, removes all app data including settings. App data is excluded from Android cloud backup and device transfer, so it is not copied to a Google account or a new phone.</p>
+          <p>Exported CSV files are kept wherever you saved or shared them; deleting history in the app does not delete those copies. We cannot delete information kept by a network destination, DNS resolver, speed-test provider or your internet provider as a result of a test.</p>
+          <p>Google keeps data processed through AdMob according to its own <a href="https://policies.google.com/technologies/retention" target="_blank" rel="noopener noreferrer">retention policy</a>. You can reset your advertising ID and use Google's controls described in section 07.</p>
         </section>
 
-        <section id="choices">
-          <div class="section-number">08 / CONTROLS</div>
-          <h2>Your privacy choices</h2>
+        <section id="rights">
+          <div class="section-number">11 / CONTROLS</div>
+          <h2>Your rights and choices</h2>
           <ul>
-            <li>You can decide whether to run a diagnostic test or export a result.</li>
-            <li>You can manage app permissions, including Wi-Fi or location-related access where required by your operating system, in your device settings. Denying a permission may limit a related feature.</li>
-            <li>You can remove locally stored app data using available history controls or by uninstalling the app.</li>
-            <li>You can manage advertising preferences through your device settings, Apple's tracking setting on iOS, and Google's ad controls. At present, the app has no in-app screen for changing ad consent.</li>
+            <li>You decide whether to run a scan or test, turn on alerts or background scans, and export results.</li>
+            <li>You can grant or withdraw Android permissions in your device settings at any time.</li>
+            <li>You can delete local data in Settings or by uninstalling the app.</li>
+            <li>You can change your ad consent in Settings &gt; Ad privacy choices (where offered) and manage your advertising ID in Android settings.</li>
           </ul>
-          <p>For questions about access, consent, or deletion, email <a href="mailto:hello@novasoft.io">hello@novasoft.io</a>.</p>
+          <p>Depending on where you live (for example in the EEA, UK, or certain US states), you may have the right to access, correct, delete or port your personal data, to object to or restrict processing, to withdraw consent, to opt out of targeted advertising, and to complain to your local data protection authority. Because Nova Soft does not hold your app data, most of these rights are exercised directly in the app or with Google. For AdMob, personalised ads rely on your consent where the law requires it, and non-personalised ad delivery and fraud prevention rely on legitimate interests in keeping the app free and secure. Google may process ad data in countries other than your own under its own safeguards.</p>
+          <p>For any privacy request or question, email <a href="mailto:support@novasoftlabs.com">support@novasoftlabs.com</a>. We will reply within the time required by applicable law.</p>
+        </section>
+
+        <section id="children">
+          <div class="section-number">12 / CHILDREN</div>
+          <h2>Children's privacy</h2>
+          <p>WiFi Analyzer is a network utility for a general audience and is not directed to children under 13 (or the minimum age required in your country). We do not knowingly collect personal information from children. If you believe a child has used the app in a way that resulted in data being collected, contact us and we will help you remove it.</p>
         </section>
 
         <section id="security">
-          <div class="section-number">09 / PROTECTION</div>
+          <div class="section-number">13 / PROTECTION</div>
           <h2>Security</h2>
-          <p>Diagnostic history is stored locally using the protections of your device and operating system. No method of storage or network transmission is completely secure. Some diagnostic tools use ordinary network protocols that are not encrypted by design, and devices or operators on the tested network may observe their traffic. Use these tools only on networks where you are authorized to do so.</p>
+          <p>App data is stored in the app's private storage, protected by Android's app sandbox and your device's encryption and screen lock. The app's internet requests use HTTPS and it does not allow unencrypted HTTP connections, except for protocols that are unencrypted by design (DNS, Whois and local-network discovery). Devices or operators on the network being tested may observe that traffic. No method of storage or transmission is completely secure, so protect your phone with a screen lock and share exports with care.</p>
         </section>
 
         <section id="changes">
-          <div class="section-number">10 / UPDATES</div>
+          <div class="section-number">14 / UPDATES</div>
           <h2>Changes and contact</h2>
-          <p>We may update this policy when the app, its advertising setup, or legal requirements change. The effective date at the top shows when this version took effect. Material changes will be communicated through the app or this page where appropriate.</p>
-          <p>For privacy questions or requests, contact Nova Soft at <a href="mailto:hello@novasoft.io">hello@novasoft.io</a>.</p>
-          <div class="note"><p>Looking for the rules for using the app? Read the <a href="terms-of-use.html">Network Analyzer Terms of Use</a>.</p></div>
+          <p>We will update this policy when the app's features, its advertising setup or legal requirements change, and change the effective date at the top. Significant changes will be announced on this page and, where appropriate, in the app before they take effect.</p>
+          <p>Contact Nova Soft about privacy at <a href="mailto:support@novasoftlabs.com">support@novasoftlabs.com</a>.</p>
+          <div class="note"><p>Looking for the rules for using the app? Read the <a href="terms-of-use.html">WiFi Analyzer Terms of Use</a>.</p></div>
         </section>
       </article>
     </div>
@@ -216,10 +319,9 @@ li::marker{color:var(--accent)}
 
   <footer class="site-footer">
     <div class="wrap footer-inner">
-      <div><a class="brand" href="https://novasoftlabs.com/">Nova<span>Soft</span></a><p>© 2026 Nova Soft. Network Analyzer legal pages.</p></div>
-      <div class="footer-links"><a href="https://novasoftlabs.com/">Home</a><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-use.html">Terms of Use</a><a href="mailto:hello@novasoft.io">Contact</a></div>
+      <div><a class="brand" href="https://novasoftlabs.com/">Nova<span>Soft</span></a><p>© 2026 Nova Soft. WiFi Analyzer legal pages.</p></div>
+      <div class="footer-links"><a href="https://novasoftlabs.com/">Home</a><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-use.html">Terms of Use</a><a href="mailto:support@novasoftlabs.com">Contact</a></div>
     </div>
   </footer>
 </body>
 </html>
-
