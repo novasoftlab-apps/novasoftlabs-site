@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy — QR Barcode Scanner — Nova Soft Labs</title>
+  <meta name="description" content="How the QR Barcode Scanner app by Nova Soft Labs handles your data: on-device code scanning, AI product checks, ads and purchases."/>
+  <link rel="canonical" href="https://novasoftlabs.com/qr-barcode-scanner-privacy-policy.html"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a0a0f;
+      --surface: #111118;
+      --border: #1e1e2e;
+      --accent: #6c63ff;
+      --accent2: #00e5ff;
+      --text: #e8e8f0;
+      --muted: #7a7a96;
+      --tag-bg: #1a1a28;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Syne', sans-serif;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 5vw;
+      background: rgba(10,10,15,0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .logo {
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .logo span { color: var(--accent); }
+    .nav-link {
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-decoration: none;
+      font-family: 'Space Mono', monospace;
+      transition: color 0.2s;
+    }
+    .nav-link:hover { color: var(--accent2); }
+    .hero {
+      padding: 5rem 5vw 3rem;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px; left: -80px;
+      width: 420px; height: 420px;
+      background: radial-gradient(circle, rgba(108,99,255,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-tag {
+      display: inline-block;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--accent2);
+      background: var(--tag-bg);
+      border: 1px solid rgba(0,229,255,0.2);
+      padding: 0.3rem 0.8rem;
+      border-radius: 2px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 1.4rem;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--accent);
+    }
+    .hero-meta {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 1.2rem;
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 0;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 5vw 6rem;
+    }
+    .toc {
+      padding: 3rem 2rem 3rem 0;
+      position: sticky;
+      top: 70px;
+      align-self: start;
+      height: fit-content;
+      border-right: 1px solid var(--border);
+    }
+    .toc-title {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    .toc a {
+      display: block;
+      font-size: 0.82rem;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 0.38rem 0;
+      border-left: 2px solid transparent;
+      padding-left: 0.8rem;
+      transition: all 0.2s;
+    }
+    .toc a:hover {
+      color: var(--text);
+      border-left-color: var(--accent);
+    }
+    .content {
+      padding: 3rem 0 3rem 3rem;
+      min-width: 0;
+    }
+    .section {
+      margin-bottom: 3.5rem;
+      padding-bottom: 3.5rem;
+      border-bottom: 1px solid var(--border);
+      scroll-margin-top: 80px;
+    }
+    .section:last-child {
+      border-bottom: none;
+    }
+    .section-num {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+    }
+    .section h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+    .section h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 1.8rem 0 0.6rem;
+    }
+    .section p {
+      color: #b8b8d0;
+      font-size: 0.95rem;
+      margin-bottom: 0.9rem;
+    }
+    .section ul {
+      list-style: none;
+      margin: 0.6rem 0 0.9rem 0;
+    }
+    .section ul li {
+      color: #b8b8d0;
+      font-size: 0.95rem;
+      padding: 0.3rem 0 0.3rem 1.4rem;
+      position: relative;
+    }
+    .section ul li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.8rem;
+    }
+    .section a { color: var(--accent2); }
+    .highlight-box {
+      background: var(--tag-bg);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      padding: 1rem 1.2rem;
+      border-radius: 4px;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+      color: #c0c0dc;
+    }
+    .highlight-box.warning {
+      border-left-color: #ffb347;
+    }
+    .contact-block {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--tag-bg);
+      border: 1px solid rgba(108,99,255,0.3);
+      padding: 0.7rem 1.2rem;
+      border-radius: 4px;
+      margin-top: 0.5rem;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.82rem;
+      color: var(--accent2);
+      text-decoration: none;
+    }
+    .contact-block:hover { border-color: var(--accent2); }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 5vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    footer p {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+    footer a {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 1.2rem;
+      transition: color 0.2s;
+    }
+    footer a:hover { color: var(--accent2); }
+    .table-wrap { overflow-x: auto; margin: 1rem 0 1.2rem; }
+    table.compare { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 420px; }
+    table.compare th, table.compare td { text-align: left; padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--border); color: #b8b8d0; }
+    table.compare th { font-family: 'Space Mono', monospace; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 400; }
+    table.compare td:first-child { color: var(--text); }
+    table.compare .pro { color: var(--accent2); }
+    .section a, .section p, .section li { overflow-wrap: anywhere; }
+    @media (max-width: 700px) {
+      .hero h1 { font-size: clamp(1.7rem, 9vw, 3.2rem); }
+      .layout { grid-template-columns: 1fr; }
+      .toc { display: none; }
+      .content { padding: 2rem 0; }
+      footer a { margin-left: 0; margin-right: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="https://novasoftlabs.com" class="logo">Nova<span>Soft</span> Labs</a>
+  <a href="https://novasoftlabs.com" class="nav-link">← Back to Home</a>
+</nav>
+<div class="hero">
+  <div class="hero-tag">// Legal · QR Barcode Scanner</div>
+  <h1>Privacy <em>Policy</em></h1>
+  <p style="color:var(--muted);max-width:560px;font-size:0.95rem;">The codes you scan and create stay on your phone. Here is exactly what leaves it, when, and why.</p>
+  <div class="hero-meta">Last updated: November 2026 &nbsp;·&nbsp; Applies to the QR Barcode Scanner app for Android</div>
+</div>
+<div class="layout">
+  <aside class="toc">
+    <div class="toc-title">On this page</div>
+    <a href="#overview">Overview</a>
+    <a href="#information">Information We Collect</a>
+    <a href="#codes">Scanning &amp; Creating Codes</a>
+    <a href="#products">Product Checks &amp; AI</a>
+    <a href="#permissions">Device Permissions</a>
+    <a href="#usage">How We Use Information</a>
+    <a href="#advertising">Advertising (Google AdMob)</a>
+    <a href="#consent">Consent Management (EEA, UK &amp; Switzerland)</a>
+    <a href="#purchases">In-App Purchases &amp; Pro</a>
+    <a href="#sharing">Sharing &amp; Disclosure</a>
+    <a href="#security">Data Storage &amp; Security</a>
+    <a href="#retention">Data Retention</a>
+    <a href="#children">Children's Privacy</a>
+    <a href="#rights">Your Rights</a>
+    <a href="#deletion">Data Deletion</a>
+    <a href="#thirdparty">Third-Party Services</a>
+    <a href="#changes">Policy Changes</a>
+    <a href="#governing">Governing Law</a>
+    <a href="#contact">Contact Us</a>
+  </aside>
+  <main class="content">
+
+    <div class="section" id="overview">
+      <div class="section-num">01 —</div>
+      <h2>Overview</h2>
+      <p>Nova Soft Labs ("we," "our," or "us") is an independent app developer based in Lahore, Pakistan. This Privacy Policy explains how the <strong>QR Barcode Scanner</strong> app for Android (the "app") handles information.</p>
+      <p>The app does three things:</p>
+      <ul>
+        <li><strong>Scan</strong> QR codes and barcodes with your camera or from an image</li>
+        <li><strong>Create</strong> QR codes and barcodes, and keep a history of what you scanned and created</li>
+        <li><strong>Check products</strong>: scan the barcode of a food or skin care product, or snap photos of its pack, to see its ingredients, a score, allergens, a halal indication and other details, and ask AI questions about it</li>
+      </ul>
+      <div class="highlight-box">
+        🔒 <strong>In short:</strong> the app has no accounts and never asks for your name, email or phone number. Scanning and creating codes happens on your device. Only the product features send data to our server: the product's barcode, pack photos you choose to send, and questions you ask the AI. We do not sell your data.
+      </div>
+    </div>
+
+    <div class="section" id="information">
+      <div class="section-num">02 —</div>
+      <h2>Information We Collect</h2>
+      <p><strong>Stays on your device:</strong></p>
+      <ul>
+        <li>Codes you scan and create, and your scan and create history</li>
+        <li>Product results you have checked, and pack photos you take for "Snap a product"</li>
+        <li>Your settings, and the count of free product checks used today</li>
+      </ul>
+      <p><strong>Sent to our product service, only when you use a product feature:</strong></p>
+      <ul>
+        <li>The barcode number of the product you scan</li>
+        <li>Photos of a product's pack, only when you take or choose them in "Snap a product"</li>
+        <li>Questions you type in Ask AI, with the product details shown on screen and your app language</li>
+        <li>For Pro features, the Google Play purchase token, so we can confirm your Pro plan with Google Play</li>
+        <li>Your IP address, which every internet request carries; it is used for security and rate limiting and is not stored by us</li>
+      </ul>
+      <p><strong>Collected by Google services in the app:</strong></p>
+      <ul>
+        <li>Advertising ID, device information, approximate location from IP address, and ad interactions, collected by Google AdMob for free users (see Section 07)</li>
+        <li>Purchase information, handled by Google Play (see Section 09)</li>
+      </ul>
+      <p><strong>We do NOT collect:</strong></p>
+      <ul>
+        <li>Your name, email, phone number or any account information; the app has no accounts</li>
+        <li>Precise location (GPS)</li>
+        <li>Your contacts, messages, files or photo library; the app only reads a single image you pick yourself</li>
+        <li>The links or text inside the codes you scan; they are not sent to us</li>
+        <li>Payment card details; purchases are handled entirely by Google Play</li>
+      </ul>
+    </div>
+
+    <div class="section" id="codes">
+      <div class="section-num">03 —</div>
+      <h2>Scanning &amp; Creating Codes</h2>
+      <ul>
+        <li><strong>Camera:</strong> used to scan codes while a scanner screen is open. Codes are read on your device by Google ML Kit. Camera frames are not saved or uploaded.</li>
+        <li><strong>Scanning from an image:</strong> you pick a single image with the Android photo picker. The app reads only that image, on your device.</li>
+        <li><strong>History:</strong> codes you scan and create are saved in the app's private storage on your device. You can delete items in the app at any time.</li>
+        <li><strong>Saving, sharing and exporting:</strong> codes you save go to your device's gallery or Downloads folder, and codes you share go through the app you choose. A history export (CSV) is saved to your Downloads folder, with Wi-Fi passwords hidden. We do not receive a copy.</li>
+        <li><strong>Opening scanned content:</strong> links open in your browser. The app warns you about some suspicious links, such as look-alike domains. Websites you visit have their own privacy policies.</li>
+      </ul>
+    </div>
+
+    <div class="section" id="products">
+      <div class="section-num">04 —</div>
+      <h2>Product Checks &amp; AI</h2>
+      <p>When you check a product, the app sends the data listed in Section 02 to our product service. Our service runs on <strong>Cloudflare Workers</strong> and uses these providers to answer:</p>
+      <ul>
+        <li><strong>Open Food Facts, Open Beauty Facts and Open Products Facts</strong>: public product databases, looked up by barcode</li>
+        <li><strong>Google Gemini API</strong>: Google's AI, which reads the product data, pack photos and your questions, and may search the web (Google Search) for missing details such as ingredients or the product image</li>
+      </ul>
+      <p>Our service makes these requests itself, so the product databases and Google receive the barcode, photos or question from our server, not your device or IP address.</p>
+      <h3>What we keep</h3>
+      <ul>
+        <li>Our server does <strong>not</strong> store your photos, your questions, the AI's answers to you, your purchase token or your IP address</li>
+        <li>Product results looked up by barcode are cached for up to 7 days (1 day for details found on the web), so the next person who scans the same product gets an answer faster. These results describe the product only and are not linked to you</li>
+        <li>Google processes the content it receives under the Gemini API terms and may keep it for a limited time to detect abuse, as described in Google's terms</li>
+      </ul>
+      <h3>Product images</h3>
+      <p>Product pictures are loaded straight from the product database or the brand's or a retailer's website. Like any website, those servers can see your IP address when the image loads.</p>
+      <div class="highlight-box warning">
+        ⚠️ Photos and questions are processed by AI. Please don't include people, documents or personal details in pack photos, or personal health or identity information in your questions.
+      </div>
+    </div>
+
+    <div class="section" id="permissions">
+      <div class="section-num">05 —</div>
+      <h2>Device Permissions</h2>
+      <ul>
+        <li><strong>Camera</strong>: to scan codes and to take pack photos for "Snap a product"</li>
+        <li><strong>Internet</strong>: for product checks, ads and purchases. Scanning and creating codes work offline</li>
+        <li><strong>Storage</strong> (Android 9 and older only): to save codes you create to your gallery</li>
+        <li><strong>Vibration</strong>: for feedback when a code is scanned</li>
+        <li><strong>Google Play Billing</strong>: to buy and restore Pro</li>
+        <li><strong>Advertising ID</strong>: used by Google AdMob, as described in Section 07</li>
+      </ul>
+      <p>You can review and revoke permissions at any time in <strong>Settings → Apps → QR Barcode Scanner → Permissions</strong>. Some features won't work without the related permission.</p>
+    </div>
+
+    <div class="section" id="usage">
+      <div class="section-num">06 —</div>
+      <h2>How We Use Information</h2>
+      <p>We use information only to:</p>
+      <ul>
+        <li>Provide the app's features: scanning, creating, history and product checks</li>
+        <li>Find a product's ingredients, image and details, score it, and answer your questions about it</li>
+        <li>Confirm your Pro plan and unlock Pro features</li>
+        <li>Count free product checks, and give an extra check when you choose to watch a rewarded ad</li>
+        <li>Protect our service from abuse, for example by limiting how many requests come from one IP address</li>
+        <li>Show ads to free users through Google AdMob</li>
+        <li>Answer your support requests, and comply with legal obligations</li>
+      </ul>
+      <p>We do not use your photos or questions to build a profile of you, and we do not sell them.</p>
+    </div>
+
+    <div class="section" id="advertising">
+      <div class="section-num">07 —</div>
+      <h2>Advertising (Google AdMob)</h2>
+      <p>Free users see ads from <strong>Google AdMob</strong>, operated by Google LLC: banner ads, a full-screen ad when the app opens, and optional rewarded ads you can choose to watch for an extra product check. Pro users see no ads.</p>
+      <p><strong>What AdMob collects:</strong></p>
+      <ul>
+        <li>Google Advertising ID (GAID), a resettable device identifier</li>
+        <li>Device information (model, OS version, language, time zone)</li>
+        <li>Ad interaction data (impressions, clicks, view time)</li>
+        <li>Approximate location based on IP address</li>
+      </ul>
+      <p>Where permitted, AdMob may show personalized ads based on your interests across apps and websites.</p>
+      <div class="highlight-box">
+        🔧 <strong>Opt out of personalized ads:</strong> go to <strong>Settings → Google → Ads</strong> (on some devices <strong>Settings → Privacy → Ads</strong>) and delete your advertising ID.
+      </div>
+      <p>Learn how Google uses data from apps that show its ads at <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">policies.google.com/technologies/partner-sites</a>.</p>
+    </div>
+
+    <div class="section" id="consent">
+      <div class="section-num">08 —</div>
+      <h2>Consent Management (EEA, UK &amp; Switzerland)</h2>
+      <p>In the European Economic Area, the United Kingdom and Switzerland, the app uses <strong>Google's User Messaging Platform (UMP)</strong>, a Google-certified consent management platform, to ask for your consent before personalized ads are shown. You can:</p>
+      <ul>
+        <li>Accept or reject personalized ads</li>
+        <li>Review the advertising partners and their purposes</li>
+        <li>Change your choice at any time in the app: <strong>Settings → Privacy choices</strong></li>
+      </ul>
+      <p>Your consent choice is stored on your device.</p>
+    </div>
+
+    <div class="section" id="purchases">
+      <div class="section-num">09 —</div>
+      <h2>In-App Purchases &amp; Pro</h2>
+      <p>Pro is an optional subscription sold through <strong>Google Play</strong>. Google Play handles payment, and we never see your card or billing details.</p>
+      <ul>
+        <li>Google Play tells the app whether you have an active Pro plan, so Pro features can be unlocked</li>
+        <li>When you use a Pro feature such as Ask AI, the app sends your Google Play purchase token to our server, which asks Google Play whether the plan is active. The token doesn't contain your name, email or payment details</li>
+        <li>Your purchase history is managed in your Google Play account</li>
+      </ul>
+      <p>Prices, free trials, renewal and cancellation are explained in our <a href="qr-barcode-scanner-subscription-policy.html">Subscription Policy</a>.</p>
+    </div>
+
+    <div class="section" id="sharing">
+      <div class="section-num">10 —</div>
+      <h2>Sharing &amp; Disclosure</h2>
+      <p>We do not sell your personal data, and we do not rent or trade it.</p>
+      <p>We share data only with these service providers, and only as needed to run the app:</p>
+      <ul>
+        <li><strong>Cloudflare</strong>: hosts our product service and protects it from abuse</li>
+        <li><strong>Google</strong>: the Gemini API (AI and web search), Google Play (purchases) and Google AdMob (ads)</li>
+        <li><strong>Open Food Facts, Open Beauty Facts and Open Products Facts</strong>: receive barcodes and product searches from our server. Your photos are not added to these databases</li>
+      </ul>
+      <p>We may also disclose information if required by law or a court order, to protect the safety of our users or the public, or as part of a merger or acquisition, where this policy would continue to apply.</p>
+      <p>Under some U.S. state laws (such as California's CCPA/CPRA), letting ad partners use your advertising ID for personalized ads may count as "sharing." You can opt out by deleting your advertising ID (Section 07) or by rejecting personalized ads in <strong>Settings → Privacy choices</strong> where shown.</p>
+    </div>
+
+    <div class="section" id="security">
+      <div class="section-num">11 —</div>
+      <h2>Data Storage &amp; Security</h2>
+      <ul>
+        <li>Your history, product results and pack photos are kept in the app's private storage, which other apps can't read</li>
+        <li>Everything the app sends to our service travels over an encrypted connection (HTTPS)</li>
+        <li>Our AI keys stay on our server and are never included in the app</li>
+        <li>Our service only accepts requests from the app and limits how many requests each IP address can make</li>
+        <li>Pro is confirmed with Google Play on our server, not only on your device</li>
+      </ul>
+      <div class="highlight-box">
+        🔒 No method of storage or transfer is 100% secure, but we take reasonable steps to protect your data and keep as little of it as we can.
+      </div>
+    </div>
+
+    <div class="section" id="retention">
+      <div class="section-num">12 —</div>
+      <h2>Data Retention</h2>
+      <ul>
+        <li><strong>On your device:</strong> history, product results, pack photos and settings stay until you delete them in the app, clear the app's data, or uninstall the app</li>
+        <li><strong>On our server:</strong> nothing linked to you is stored. Product results by barcode are cached for up to 7 days</li>
+        <li><strong>Google and Cloudflare</strong> keep data they process under their own retention policies; see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a> and <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">cloudflare.com/privacypolicy</a></li>
+      </ul>
+    </div>
+
+    <div class="section" id="children">
+      <div class="section-num">13 —</div>
+      <h2>Children's Privacy</h2>
+      <p>The app is intended for users aged <strong>13 and above</strong> and is not directed at children under 13. We do not knowingly collect personal information from children under 13 (or the age of digital consent in your region).</p>
+      <p>If you believe a child under 13 has used the app and sent us information, contact us at <a href="mailto:support@novasoftlabs.com">support@novasoftlabs.com</a> and we will take prompt action.</p>
+    </div>
+
+    <div class="section" id="rights">
+      <div class="section-num">14 —</div>
+      <h2>Your Rights</h2>
+      <p>You can:</p>
+      <ul>
+        <li>Delete history items and product results in the app, or remove all app data by clearing its storage or uninstalling it</li>
+        <li>Revoke the camera permission at any time in your device settings</li>
+        <li>Change your ad consent in <strong>Settings → Privacy choices</strong>, and reset or delete your advertising ID</li>
+        <li>Manage or cancel your Pro plan in your Google Play account</li>
+        <li>Ask us what data, if any, we hold about you, and ask us to delete it</li>
+      </ul>
+      <p>Users in the EU/EEA, UK, California and other places with data protection laws may have more rights, such as access, correction, deletion and objection. We honor all applicable requests.</p>
+    </div>
+
+    <div class="section" id="deletion">
+      <div class="section-num">15 —</div>
+      <h2>Data Deletion</h2>
+      <p>The app has no account, and the data linked to you is on your device, so you control it:</p>
+      <ul>
+        <li><strong>In the app:</strong> delete items from your history</li>
+        <li><strong>Everything at once:</strong> <strong>Settings → Apps → QR Barcode Scanner → Storage → Clear data</strong>, or uninstall the app</li>
+      </ul>
+      <p>Our server keeps no photos, questions or personal data, so there is nothing linked to you to delete there. For any other request, email <a href="mailto:support@novasoftlabs.com">support@novasoftlabs.com</a> with the subject <strong>"Data Deletion Request"</strong>. We reply within <strong>30 days</strong>.</p>
+      <p>Data Google holds as an independent controller (for example for ad personalization) can be managed at <a href="https://myaccount.google.com/data-and-privacy" target="_blank" rel="noopener">myaccount.google.com/data-and-privacy</a>.</p>
+    </div>
+
+    <div class="section" id="thirdparty">
+      <div class="section-num">16 —</div>
+      <h2>Third-Party Services</h2>
+      <ul>
+        <li><strong>Google ML Kit</strong>: on-device code scanning (<a href="https://developers.google.com/ml-kit/terms" target="_blank" rel="noopener">terms</a>)</li>
+        <li><strong>Google Gemini API</strong>: AI product analysis and Ask AI (<a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">terms</a>)</li>
+        <li><strong>Google AdMob &amp; User Messaging Platform</strong>: ads and ad consent (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">privacy policy</a>)</li>
+        <li><strong>Google Play &amp; Google Play Billing</strong>: distribution and purchases</li>
+        <li><strong>Cloudflare Workers</strong>: hosting for our product service (<a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">privacy policy</a>)</li>
+        <li><strong>Open Food Facts, Open Beauty Facts, Open Products Facts</strong>: product data (<a href="https://world.openfoodfacts.org/privacy" target="_blank" rel="noopener">privacy policy</a>)</li>
+      </ul>
+    </div>
+
+    <div class="section" id="changes">
+      <div class="section-num">17 —</div>
+      <h2>Policy Changes</h2>
+      <p>We may update this policy when we add features or when the law changes. We will update the "Last updated" date at the top, and for significant changes we will show a notice in the app.</p>
+      <p>If you keep using the app after a change, the updated policy applies.</p>
+    </div>
+
+    <div class="section" id="governing">
+      <div class="section-num">18 —</div>
+      <h2>Governing Law</h2>
+      <p>This Privacy Policy is governed by the laws of Pakistan. Where the law of your country gives you more rights, including the GDPR for EEA/UK users and the CCPA/CPRA for California residents, we respect those rights.</p>
+      <p>If we have not resolved a privacy concern to your satisfaction, you may contact your local data protection authority.</p>
+    </div>
+
+    <div class="section" id="contact">
+      <div class="section-num">19 —</div>
+      <h2>Contact Us</h2>
+      <p>Have a question, concern or request about your privacy? We're here.</p>
+      <p><strong>Nova Soft Labs</strong><br/>Lahore, Punjab, Pakistan</p>
+      <a href="mailto:support@novasoftlabs.com" class="contact-block">✉ support@novasoftlabs.com</a>
+      <p style="margin-top:1rem;">We aim to reply within 48 hours.</p>
+    </div>
+
+  </main>
+</div>
+<footer>
+  <p>© 2026 Nova Soft Labs. All rights reserved.</p>
+  <div>
+    <a href="qr-barcode-scanner-subscription-policy.html">Subscription Policy</a>
+    <a href="qr-barcode-scanner-privacy-policy.html">Privacy Policy</a>
+    <a href="qr-barcode-scanner-terms-of-use.html">Terms of Use</a>
+    <a href="https://novasoftlabs.com">Home</a>
+  </div>
+</footer>
+</body>
+</html>
