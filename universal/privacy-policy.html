@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Universal Remote · Nova Soft</title>
+<meta name="description" content="How the Universal Remote app by Nova Soft handles your data: TV control, casting, screen mirroring, Google AdMob ads and Google Play purchases.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #080b10; --bg2: #0d1117; --bg3: #111820;
+    --accent: #00f5c4; --accent2: #0af;
+    --text: #e8edf5; --body: rgba(232,237,245,0.78); --muted: #6b7a90;
+    --border: rgba(255,255,255,0.07); --card-bg: rgba(255,255,255,0.03);
+  }
+  html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+  body { background: var(--bg); color: var(--text); font-family: 'DM Mono', monospace; font-size: 15px; line-height: 1.8; overflow-x: hidden; }
+  body::before { content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 0;
+    background-image: linear-gradient(rgba(0,245,196,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(0,245,196,0.025) 1px, transparent 1px);
+    background-size: 60px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between;
+    padding: 1.2rem 4rem; background: rgba(8,11,16,0.85); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
+  .logo { font-family: 'Syne', sans-serif; font-size: 1.4rem; font-weight: 800; letter-spacing: -0.02em; color: var(--text); }
+  .logo span { color: var(--accent); }
+  .logo:hover { text-decoration: none; }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a { color: var(--muted); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--accent); text-decoration: none; }
+  .nav-cta { border: 1px solid var(--accent); color: var(--accent); padding: 0.5rem 1.4rem; font-size: 0.8rem; letter-spacing: 0.06em; transition: all 0.2s; }
+  .nav-cta:hover { background: var(--accent); color: #080b10; text-decoration: none; }
+
+  .page { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; padding: 9rem 4rem 5rem;
+    display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 4rem; }
+  .doc-head { grid-column: 1 / -1; }
+  .section-label { color: var(--accent); font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem; }
+  h1 { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 8.5vw, 4.4rem); overflow-wrap: anywhere; font-weight: 800; line-height: 1.02; letter-spacing: -0.03em; margin-bottom: 1.5rem; }
+  h1 .grad { background: linear-gradient(90deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .meta { display: flex; flex-wrap: wrap; gap: 0.6rem 2rem; color: var(--muted); font-size: 0.8rem; letter-spacing: 0.04em; margin-bottom: 2rem; }
+  .meta b { color: var(--text); font-weight: 400; }
+  .tabs { display: flex; flex-wrap: wrap; gap: 1px; background: var(--border); border: 1px solid var(--border); width: fit-content; max-width: 100%; }
+  .tabs a { background: var(--bg); color: var(--muted); padding: 0.6rem 1.2rem; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; }
+  .tabs a:hover { color: var(--accent); text-decoration: none; }
+  .tabs a[aria-current="page"] { background: rgba(0,245,196,0.08); color: var(--accent); }
+
+  .toc { position: sticky; top: 7rem; align-self: start; border-left: 1px solid var(--border); padding-left: 1.2rem; }
+  .toc p { color: var(--muted); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.8rem; }
+  .toc ol { list-style: none; counter-reset: toc; }
+  .toc li { counter-increment: toc; }
+  .toc a { display: block; color: var(--muted); font-size: 0.8rem; line-height: 1.5; padding: 0.3rem 0; }
+  .toc a::before { content: counter(toc, decimal-leading-zero) "  "; color: rgba(0,245,196,0.5); }
+  .toc a:hover { color: var(--accent); text-decoration: none; }
+
+  article { min-width: 0; }
+  .summary { background: var(--card-bg); border: 1px solid rgba(0,245,196,0.2); padding: 1.6rem 1.8rem; margin-bottom: 3.5rem; }
+  .summary h2 { font-size: 1.1rem; margin: 0 0 0.8rem; }
+  .summary h2::before { display: none; }
+  .summary ul { margin-bottom: 0; }
+  section { margin-bottom: 3.5rem; }
+  h2 { font-family: 'Syne', sans-serif; font-size: 1.55rem; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25; margin-bottom: 1.1rem; }
+  h2 .num { display: block; color: var(--accent); font-family: 'DM Mono', monospace; font-size: 0.75rem; font-weight: 400; letter-spacing: 0.12em; margin-bottom: 0.4rem; }
+  h3 { font-family: 'Syne', sans-serif; font-size: 1.05rem; font-weight: 700; margin: 1.6rem 0 0.6rem; color: var(--text); }
+  p, li { color: var(--body); }
+  p { margin-bottom: 1rem; }
+  ul, ol.list { margin: 0 0 1rem 1.2rem; }
+  li { margin-bottom: 0.45rem; padding-left: 0.3rem; }
+  ul li::marker { color: var(--accent); }
+  strong { color: var(--text); font-weight: 400; }
+  .table-wrap { overflow-x: auto; border: 1px solid var(--border); margin: 0.5rem 0 1.5rem; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.82rem; line-height: 1.6; min-width: 560px; }
+  th, td { text-align: left; vertical-align: top; padding: 0.8rem 1rem; border-bottom: 1px solid var(--border); }
+  th { color: var(--accent); font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.72rem; background: var(--bg2); }
+  td { color: var(--body); }
+  td:first-child { color: var(--text); }
+  tr:last-child td { border-bottom: none; }
+  .note { border-left: 2px solid var(--accent2); background: rgba(0,170,255,0.05); padding: 0.9rem 1.2rem; margin: 0 0 1rem; }
+  .note p:last-child { margin-bottom: 0; }
+  .contact-card { background: var(--bg2); border: 1px solid var(--border); padding: 1.6rem 1.8rem; }
+  .contact-card p { margin-bottom: 0.4rem; }
+
+  footer { position: relative; z-index: 1; border-top: 1px solid var(--border); padding: 2rem 4rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+  footer p { color: var(--muted); font-size: 0.78rem; margin: 0; }
+  .footer-links { display: flex; gap: 2rem; list-style: none; }
+  .footer-links a { color: var(--muted); font-size: 0.78rem; }
+  .footer-links a:hover { color: var(--accent); text-decoration: none; }
+
+  @media (max-width: 960px) {
+    nav { padding: 1rem; }
+    .nav-links { display: none; }
+    .page { grid-template-columns: 1fr; gap: 2rem; padding: 7rem 1rem 3rem; }
+    .toc { display: none; }
+    footer { padding: 1.6rem 1rem; }
+    .footer-links { gap: 1.2rem; flex-wrap: wrap; }
+  }
+  @media (max-width: 480px) {
+    .nav-cta { padding: 0.45rem 0.9rem; }
+    .summary, .contact-card { padding: 1.2rem; }
+    .tabs a { padding: 0.55rem 0.8rem; font-size: 0.7rem; }
+  }
+  @media print {
+    body::before, nav, .toc, .tabs, footer { display: none; }
+    body { background: #fff; color: #000; }
+    .page { display: block; padding: 0; }
+    p, li, td, h1, h2, h3, strong { color: #000 !important; -webkit-text-fill-color: #000 !important; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="https://novasoftlabs.com/">Nova<span>Soft</span></a>
+  <ul class="nav-links">
+    <li><a href="../privacy/" aria-current="page">Privacy</a></li>
+    <li><a href="../terms/">Terms</a></li>
+    <li><a href="../subscription/">Subscriptions</a></li>
+  </ul>
+  <a class="nav-cta" href="mailto:novasoftlab@gmail.com?subject=Universal%20Remote%20privacy">Contact</a>
+</nav>
+
+<main class="page">
+  <header class="doc-head">
+    <p class="section-label">// Legal · Universal Remote</p>
+    <h1>Privacy <span class="grad">Policy</span></h1>
+    <div class="meta">
+      <span>Effective <b>21 November 2026</b></span>
+      <span>App <b>Universal Remote</b></span>
+      <span>Package <b>com.novasoftlab.universalremoteapp</b></span>
+      <span>Developer <b>Nova Soft</b></span>
+    </div>
+    <div class="tabs">
+      <a href="../privacy/" aria-current="page">Privacy Policy</a>
+      <a href="../terms/">Terms of Use</a>
+      <a href="../subscription/">Subscription Policy</a>
+    </div>
+  </header>
+
+  <aside class="toc" aria-label="On this page">
+    <p>On this page</p>
+    <ol>
+      <li><a href="#who">Who we are</a></li>
+      <li><a href="#collect">Data the app handles</a></li>
+      <li><a href="#permissions">Permissions</a></li>
+      <li><a href="#ads">Ads &amp; Google AdMob</a></li>
+      <li><a href="#purchases">Purchases</a></li>
+      <li><a href="#third-parties">Third-party services</a></li>
+      <li><a href="#sharing">How data is shared</a></li>
+      <li><a href="#retention">Retention &amp; deletion</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#children">Children</a></li>
+      <li><a href="#rights">Your rights</a></li>
+      <li><a href="#transfers">International transfers</a></li>
+      <li><a href="#changes">Changes</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </aside>
+
+  <article>
+    <div class="summary">
+      <h2>In short</h2>
+      <ul>
+        <li>Universal Remote has <strong>no sign-up and no user account</strong>. We do not run servers that receive your remote commands, your media or your screen.</li>
+        <li>Controlling, casting and mirroring happen <strong>directly between your phone and your TV over your local Wi-Fi network</strong>.</li>
+        <li>Your photos, videos, music, screen and voice are <strong>sent only to the TV you choose</strong>. They are never uploaded to us.</li>
+        <li>The free version shows ads from <strong>Google AdMob</strong>, which collects device and advertising identifiers. Where the law requires it, we ask for your consent first. PRO removes ads.</li>
+        <li>Purchases are handled by <strong>Google Play</strong>. We never see your card or payment details.</li>
+        <li>We do not sell your personal information.</li>
+      </ul>
+    </div>
+
+    <section id="who">
+      <h2><span class="num">01 —</span>Who we are</h2>
+      <p>This Privacy Policy explains how <strong>Nova Soft</strong> (“Nova Soft”, “we”, “us”), the developer of the <strong>Universal Remote</strong> Android app (the “App”), handles information when you use the App. Nova Soft is the controller of the limited personal data described here. The policy applies to the App as distributed on Google Play and to any related support we provide by email.</p>
+      <p>The App is a universal remote, casting and screen-mirroring tool for smart TVs and streaming devices, including <strong>Google TV, Android TV and Chromecast with Google TV</strong>, <strong>Samsung</strong> smart TVs, <strong>LG webOS</strong> TVs and <strong>Roku</strong> TVs and players, as well as Google Cast receivers and DLNA/UPnP media renderers for casting.</p>
+      <p>By using the App you acknowledge this policy. If you do not agree with it, please do not use the App.</p>
+    </section>
+
+    <section id="collect">
+      <h2><span class="num">02 —</span>Data the app handles, and why</h2>
+      <p>The table below lists every category of data the App processes. Unless a row says otherwise, the data stays on your phone or travels only across your local network to your TV, and is <strong>not sent to Nova Soft</strong>.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Data</th><th>What it is used for</th><th>Where it goes</th></tr></thead>
+          <tbody>
+            <tr><td>TVs and devices on your network</td><td>Finding compatible TVs (via mDNS/Bonjour, SSDP and similar local discovery), showing their name and model, and reconnecting to the TV you used last. Includes device name, model, brand and local IP address.</td><td>Stored on your phone only.</td></tr>
+            <tr><td>Pairing credentials</td><td>Keeping your phone paired with your TV so you do not have to re-enter a PIN or re-approve the connection each time. This includes a client certificate for Google TV / Android TV and access tokens or keys issued by Samsung and LG TVs.</td><td>Stored in the App’s private storage on your phone; exchanged only with your TV.</td></tr>
+            <tr><td>Remote commands and typed text</td><td>Sending button presses, touchpad and air-mouse movements, keyboard text and app-launch requests to your TV.</td><td>Sent directly to your TV over your local network. Not stored.</td></tr>
+            <tr><td>Voice input</td><td>When you press and hold the voice button on a supported TV, audio from your microphone is streamed to the TV, whose own assistant performs the recognition.</td><td>Sent only to your TV. Not recorded or stored by the App and never sent to us. Your TV maker’s privacy policy applies to how the TV processes it.</td></tr>
+            <tr><td>Photos, videos and music</td><td>Showing your media in the in-app gallery and casting the items you pick. While casting, the App runs a small media server on your phone so that only your TV can fetch the selected file over the local network.</td><td>Read on your phone and streamed only to your TV. Never uploaded to us.</td></tr>
+            <tr><td>Screen content and device audio (mirroring)</td><td>When you start screen mirroring and approve Android’s screen-capture prompt, the App encodes your screen, and optionally the audio played by other apps, and streams it live to your TV.</td><td>Sent only to your TV. Not recorded, saved or sent to us. Mirroring stops when you tap Stop or end it from the notification.</td></tr>
+            <tr><td>Recently cast items</td><td>Showing a short “Recent” list so you can cast something again. Contains references to the files or web videos you cast and their titles.</td><td>Stored on your phone only.</td></tr>
+            <tr><td>Web addresses and searches (Web Video)</td><td>The built-in Web Video browser loads the pages you open. Text that is not a web address is sent to Google Search. When you tap Cast video, the video’s address is sent to your TV, which fetches the video itself.</td><td>Sent to the websites you visit, to Google Search for searches, and to your TV. Not sent to us.</td></tr>
+            <tr><td>App settings and PRO status</td><td>Remembering choices such as your last control mode and mirroring quality, and keeping PRO active offline.</td><td>Stored on your phone only.</td></tr>
+            <tr><td>Advertising data (free version)</td><td>Showing ads, limiting how often they appear, measuring them and preventing ad fraud. See <a href="#ads">Ads &amp; Google AdMob</a>.</td><td>Collected and processed by Google AdMob.</td></tr>
+            <tr><td>Purchase data</td><td>Unlocking PRO and restoring it on your devices. We receive the product, purchase state, purchase token and order ID from Google Play.</td><td>Processed by Google Play; checked on your phone.</td></tr>
+            <tr><td>Support messages</td><td>If you email us, we receive your email address, your message and, if you leave it in, the App version, Android version and phone model that the App adds to the email to help us troubleshoot.</td><td>Received by Nova Soft by email.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>We do <strong>not</strong> collect your name, phone number, contacts, precise location, call logs, SMS, browsing history outside the App, or files you have not chosen to cast. The App has no analytics or crash-reporting SDK of its own.</p>
+    </section>
+
+    <section id="permissions">
+      <h2><span class="num">03 —</span>Permissions the app asks for</h2>
+      <p>Android permissions are requested only when the related feature is used, and the App explains why before the system prompt appears. You can withdraw any permission at any time in <strong>Settings → Apps → Universal Remote → Permissions</strong>; the related feature will then stop working, while the rest of the App continues to work.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Permission</th><th>Why it is needed</th></tr></thead>
+          <tbody>
+            <tr><td>Internet, network state, Wi-Fi state, Wi-Fi multicast</td><td>Talking to TVs on your local network, discovering them, telling “no Wi-Fi” apart from “no TVs found”, loading ads and logos, and reaching Google Play.</td></tr>
+            <tr><td>Nearby devices / local network access</td><td>Required on newer Android versions to find and connect to TVs on your local network.</td></tr>
+            <tr><td>Microphone (Record audio)</td><td>Voice search on supported TVs, and Android’s requirement for capturing app audio during screen mirroring. During mirroring the microphone itself is not recorded.</td></tr>
+            <tr><td>Photos and videos, Music and audio (or Storage on older Android)</td><td>Showing your media in the cast gallery and casting it to your TV. On Android 14 and later you may allow only selected items; the App respects that choice.</td></tr>
+            <tr><td>Screen capture (MediaProjection)</td><td>Screen mirroring. Android asks you to approve each mirroring session; nothing is captured without that approval.</td></tr>
+            <tr><td>Foreground service (media playback, media projection)</td><td>Keeping casting and mirroring running while you use other apps, with a visible notification that lets you pause or stop.</td></tr>
+            <tr><td>Notifications</td><td>Showing the casting/mirroring notification with its controls.</td></tr>
+            <tr><td>Motion sensors (no prompt)</td><td>The optional air-mouse mode, processed on the phone only.</td></tr>
+            <tr><td>Advertising ID</td><td>Used by Google AdMob for ads in the free version. See below.</td></tr>
+            <tr><td>Google Play Billing</td><td>Buying and restoring PRO.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="ads">
+      <h2><span class="num">04 —</span>Ads and Google AdMob</h2>
+      <p>The free version of the App is supported by full-screen (interstitial) ads served by <strong>Google AdMob</strong>, a service of Google LLC / Google Ireland Limited. Ads appear at natural pauses after a number of taps, never on the upgrade screens, and never for PRO users.</p>
+      <h3>What AdMob collects</h3>
+      <p>To serve and measure ads, the Google Mobile Ads SDK may collect and process:</p>
+      <ul>
+        <li>your device’s <strong>advertising ID</strong> (and, where available, Android Privacy Sandbox signals);</li>
+        <li>your <strong>IP address</strong>, from which an approximate (city-level) location may be inferred;</li>
+        <li>device and app information such as model, operating system, language, screen size, network type and App version;</li>
+        <li>ad interactions such as views, clicks and diagnostic data used to measure ad performance and prevent fraud.</li>
+      </ul>
+      <p>Google uses this information under its own policies. Learn more at <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from sites or apps that use its services</a> and the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
+      <h3>Consent</h3>
+      <p>We use <strong>Google’s User Messaging Platform (UMP)</strong>, a Google-certified consent management solution. If you are in the European Economic Area, the United Kingdom or Switzerland, or another region where consent is required, the App shows a consent form before any ad is requested. Depending on your choice, ads may be personalized, non-personalized (based on context only) or limited. Where US state privacy laws give you the right to opt out of targeted advertising, the App honours that choice through the same messaging.</p>
+      <h3>Your ad choices</h3>
+      <ul>
+        <li><strong>Change your consent</strong> at any time from <strong>Settings → Ad privacy choices</strong> inside the App (shown where consent applies).</li>
+        <li><strong>Reset or delete your advertising ID</strong> in Android <strong>Settings → Privacy → Ads</strong> (or Settings → Google → Ads). Deleting it stops personalized ads across apps.</li>
+        <li><strong>Remove ads entirely</strong> by upgrading to PRO.</li>
+      </ul>
+      <p>The App is not designed for children and does not request child-directed ad treatment. We do not allow ads to be targeted using data about health, religion, or other sensitive categories.</p>
+    </section>
+
+    <section id="purchases">
+      <h2><span class="num">05 —</span>Purchases and subscriptions</h2>
+      <p>PRO subscriptions and the lifetime purchase are processed entirely by <strong>Google Play Billing</strong>. Google collects your payment details, billing address and transaction data under the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> and the <a href="https://payments.google.com/payments/apis-secure/u/0/get_legal_document?ldo=0&amp;ldt=privacynotice" target="_blank" rel="noopener">Google Payments Privacy Notice</a>.</p>
+      <p>We receive from Google Play only what is needed to unlock PRO: the product purchased, whether it is active, a purchase token and an order ID. We never receive your card number or bank details. The App caches your PRO status on your phone so that PRO keeps working without a connection. See our <a href="../subscription/">Subscription Policy</a> for billing, trials, cancellation and refunds.</p>
+    </section>
+
+    <section id="third-parties">
+      <h2><span class="num">06 —</span>Third-party services</h2>
+      <p>The App relies on the following services. Each processes data under its own privacy policy, which we encourage you to read.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Service</th><th>Purpose</th><th>Data involved</th></tr></thead>
+          <tbody>
+            <tr><td>Google AdMob &amp; User Messaging Platform (Google)</td><td>Ads in the free version; consent management.</td><td>Advertising ID, IP address, device and app info, ad interactions, consent choices.</td></tr>
+            <tr><td>Google Play Billing (Google)</td><td>PRO subscriptions and lifetime purchase.</td><td>Purchase and payment data held by Google.</td></tr>
+            <tr><td>Google Play In-App Review (Google)</td><td>Letting you rate the App without leaving it.</td><td>Handled by Google Play; we do not see who left which review.</td></tr>
+            <tr><td>logo.dev</td><td>Loading the logos of streaming apps (for example Netflix or YouTube) shown on the remote’s app shortcuts.</td><td>The public domain of the app whose logo is shown, and your IP address as part of the request. No personal or TV data is sent.</td></tr>
+            <tr><td>Google Search and websites you visit</td><td>The optional Web Video browser.</td><td>Your searches and the pages you open; websites may set cookies in the App’s browser.</td></tr>
+            <tr><td>Your TV and its manufacturer (Google, Samsung, LG, Roku and others)</td><td>Receiving commands, voice, cast media and mirrored screens.</td><td>Whatever you send to your TV is then handled under that TV’s software and its maker’s privacy policy.</td></tr>
+            <tr><td>Android Backup (Google)</td><td>If you have Android backup turned on, Android may back up the App’s settings to your Google account.</td><td>App settings, encrypted by Android. You control this in Android settings.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="sharing">
+      <h2><span class="num">07 —</span>How data is shared</h2>
+      <p>We do <strong>not sell</strong> your personal information and we do not share it for money. Data leaves your phone only:</p>
+      <ul>
+        <li>to the TV or device on your network that you choose to control, cast to or mirror to;</li>
+        <li>to the third-party services listed above, for the purposes listed;</li>
+        <li>where required by law, a court order or a lawful request by public authorities, or to protect the rights, safety and property of our users, the public or Nova Soft;</li>
+        <li>to a successor entity if Nova Soft or the App is involved in a merger, acquisition or sale of assets, in which case this policy continues to apply to your data.</li>
+      </ul>
+      <p>Under some US state laws, allowing ad partners to use advertising identifiers for personalized ads may be considered “selling” or “sharing” personal information. You can opt out at any time as described in <a href="#ads">Your ad choices</a>.</p>
+    </section>
+
+    <section id="retention">
+      <h2><span class="num">08 —</span>Data retention and deletion</h2>
+      <ul>
+        <li><strong>On-device data</strong> (remembered TVs, pairing credentials, recent casts, settings, PRO status) is kept until you delete it. You can remove it at any time by clearing the App’s storage in <strong>Settings → Apps → Universal Remote → Storage → Clear storage</strong>, or by uninstalling the App.</li>
+        <li><strong>Media, screen content and voice</strong> are streamed in real time and are not retained by the App.</li>
+        <li><strong>Advertising data</strong> is retained by Google according to its own retention policies. You can delete your advertising ID as described above.</li>
+        <li><strong>Purchase records</strong> are kept by Google Play as required for accounting and legal purposes.</li>
+        <li><strong>Support emails</strong> are kept only as long as needed to help you and for our records, and are deleted on request.</li>
+      </ul>
+      <p>Because the App has no user accounts and we do not hold your data on our servers, there is no account to delete. To ask us to delete any information we hold about you (for example, support emails), write to <a href="mailto:novasoftlab@gmail.com?subject=Universal%20Remote%20data%20deletion">novasoftlab@gmail.com</a> with the subject “Data deletion”. We will respond within 30 days.</p>
+    </section>
+
+    <section id="security">
+      <h2><span class="num">09 —</span>Security</h2>
+      <p>Pairing credentials and settings are stored in the App’s private storage, which other apps cannot read. Connections to TVs use encryption (TLS) wherever the TV supports it, as Google TV / Android TV, Samsung and LG TVs do. Some devices, such as Roku players and DLNA renderers, only accept unencrypted commands on the local network by design; the App limits this traffic to your local network. Connections to Google and logo.dev use HTTPS.</p>
+      <p>No method of transmission or storage is 100% secure. We recommend using the App only on a Wi-Fi network you trust, keeping your phone and TV software up to date, and remembering that while you mirror your screen, anyone who can see the TV can see your screen, including notifications.</p>
+    </section>
+
+    <section id="children">
+      <h2><span class="num">10 —</span>Children’s privacy</h2>
+      <p>The App is a general-audience utility and is <strong>not directed at children under 13</strong> (or the minimum age of digital consent in your country, such as 16 in parts of the EEA). We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, contact us and we will delete it.</p>
+    </section>
+
+    <section id="rights">
+      <h2><span class="num">11 —</span>Your rights</h2>
+      <p>Depending on where you live, you may have the right to:</p>
+      <ul>
+        <li>access the personal data we hold about you and receive a copy;</li>
+        <li>correct inaccurate data, or ask us to delete it;</li>
+        <li>restrict or object to processing, including for direct marketing or personalized advertising;</li>
+        <li>data portability;</li>
+        <li>withdraw consent at any time, without affecting earlier processing;</li>
+        <li>opt out of the “sale” or “sharing” of personal information and of targeted advertising (for example under the California CCPA/CPRA and other US state laws);</li>
+        <li>not be discriminated against for exercising these rights;</li>
+        <li>lodge a complaint with your local data protection authority.</li>
+      </ul>
+      <h3>Legal bases (EEA, UK and Switzerland)</h3>
+      <ul>
+        <li><strong>Performance of a contract</strong>: providing remote control, casting, mirroring and PRO.</li>
+        <li><strong>Consent</strong>: personalized ads and access to your microphone, media and screen, which you grant through Android and consent prompts.</li>
+        <li><strong>Legitimate interests</strong>: non-personalized ads that fund the free version, fraud prevention and answering support requests.</li>
+        <li><strong>Legal obligation</strong>: keeping purchase records where the law requires it.</li>
+      </ul>
+      <p>Most data stays on your phone, where you control it directly. For anything else, email us at <a href="mailto:novasoftlab@gmail.com">novasoftlab@gmail.com</a>. For data held by Google, use your <a href="https://myaccount.google.com/data-and-privacy" target="_blank" rel="noopener">Google Account privacy controls</a>.</p>
+    </section>
+
+    <section id="transfers">
+      <h2><span class="num">12 —</span>International transfers</h2>
+      <p>Google and logo.dev may process data in countries other than yours, including the United States. Where data from the EEA, UK or Switzerland is transferred, these providers rely on recognised safeguards such as the European Commission’s Standard Contractual Clauses or the EU–US Data Privacy Framework.</p>
+    </section>
+
+    <section id="changes">
+      <h2><span class="num">13 —</span>Changes to this policy</h2>
+      <p>We may update this policy when the App or the law changes. We will change the “Effective” date at the top, and for material changes we will give notice inside the App or on its Google Play listing before they take effect. Continued use of the App after a change means you accept the updated policy.</p>
+    </section>
+
+    <section id="contact">
+      <h2><span class="num">14 —</span>Contact us</h2>
+      <div class="contact-card">
+        <p><strong>Nova Soft</strong> — developer of Universal Remote</p>
+        <p>Email: <a href="mailto:novasoftlab@gmail.com?subject=Universal%20Remote%20privacy">novasoftlab@gmail.com</a></p>
+        <p>Website: <a href="https://novasoftlabs.com/">novasoftlabs.com</a></p>
+        <p>In the App: Settings → Contact Us</p>
+      </div>
+    </section>
+  </article>
+</main>
+
+<footer>
+  <p>© 2026 Nova Soft. All rights reserved.</p>
+  <ul class="footer-links">
+    <li><a href="../privacy/">Privacy</a></li>
+    <li><a href="../terms/">Terms</a></li>
+    <li><a href="../subscription/">Subscriptions</a></li>
+    <li><a href="https://novasoftlabs.com/">novasoftlabs.com</a></li>
+  </ul>
+</footer>
+
+</body>
+</html>
