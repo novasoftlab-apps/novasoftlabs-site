@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subscription Policy — Roku Remote · Nova Soft</title>
+<meta name="description" content="How Roku Remote PRO works: Monthly, Yearly and Lifetime plans, each with a 3-day free trial, auto-renewal, cancellation and refunds through Google Play.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #080b10; --bg2: #0d1117; --bg3: #111820;
+    --accent: #00f5c4; --accent2: #0af;
+    --text: #e8edf5; --body: rgba(232,237,245,0.78); --muted: #6b7a90;
+    --border: rgba(255,255,255,0.07); --card-bg: rgba(255,255,255,0.03);
+  }
+  html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+  body { background: var(--bg); color: var(--text); font-family: 'DM Mono', monospace; font-size: 15px; line-height: 1.8; overflow-x: hidden; }
+  body::before { content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 0;
+    background-image: linear-gradient(rgba(0,245,196,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(0,245,196,0.025) 1px, transparent 1px);
+    background-size: 60px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between;
+    padding: 1.2rem 4rem; background: rgba(8,11,16,0.85); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
+  .logo { font-family: 'Syne', sans-serif; font-size: 1.4rem; font-weight: 800; letter-spacing: -0.02em; color: var(--text); }
+  .logo span { color: var(--accent); }
+  .logo:hover { text-decoration: none; }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a { color: var(--muted); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--accent); text-decoration: none; }
+  .nav-cta { border: 1px solid var(--accent); color: var(--accent); padding: 0.5rem 1.4rem; font-size: 0.8rem; letter-spacing: 0.06em; transition: all 0.2s; }
+  .nav-cta:hover { background: var(--accent); color: #080b10; text-decoration: none; }
+
+  .page { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; padding: 9rem 4rem 5rem;
+    display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 4rem; }
+  .doc-head { grid-column: 1 / -1; }
+  .section-label { color: var(--accent); font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem; }
+  h1 { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 8.5vw, 4.4rem); overflow-wrap: anywhere; font-weight: 800; line-height: 1.02; letter-spacing: -0.03em; margin-bottom: 1.5rem; }
+  h1 .grad { background: linear-gradient(90deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .meta { display: flex; flex-wrap: wrap; gap: 0.6rem 2rem; color: var(--muted); font-size: 0.8rem; letter-spacing: 0.04em; margin-bottom: 2rem; }
+  .meta b { color: var(--text); font-weight: 400; }
+  .tabs { display: flex; flex-wrap: wrap; gap: 1px; background: var(--border); border: 1px solid var(--border); width: fit-content; max-width: 100%; }
+  .tabs a { background: var(--bg); color: var(--muted); padding: 0.6rem 1.2rem; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; }
+  .tabs a:hover { color: var(--accent); text-decoration: none; }
+  .tabs a[aria-current="page"] { background: rgba(0,245,196,0.08); color: var(--accent); }
+
+  .toc { position: sticky; top: 7rem; align-self: start; border-left: 1px solid var(--border); padding-left: 1.2rem; }
+  .toc p { color: var(--muted); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.8rem; }
+  .toc ol { list-style: none; counter-reset: toc; }
+  .toc li { counter-increment: toc; }
+  .toc a { display: block; color: var(--muted); font-size: 0.8rem; line-height: 1.5; padding: 0.3rem 0; }
+  .toc a::before { content: counter(toc, decimal-leading-zero) "  "; color: rgba(0,245,196,0.5); }
+  .toc a:hover { color: var(--accent); text-decoration: none; }
+
+  article { min-width: 0; }
+  .summary { background: var(--card-bg); border: 1px solid rgba(0,245,196,0.2); padding: 1.6rem 1.8rem; margin-bottom: 3.5rem; }
+  .summary h2 { font-size: 1.1rem; margin: 0 0 0.8rem; }
+  .summary h2::before { display: none; }
+  .summary ul { margin-bottom: 0; }
+  section { margin-bottom: 3.5rem; }
+  h2 { font-family: 'Syne', sans-serif; font-size: 1.55rem; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25; margin-bottom: 1.1rem; }
+  h2 .num { display: block; color: var(--accent); font-family: 'DM Mono', monospace; font-size: 0.75rem; font-weight: 400; letter-spacing: 0.12em; margin-bottom: 0.4rem; }
+  h3 { font-family: 'Syne', sans-serif; font-size: 1.05rem; font-weight: 700; margin: 1.6rem 0 0.6rem; color: var(--text); }
+  p, li { color: var(--body); }
+  p { margin-bottom: 1rem; }
+  ul, ol.list { margin: 0 0 1rem 1.2rem; }
+  li { margin-bottom: 0.45rem; padding-left: 0.3rem; }
+  ul li::marker { color: var(--accent); }
+  strong { color: var(--text); font-weight: 400; }
+  .table-wrap { overflow-x: auto; border: 1px solid var(--border); margin: 0.5rem 0 1.5rem; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.82rem; line-height: 1.6; min-width: 560px; }
+  th, td { text-align: left; vertical-align: top; padding: 0.8rem 1rem; border-bottom: 1px solid var(--border); }
+  th { color: var(--accent); font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.72rem; background: var(--bg2); }
+  td { color: var(--body); }
+  td:first-child { color: var(--text); }
+  tr:last-child td { border-bottom: none; }
+  .note { border-left: 2px solid var(--accent2); background: rgba(0,170,255,0.05); padding: 0.9rem 1.2rem; margin: 0 0 1rem; }
+  .note p:last-child { margin-bottom: 0; }
+  .contact-card { background: var(--bg2); border: 1px solid var(--border); padding: 1.6rem 1.8rem; }
+  .contact-card p { margin-bottom: 0.4rem; }
+
+  footer { position: relative; z-index: 1; border-top: 1px solid var(--border); padding: 2rem 4rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+  footer p { color: var(--muted); font-size: 0.78rem; margin: 0; }
+  .footer-links { display: flex; gap: 2rem; list-style: none; }
+  .footer-links a { color: var(--muted); font-size: 0.78rem; }
+  .footer-links a:hover { color: var(--accent); text-decoration: none; }
+
+  @media (max-width: 960px) {
+    nav { padding: 1rem; }
+    .nav-links { display: none; }
+    .page { grid-template-columns: 1fr; gap: 2rem; padding: 7rem 1rem 3rem; }
+    .toc { display: none; }
+    footer { padding: 1.6rem 1rem; }
+    .footer-links { gap: 1.2rem; flex-wrap: wrap; }
+  }
+  @media (max-width: 480px) {
+    .nav-cta { padding: 0.45rem 0.9rem; }
+    .summary, .contact-card { padding: 1.2rem; }
+    .tabs a { padding: 0.55rem 0.8rem; font-size: 0.7rem; }
+  }
+  @media print {
+    body::before, nav, .toc, .tabs, footer { display: none; }
+    body { background: #fff; color: #000; }
+    .page { display: block; padding: 0; }
+    p, li, td, h1, h2, h3, strong { color: #000 !important; -webkit-text-fill-color: #000 !important; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="https://novasoftlabs.com/">Nova<span>Soft</span></a>
+  <ul class="nav-links">
+    <li><a href="privacy-policy.html">Privacy</a></li>
+    <li><a href="terms-of-use.html">Terms</a></li>
+    <li><a href="subscription-policy.html" aria-current="page">Subscriptions</a></li>
+  </ul>
+  <a class="nav-cta" href="mailto:support@novasoftlabs.com?subject=Roku%20Remote%20subscription">Contact</a>
+</nav>
+
+<main class="page">
+  <header class="doc-head">
+    <p class="section-label">// Legal · Roku Remote</p>
+    <h1>Subscription <span class="grad">Policy</span></h1>
+    <div class="meta">
+      <span>Effective <b>22 November 2026</b></span>
+      <span>App <b>Roku Remote</b></span>
+      <span>Package <b>com.novasoftlab.rokuremote</b></span>
+      <span>Developer <b>Nova Soft</b></span>
+    </div>
+    <div class="tabs">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-use.html">Terms of Use</a>
+      <a href="subscription-policy.html" aria-current="page">Subscription Policy</a>
+    </div>
+  </header>
+
+  <aside class="toc" aria-label="On this page">
+    <p>On this page</p>
+    <ol>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#pro">What PRO includes</a></li>
+      <li><a href="#plans">Plans &amp; prices</a></li>
+      <li><a href="#trials">3-day free trial</a></li>
+      <li><a href="#renewal">Billing &amp; auto-renewal</a></li>
+      <li><a href="#cancel">How to cancel</a></li>
+      <li><a href="#refunds">Refunds</a></li>
+      <li><a href="#price-changes">Price changes</a></li>
+      <li><a href="#payment-issues">Payment problems</a></li>
+      <li><a href="#restore">Restoring PRO</a></li>
+      <li><a href="#changes">Changes</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </aside>
+
+  <article>
+    <div class="summary">
+      <h2>In short</h2>
+      <ul>
+        <li>PRO is optional. It is offered as a <strong>Monthly</strong> or <strong>Yearly</strong> subscription, or as a one-time <strong>Lifetime</strong> purchase.</li>
+        <li><strong>Every plan starts with a 3-day free trial.</strong> You are not charged during the trial.</li>
+        <li>Monthly and Yearly <strong>renew automatically</strong> after the trial, at the price shown, until you cancel. Cancel any time in Google Play, at least 24 hours before the trial or period ends to avoid the next charge.</li>
+        <li>Lifetime is a <strong>single payment</strong> you choose to make after its trial. It is never charged automatically and never recurs.</li>
+        <li>All payments go through <strong>Google Play</strong>, in your local currency. The exact price, billing period and trial are shown before you confirm.</li>
+        <li>Uninstalling the App does <strong>not</strong> cancel a subscription or trial.</li>
+      </ul>
+    </div>
+
+    <section id="overview">
+      <h2><span class="num">01 —</span>Overview</h2>
+      <p>This Subscription Policy explains how paid upgrades work in the <strong>Roku Remote</strong> Android app (the “App”) by <strong>Nova Soft</strong>. It forms part of our <a href="terms-of-use.html">Terms of Use</a>. All purchases are made with <strong>Google Play Billing</strong> and are also subject to the <a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener">Google Play Terms of Service</a>. Where this policy and Google Play’s terms differ on billing, cancellation or refunds, Google Play’s terms apply.</p>
+    </section>
+
+    <section id="pro">
+      <h2><span class="num">02 —</span>What PRO includes</h2>
+      <p>The App is free to use with ads. PRO upgrades your experience:</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Feature</th><th>Free</th><th>PRO</th></tr></thead>
+          <tbody>
+            <tr><td>Remote control (D-pad, touchpad, playback, volume, keyboard)</td><td>Yes</td><td>Yes</td></tr>
+            <tr><td>Opening apps and TV channels</td><td>Yes</td><td>Yes</td></tr>
+            <tr><td>Ads</td><td>Banner and full-screen ads from Google AdMob</td><td><strong>No ads</strong></td></tr>
+            <tr><td>Premium features</td><td>—</td><td>As listed on the upgrade screen</td></tr>
+            <tr><td>New premium features we add</td><td>—</td><td>Included</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The features included in PRO are always described on the upgrade screen in the App before you start a trial or buy. PRO does not change which Roku devices are compatible: please check that the App works with your device (see <a href="terms-of-use.html#compatibility">Compatibility</a>).</p>
+    </section>
+
+    <section id="plans">
+      <h2><span class="num">03 —</span>Plans and prices</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Plan</th><th>Free trial</th><th>Type</th><th>Billing after the trial</th></tr></thead>
+          <tbody>
+            <tr><td>PRO Monthly</td><td><strong>3 days free</strong></td><td>Auto-renewing subscription</td><td>Charged the monthly price when the trial ends, then every month until cancelled.</td></tr>
+            <tr><td>PRO Yearly</td><td><strong>3 days free</strong></td><td>Auto-renewing subscription</td><td>Charged the yearly price when the trial ends, then every year until cancelled.</td></tr>
+            <tr><td>PRO Lifetime</td><td><strong>3 days free</strong></td><td>One-time purchase</td><td>If you choose to buy: a single payment for permanent PRO on the Google account that bought it. Never charged automatically, no subscription and no renewals.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Prices vary by country and are set in your local currency by Google Play, including any applicable taxes. <strong>Google Play always shows the final price, the billing period and the trial terms before you confirm</strong>, and that is the price you are charged. Where the App shows a monthly equivalent for the Yearly plan or a percentage saved, it is for comparison only.</p>
+    </section>
+
+    <section id="trials">
+      <h2><span class="num">04 —</span>3-day free trial</h2>
+      <p>Each PRO plan, <strong>Monthly, Yearly and Lifetime</strong>, comes with a <strong>3-day free trial</strong> so you can try PRO with your own Roku device before you pay.</p>
+      <h3>Monthly and Yearly</h3>
+      <ul>
+        <li>Starting a trial requires a valid Google Play payment method, but <strong>you are not charged during the 3 days</strong>.</li>
+        <li>When the trial ends, your trial <strong>automatically converts to a paid subscription</strong> and you are charged the plan price shown at sign-up, then at the start of each billing period, unless you cancel <strong>at least 24 hours before the trial ends</strong>.</li>
+        <li>If you cancel during the trial, you keep PRO until the trial ends and you are not charged.</li>
+        <li>Google Play sends you a reminder before your trial ends, and you can check the exact end date at any time in Google Play → Payments &amp; subscriptions → Subscriptions.</li>
+      </ul>
+      <h3>Lifetime</h3>
+      <ul>
+        <li>The Lifetime trial gives you <strong>3 days of PRO free</strong>. No payment is taken during the trial.</li>
+        <li>When the 3 days end, you can keep PRO by buying Lifetime with a <strong>single one-time payment</strong>, at the price shown in the Google Play purchase sheet before you confirm. You are <strong>never charged automatically</strong> for Lifetime, and it never renews.</li>
+        <li>If you do not buy Lifetime, PRO simply ends with the trial and the App returns to the free version. Nothing is charged.</li>
+      </ul>
+      <h3>Eligibility</h3>
+      <ul>
+        <li>Free trials are available <strong>once per Google account</strong>. If you have already used a trial, the purchase screen and Google Play will show the price without a trial.</li>
+        <li>Google Play decides trial eligibility. We may change or withdraw trials for new purchases at any time; any change is shown before you buy and never affects a trial you have already started.</li>
+      </ul>
+    </section>
+
+    <section id="renewal">
+      <h2><span class="num">05 —</span>Billing and auto-renewal</h2>
+      <ul>
+        <li>Payment is charged to the payment method on your Google Play account when the free trial ends, or when you confirm a purchase if you are not eligible for a trial.</li>
+        <li><strong>Monthly and Yearly subscriptions renew automatically</strong> at the end of each billing period, at the then-current price, unless you cancel at least 24 hours before the renewal date.</li>
+        <li>You can see your next renewal date and manage your plan at any time in Google Play.</li>
+        <li>If you switch between Monthly and Yearly, Google Play applies the change and any proration according to its rules.</li>
+        <li>Some payment methods can take time to complete. While a purchase is pending, the App says so, and PRO turns on as soon as Google Play confirms the payment.</li>
+      </ul>
+    </section>
+
+    <section id="cancel">
+      <h2><span class="num">06 —</span>How to cancel</h2>
+      <p>You can cancel a trial or subscription at any time. <strong>Deleting the App does not cancel your subscription or trial.</strong></p>
+      <h3>On your Android phone</h3>
+      <ol class="list">
+        <li>Open the <strong>Google Play Store</strong> app.</li>
+        <li>Tap your profile icon, then <strong>Payments &amp; subscriptions → Subscriptions</strong>.</li>
+        <li>Select <strong>Roku Remote</strong>.</li>
+        <li>Tap <strong>Cancel subscription</strong> and follow the instructions.</li>
+      </ol>
+      <p>You can also tap <strong>Manage subscription</strong> in the App’s Settings, or visit <a href="https://play.google.com/store/account/subscriptions" target="_blank" rel="noopener">play.google.com/store/account/subscriptions</a> while signed in to the same Google account.</p>
+      <p>After you cancel, PRO stays active until the end of the trial or the period you have already paid for, and you will not be charged again. Google Play may also let you pause or resubscribe.</p>
+    </section>
+
+    <section id="refunds">
+      <h2><span class="num">07 —</span>Refunds</h2>
+      <p>Because payments are processed by Google Play, refunds are handled under <a href="https://support.google.com/googleplay/answer/2479637" target="_blank" rel="noopener">Google Play’s refund policy</a>.</p>
+      <ul>
+        <li><strong>Within 48 hours</strong> of a charge, you can usually request a refund directly from Google Play (play.google.com → Order history → Request a refund).</li>
+        <li><strong>After 48 hours</strong>, contact us at <a href="mailto:support@novasoftlabs.com?subject=Roku%20Remote%20refund%20request">support@novasoftlabs.com</a> with your Google Play order number (it starts with “GPA.”). We review each request fairly, for example if PRO did not work with your Roku device, and where appropriate we will issue a refund through Google Play.</li>
+        <li>Cancelling a subscription stops future charges but does not by itself refund past charges. Partial refunds for unused time in a billing period are not provided except where required by law.</li>
+        <li>If a purchase is refunded, PRO is removed from that Google account.</li>
+      </ul>
+      <p>Nothing in this policy affects your statutory rights, including any right of withdrawal under the consumer law of your country.</p>
+    </section>
+
+    <section id="price-changes">
+      <h2><span class="num">08 —</span>Price changes</h2>
+      <p>We may change subscription prices for future billing periods. Google Play will notify you in advance as its policies require, and in some cases you must accept a price increase before it applies to you. If you do not want to continue at the new price, you can cancel before it takes effect. Price changes never affect a Lifetime purchase you have already made.</p>
+    </section>
+
+    <section id="payment-issues">
+      <h2><span class="num">09 —</span>Payment problems</h2>
+      <p>If a payment at the end of a trial or at renewal fails, Google Play may give you a grace period during which PRO stays active while you update your payment method, followed by an account hold during which PRO is paused. If the payment is not resolved, the subscription is cancelled. You can fix payment issues in Google Play under Payments &amp; subscriptions.</p>
+    </section>
+
+    <section id="restore">
+      <h2><span class="num">10 —</span>Restoring PRO and using it on other devices</h2>
+      <p>PRO is tied to the <strong>Google account</strong> used to buy it, not to a separate Roku Remote account. To use PRO on a new or reset phone, install the App while signed in to the same Google account. PRO is detected automatically, or you can tap <strong>Restore</strong> on the upgrade screen. If no purchase is found, make sure the Play Store is signed in to the account that made the purchase.</p>
+      <p>The App remembers your PRO status on the phone so that it keeps working offline, and checks it again with Google Play when a connection is available.</p>
+    </section>
+
+    <section id="changes">
+      <h2><span class="num">11 —</span>Changes to plans and this policy</h2>
+      <p>We may add, change or remove plans, trials and PRO features for new purchases. We will not reduce the core benefit of an active paid plan (an ad-free App) during a period you have already paid for. We may update this policy; the “Effective” date above shows the latest version, and material changes will be announced in the App or on its Google Play listing.</p>
+    </section>
+
+    <section id="contact">
+      <h2><span class="num">12 —</span>Contact us</h2>
+      <div class="contact-card">
+        <p><strong>Nova Soft</strong> — developer of Roku Remote</p>
+        <p>Billing questions: <a href="mailto:support@novasoftlabs.com?subject=Roku%20Remote%20subscription">support@novasoftlabs.com</a></p>
+        <p>Website: <a href="https://novasoftlabs.com/">novasoftlabs.com</a></p>
+        <p>Please include your Google Play order number (GPA.xxxx) so we can help faster.</p>
+      </div>
+    </section>
+  </article>
+</main>
+
+<footer>
+  <p>© 2026 Nova Soft. All rights reserved.</p>
+  <ul class="footer-links">
+    <li><a href="privacy-policy.html">Privacy</a></li>
+    <li><a href="terms-of-use.html">Terms</a></li>
+    <li><a href="subscription-policy.html">Subscriptions</a></li>
+    <li><a href="https://novasoftlabs.com/">novasoftlabs.com</a></li>
+  </ul>
+</footer>
+
+</body>
+</html>

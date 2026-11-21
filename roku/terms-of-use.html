@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Use — Roku Remote · Nova Soft</title>
+<meta name="description" content="Terms for using the Roku Remote app by Nova Soft: compatibility, non-affiliation with Roku, ads, PRO and acceptable use.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #080b10; --bg2: #0d1117; --bg3: #111820;
+    --accent: #00f5c4; --accent2: #0af;
+    --text: #e8edf5; --body: rgba(232,237,245,0.78); --muted: #6b7a90;
+    --border: rgba(255,255,255,0.07); --card-bg: rgba(255,255,255,0.03);
+  }
+  html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+  body { background: var(--bg); color: var(--text); font-family: 'DM Mono', monospace; font-size: 15px; line-height: 1.8; overflow-x: hidden; }
+  body::before { content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 0;
+    background-image: linear-gradient(rgba(0,245,196,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(0,245,196,0.025) 1px, transparent 1px);
+    background-size: 60px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between;
+    padding: 1.2rem 4rem; background: rgba(8,11,16,0.85); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
+  .logo { font-family: 'Syne', sans-serif; font-size: 1.4rem; font-weight: 800; letter-spacing: -0.02em; color: var(--text); }
+  .logo span { color: var(--accent); }
+  .logo:hover { text-decoration: none; }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a { color: var(--muted); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--accent); text-decoration: none; }
+  .nav-cta { border: 1px solid var(--accent); color: var(--accent); padding: 0.5rem 1.4rem; font-size: 0.8rem; letter-spacing: 0.06em; transition: all 0.2s; }
+  .nav-cta:hover { background: var(--accent); color: #080b10; text-decoration: none; }
+
+  .page { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; padding: 9rem 4rem 5rem;
+    display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 4rem; }
+  .doc-head { grid-column: 1 / -1; }
+  .section-label { color: var(--accent); font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem; }
+  h1 { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 8.5vw, 4.4rem); overflow-wrap: anywhere; font-weight: 800; line-height: 1.02; letter-spacing: -0.03em; margin-bottom: 1.5rem; }
+  h1 .grad { background: linear-gradient(90deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .meta { display: flex; flex-wrap: wrap; gap: 0.6rem 2rem; color: var(--muted); font-size: 0.8rem; letter-spacing: 0.04em; margin-bottom: 2rem; }
+  .meta b { color: var(--text); font-weight: 400; }
+  .tabs { display: flex; flex-wrap: wrap; gap: 1px; background: var(--border); border: 1px solid var(--border); width: fit-content; max-width: 100%; }
+  .tabs a { background: var(--bg); color: var(--muted); padding: 0.6rem 1.2rem; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; }
+  .tabs a:hover { color: var(--accent); text-decoration: none; }
+  .tabs a[aria-current="page"] { background: rgba(0,245,196,0.08); color: var(--accent); }
+
+  .toc { position: sticky; top: 7rem; align-self: start; border-left: 1px solid var(--border); padding-left: 1.2rem; }
+  .toc p { color: var(--muted); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.8rem; }
+  .toc ol { list-style: none; counter-reset: toc; }
+  .toc li { counter-increment: toc; }
+  .toc a { display: block; color: var(--muted); font-size: 0.8rem; line-height: 1.5; padding: 0.3rem 0; }
+  .toc a::before { content: counter(toc, decimal-leading-zero) "  "; color: rgba(0,245,196,0.5); }
+  .toc a:hover { color: var(--accent); text-decoration: none; }
+
+  article { min-width: 0; }
+  .summary { background: var(--card-bg); border: 1px solid rgba(0,245,196,0.2); padding: 1.6rem 1.8rem; margin-bottom: 3.5rem; }
+  .summary h2 { font-size: 1.1rem; margin: 0 0 0.8rem; }
+  .summary h2::before { display: none; }
+  .summary ul { margin-bottom: 0; }
+  section { margin-bottom: 3.5rem; }
+  h2 { font-family: 'Syne', sans-serif; font-size: 1.55rem; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25; margin-bottom: 1.1rem; }
+  h2 .num { display: block; color: var(--accent); font-family: 'DM Mono', monospace; font-size: 0.75rem; font-weight: 400; letter-spacing: 0.12em; margin-bottom: 0.4rem; }
+  h3 { font-family: 'Syne', sans-serif; font-size: 1.05rem; font-weight: 700; margin: 1.6rem 0 0.6rem; color: var(--text); }
+  p, li { color: var(--body); }
+  p { margin-bottom: 1rem; }
+  ul, ol.list { margin: 0 0 1rem 1.2rem; }
+  li { margin-bottom: 0.45rem; padding-left: 0.3rem; }
+  ul li::marker { color: var(--accent); }
+  strong { color: var(--text); font-weight: 400; }
+  .table-wrap { overflow-x: auto; border: 1px solid var(--border); margin: 0.5rem 0 1.5rem; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.82rem; line-height: 1.6; min-width: 560px; }
+  th, td { text-align: left; vertical-align: top; padding: 0.8rem 1rem; border-bottom: 1px solid var(--border); }
+  th { color: var(--accent); font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.72rem; background: var(--bg2); }
+  td { color: var(--body); }
+  td:first-child { color: var(--text); }
+  tr:last-child td { border-bottom: none; }
+  .note { border-left: 2px solid var(--accent2); background: rgba(0,170,255,0.05); padding: 0.9rem 1.2rem; margin: 0 0 1rem; }
+  .note p:last-child { margin-bottom: 0; }
+  .contact-card { background: var(--bg2); border: 1px solid var(--border); padding: 1.6rem 1.8rem; }
+  .contact-card p { margin-bottom: 0.4rem; }
+
+  footer { position: relative; z-index: 1; border-top: 1px solid var(--border); padding: 2rem 4rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+  footer p { color: var(--muted); font-size: 0.78rem; margin: 0; }
+  .footer-links { display: flex; gap: 2rem; list-style: none; }
+  .footer-links a { color: var(--muted); font-size: 0.78rem; }
+  .footer-links a:hover { color: var(--accent); text-decoration: none; }
+
+  @media (max-width: 960px) {
+    nav { padding: 1rem; }
+    .nav-links { display: none; }
+    .page { grid-template-columns: 1fr; gap: 2rem; padding: 7rem 1rem 3rem; }
+    .toc { display: none; }
+    footer { padding: 1.6rem 1rem; }
+    .footer-links { gap: 1.2rem; flex-wrap: wrap; }
+  }
+  @media (max-width: 480px) {
+    .nav-cta { padding: 0.45rem 0.9rem; }
+    .summary, .contact-card { padding: 1.2rem; }
+    .tabs a { padding: 0.55rem 0.8rem; font-size: 0.7rem; }
+  }
+  @media print {
+    body::before, nav, .toc, .tabs, footer { display: none; }
+    body { background: #fff; color: #000; }
+    .page { display: block; padding: 0; }
+    p, li, td, h1, h2, h3, strong { color: #000 !important; -webkit-text-fill-color: #000 !important; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="https://novasoftlabs.com/">Nova<span>Soft</span></a>
+  <ul class="nav-links">
+    <li><a href="privacy-policy.html">Privacy</a></li>
+    <li><a href="terms-of-use.html" aria-current="page">Terms</a></li>
+    <li><a href="subscription-policy.html">Subscriptions</a></li>
+  </ul>
+  <a class="nav-cta" href="mailto:support@novasoftlabs.com?subject=Roku%20Remote%20terms">Contact</a>
+</nav>
+
+<main class="page">
+  <header class="doc-head">
+    <p class="section-label">// Legal · Roku Remote</p>
+    <h1>Terms of <span class="grad">Use</span></h1>
+    <div class="meta">
+      <span>Effective <b>22 November 2026</b></span>
+      <span>App <b>Roku Remote</b></span>
+      <span>Package <b>com.novasoftlab.rokuremote</b></span>
+      <span>Developer <b>Nova Soft</b></span>
+    </div>
+    <div class="tabs">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-use.html" aria-current="page">Terms of Use</a>
+      <a href="subscription-policy.html">Subscription Policy</a>
+    </div>
+  </header>
+
+  <aside class="toc" aria-label="On this page">
+    <p>On this page</p>
+    <ol>
+      <li><a href="#agreement">Agreement</a></li>
+      <li><a href="#service">What the app does</a></li>
+      <li><a href="#compatibility">Compatibility</a></li>
+      <li><a href="#trademarks">Trademarks &amp; affiliation</a></li>
+      <li><a href="#license">Your licence</a></li>
+      <li><a href="#private-listening">Private Listening</a></li>
+      <li><a href="#free-pro">Free version, ads &amp; PRO</a></li>
+      <li><a href="#acceptable-use">Acceptable use</a></li>
+      <li><a href="#third-party">Third-party services</a></li>
+      <li><a href="#disclaimer">Disclaimers</a></li>
+      <li><a href="#liability">Limitation of liability</a></li>
+      <li><a href="#termination">Termination</a></li>
+      <li><a href="#changes">Changes</a></li>
+      <li><a href="#law">Governing law</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </aside>
+
+  <article>
+    <div class="summary">
+      <h2>In short</h2>
+      <ul>
+        <li>Roku Remote is an <strong>independent app</strong>. It is not made by, affiliated with or endorsed by Roku, Inc.</li>
+        <li>It works <strong>over Wi-Fi</strong>, not infrared. Your phone and Roku device must be on the same local network, and features vary by model and software.</li>
+        <li>The free version shows ads from Google AdMob. PRO is optional, comes with a <strong>3-day free trial</strong> on every plan, and is billed through Google Play under our <a href="subscription-policy.html">Subscription Policy</a>.</li>
+        <li>Use the App only with devices you own or are allowed to use.</li>
+      </ul>
+    </div>
+
+    <section id="agreement">
+      <h2><span class="num">01 —</span>Agreement to these terms</h2>
+      <p>These Terms of Use (“Terms”) are a legal agreement between you and <strong>Nova Soft</strong> (“Nova Soft”, “we”, “us”) for your use of the <strong>Roku Remote</strong> Android app (the “App”). By downloading, installing or using the App you agree to these Terms, our <a href="privacy-policy.html">Privacy Policy</a> and our <a href="subscription-policy.html">Subscription Policy</a>. If you do not agree, do not use the App.</p>
+      <p>Your use of the App is also subject to the <a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener">Google Play Terms of Service</a>. If these Terms conflict with Google Play’s terms on matters of purchasing, billing or refunds, Google Play’s terms prevail.</p>
+    </section>
+
+    <section id="service">
+      <h2><span class="num">02 —</span>What the app does</h2>
+      <p>The App turns your Android phone into a Wi-Fi remote control for Roku TVs and Roku streaming players. Depending on your device, it lets you:</p>
+      <ul>
+        <li><strong>Find and connect</strong> to Roku devices on your network automatically, or by entering the device’s IP address;</li>
+        <li><strong>Control your Roku</strong> with a D-pad or touchpad, power, home, back, volume, mute, input and playback keys, and a keyboard for typing into search and sign-in fields on the TV;</li>
+        <li><strong>Open streaming apps</strong> installed on your Roku from the Apps tab, and tune antenna channels on Roku TVs from the Channels tab;</li>
+        <li><strong>Use Private Listening</strong> to hear the TV’s sound through your phone and headphones.</li>
+      </ul>
+      <p>We may add, change or remove features at any time, for example to support new Roku models or to keep up with changes Roku makes to its software.</p>
+    </section>
+
+    <section id="compatibility">
+      <h2><span class="num">03 —</span>Compatibility</h2>
+      <ul>
+        <li>The App connects <strong>over your local Wi-Fi network</strong>. It does not use infrared and cannot control devices that are not connected to the network.</li>
+        <li>Your phone and Roku device must be on the <strong>same network</strong>. Guest networks, VPNs, “AP/client isolation” and some corporate or public networks can block the connection.</li>
+        <li>Some Roku settings, such as <strong>Control by mobile apps</strong> (Settings → System → Advanced system settings), must allow network access for the App to work.</li>
+        <li>Channels, input switching and power control are available only on Roku TVs and models that support them. Private Listening depends on your Roku model, its software and your Wi-Fi quality.</li>
+        <li>Roku can change its device software at any time, which may temporarily or permanently stop a feature from working. We do not guarantee that every feature works with every device.</li>
+        <li>The App is a convenience tool and is <strong>not a replacement</strong> for your original Roku remote. Keep your original remote for setup and recovery.</li>
+      </ul>
+      <p>We recommend trying the App with your device, including during the free trial, before you pay for PRO.</p>
+    </section>
+
+    <section id="trademarks">
+      <h2><span class="num">04 —</span>Trademarks and non-affiliation</h2>
+      <div class="note">
+        <p>Roku Remote is an independent product of Nova Soft. It is <strong>not affiliated with, sponsored by or endorsed by Roku, Inc.</strong>, or any streaming-service company.</p>
+      </div>
+      <p>Roku, Roku TV and related marks are trademarks of Roku, Inc. Netflix, YouTube and other app names and logos shown in the App belong to their respective owners. All such names are used only to identify compatible devices and services.</p>
+    </section>
+
+    <section id="license">
+      <h2><span class="num">05 —</span>Your licence to use the app</h2>
+      <p>Subject to these Terms, we grant you a personal, limited, non-exclusive, non-transferable, revocable licence to install and use the App on Android devices you own or control, for your personal, non-commercial use.</p>
+      <p>You may not: copy, modify or distribute the App; reverse engineer, decompile or disassemble it except where the law expressly allows; remove or alter its notices; bypass its ads, purchase checks or other technical measures; rent, sell or sub-license it; or use it to build a competing product.</p>
+      <p>The App, its design, code, graphics and the Nova Soft name and logo are owned by Nova Soft and protected by intellectual property laws. All rights not expressly granted are reserved.</p>
+    </section>
+
+    <section id="private-listening">
+      <h2><span class="num">06 —</span>Private Listening</h2>
+      <p>Private Listening plays the audio of what is on your TV through your phone. It runs as a foreground service with a visible notification for as long as it is on, and keeps playing while your screen is off. Audio quality and delay depend on your Wi-Fi network, phone and Roku device. The App does not record, save or share this audio. Please keep the volume at a safe level when using headphones.</p>
+    </section>
+
+    <section id="free-pro">
+      <h2><span class="num">07 —</span>Free version, ads and PRO</h2>
+      <p>The App is free to download and supported by ads served by <strong>Google AdMob</strong>, as described in our <a href="privacy-policy.html#ads">Privacy Policy</a>. Where required, you will be asked for consent before ads are shown, and you can change your choice in the App under Settings → Ad privacy choices.</p>
+      <p>You can optionally get <strong>PRO</strong> as a <strong>Monthly</strong> or <strong>Yearly</strong> subscription, or as a one-time <strong>Lifetime</strong> purchase, through Google Play. <strong>Every plan starts with a 3-day free trial.</strong> PRO removes ads and unlocks the premium features described in the App at the time of purchase. Billing, free trials, renewals, cancellation and refunds are governed by our <a href="subscription-policy.html">Subscription Policy</a> and by Google Play.</p>
+    </section>
+
+    <section id="acceptable-use">
+      <h2><span class="num">08 —</span>Acceptable use</h2>
+      <p>You agree not to use the App:</p>
+      <ul>
+        <li>to control a TV or device that you do not own or are not authorised to use;</li>
+        <li>to interfere with, disrupt or gain unauthorised access to any network, device or service;</li>
+        <li>for any unlawful, harmful, harassing or fraudulent purpose;</li>
+        <li>in a way that violates the terms of Google Play, Roku or any streaming service.</li>
+      </ul>
+    </section>
+
+    <section id="third-party">
+      <h2><span class="num">09 —</span>Third-party services</h2>
+      <p>The App works with third-party products and services, including your Roku device and its software, Google Play, Google AdMob and logo.dev. Your use of them is governed by their own terms and privacy policies. We are not responsible for third-party products and services, for changes they make that affect the App, or for the content of ads served by ad networks, although we use the controls AdMob provides to block inappropriate ad categories.</p>
+    </section>
+
+    <section id="disclaimer">
+      <h2><span class="num">10 —</span>Disclaimers</h2>
+      <p>To the fullest extent permitted by law, the App is provided <strong>“as is” and “as available”</strong>, without warranties of any kind, whether express or implied, including warranties of merchantability, fitness for a particular purpose, non-infringement, compatibility with any particular device, or uninterrupted or error-free operation.</p>
+      <p>Nothing in these Terms limits any rights you have as a consumer that cannot be excluded under the law of your country.</p>
+    </section>
+
+    <section id="liability">
+      <h2><span class="num">11 —</span>Limitation of liability</h2>
+      <p>To the fullest extent permitted by law, Nova Soft will not be liable for any indirect, incidental, special, consequential or punitive damages, or for loss of data, profits or goodwill, arising from your use of or inability to use the App, including any effect on your TV, network or other devices.</p>
+      <p>Our total liability for any claim relating to the App is limited to the amount you paid us for the App in the twelve (12) months before the claim, or USD 10 if you paid nothing. These limits do not apply where the law does not allow them, such as liability for death or personal injury caused by negligence, or for fraud.</p>
+      <p>You agree to indemnify Nova Soft against claims arising from your breach of these Terms or your misuse of the App.</p>
+    </section>
+
+    <section id="termination">
+      <h2><span class="num">12 —</span>Termination</h2>
+      <p>You may stop using the App at any time by uninstalling it. Uninstalling does <strong>not</strong> cancel a subscription or a free trial; see the <a href="subscription-policy.html#cancel">Subscription Policy</a>. We may suspend or end your licence if you breach these Terms. We may also stop offering or supporting the App; if we discontinue it while you have an active paid subscription, we will make reasonable efforts to give notice and you can cancel through Google Play. Sections that by their nature should survive termination will survive.</p>
+    </section>
+
+    <section id="changes">
+      <h2><span class="num">13 —</span>Changes to these terms</h2>
+      <p>We may update these Terms from time to time. We will change the “Effective” date above and, for material changes, give notice in the App or on its Google Play listing before they take effect. If you continue to use the App after the changes take effect, you accept the updated Terms.</p>
+    </section>
+
+    <section id="law">
+      <h2><span class="num">14 —</span>Governing law</h2>
+      <p>These Terms are governed by the laws of the country in which Nova Soft is established, without regard to its conflict-of-law rules. If you are a consumer, you also keep the protection of the mandatory laws of the country where you live, and you may bring proceedings in your local courts. If any part of these Terms is found unenforceable, the rest remains in effect. These Terms, together with the Privacy Policy and Subscription Policy, are the entire agreement between you and us about the App.</p>
+    </section>
+
+    <section id="contact">
+      <h2><span class="num">15 —</span>Contact us</h2>
+      <div class="contact-card">
+        <p><strong>Nova Soft</strong> — developer of Roku Remote</p>
+        <p>Email: <a href="mailto:support@novasoftlabs.com?subject=Roku%20Remote%20terms">support@novasoftlabs.com</a></p>
+        <p>Website: <a href="https://novasoftlabs.com/">novasoftlabs.com</a></p>
+        <p>In the App: Settings → Contact Us</p>
+      </div>
+    </section>
+  </article>
+</main>
+
+<footer>
+  <p>© 2026 Nova Soft. All rights reserved.</p>
+  <ul class="footer-links">
+    <li><a href="privacy-policy.html">Privacy</a></li>
+    <li><a href="terms-of-use.html">Terms</a></li>
+    <li><a href="subscription-policy.html">Subscriptions</a></li>
+    <li><a href="https://novasoftlabs.com/">novasoftlabs.com</a></li>
+  </ul>
+</footer>
+
+</body>
+</html>
